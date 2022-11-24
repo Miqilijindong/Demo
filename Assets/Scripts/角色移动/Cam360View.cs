@@ -33,12 +33,12 @@ public class Cam360View : MonoBehaviour
     {
         if(target)
         {
-            //if(Input.GetMouseButton(1))
-            //{
+            if(Input.GetMouseButton(1))
+            {
                 x += Input.GetAxis("Mouse X") * xSpeed * 0.02f;
                 y -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
                 y = ClampAngle(y, yMinLimit, yManLimit);
-            //}
+            }
             distance -= Input.GetAxis("Mouse ScrollWheel") * mSpeed;
             distance = Mathf.Clamp(distance, minDistance, MaxDistance);
             Quaternion rotation = Quaternion.Euler(y, x, 0.0f);

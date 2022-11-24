@@ -34,7 +34,7 @@ public class MouseMoveCube : MonoBehaviour
         Vector3 screenSpace = Camera.main.WorldToScreenPoint(transform.position);//三维物体坐标转屏幕坐标
         //将鼠标屏幕坐标转为三维坐标，再算出物体位置与鼠标之间的距离
         Vector3 offset = transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z));
-        if (Input.GetKey(KeyCode.Mouse0))
+        if (Input.GetMouseButton(0))
         {
             //得到现在鼠标的2维坐标系位置       
             Vector3 curScreenSpace = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z);
