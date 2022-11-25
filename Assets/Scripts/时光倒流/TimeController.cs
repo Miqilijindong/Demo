@@ -94,6 +94,7 @@ public class TimeController : MonoBehaviour
             foreach (TimeControlled timeObject in timeObjects)
             {
                 timeObject.TimeUpdate();
+                timeObject.UpdateAnimaiton();
             }
         }
     }
