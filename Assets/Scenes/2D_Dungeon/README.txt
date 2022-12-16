@@ -1,0 +1,8 @@
+Cinemachine
+	unity提供的一种摄像机组件，使用这个组件可以减少很代码就可以实现物体跟随等需求。
+	
+使用方法
+	首先Package Manager安装Cinemachine，然后右键就可以创建了，然后场景会多一个名为CM vcam1的物体，挂载这CinemachineVirtualCamera的组件
+	
+想要实现这种不会穿墙的摄像头效果，我们只需要在CinemachineVirtualCamera的Extensions中添加CinemachineCollider即可。
+

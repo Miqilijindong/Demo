@@ -31,9 +31,12 @@ public class TimeControlled : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// ¸üÐÂ¶¯»­£¬
+    /// </summary>
     public void UpdateAnimaiton()
     {
-        if (currentAnimation != null)
+        if (currentAnimation != null)   
         {
             currentAnimation.SampleAnimation(gameObject, animationTime);
         }

@@ -11,6 +11,7 @@ public class TimeController : MonoBehaviour
     {
         public Vector2 pos;
         public Vector2 vel;
+        public float animationTime;
     }
 
     /// <summary>
@@ -34,8 +35,11 @@ public class TimeController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // ÔÝÍ£
         bool pause = Input.GetKey(KeyCode.UpArrow);
+        // »ØÍË
         bool stepBack = Input.GetKey(KeyCode.LeftArrow);
+        // Ç°½ø
         bool stepForward = Input.GetKey(KeyCode.RightArrow);
 
         if (stepBack)
@@ -51,6 +55,9 @@ public class TimeController : MonoBehaviour
                     RecordedData data = recordedDatas[objectIndex, recordIndex];
                     timeObject.transform.position = data.pos;
                     timeObject.velocity = data.vel;
+                    timeObject.animationTime = data.animationTime;
+
+                    timeObject.UpdateAnimaiton();
                 }
             }
         }
@@ -67,9 +74,10 @@ public class TimeController : MonoBehaviour
                     RecordedData data = recordedDatas[objectIndex, recordIndex];
                     timeObject.transform.position = data.pos;
                     timeObject.velocity = data.vel;
+                    timeObject.animationTime = data.animationTime;
 
+                    timeObject.UpdateAnimaiton();
                 }
-
             }
         }
         else if (!pause && !stepBack)
@@ -86,6 +94,7 @@ public class TimeController : MonoBehaviour
                 RecordedData data = new RecordedData();
                 data.pos = timeObject.transform.position;
                 data.vel = timeObject.velocity;
+                data.animationTime = timeObject.animationTime;
                 recordedDatas[objectIndex, recordCount] = data;
             }
             recordCount++;

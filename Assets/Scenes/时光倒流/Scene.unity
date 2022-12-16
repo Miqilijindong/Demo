@@ -244,7 +244,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 550139416}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.3480461, y: 0.4789439, z: -0.04791896}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -350,7 +350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0}
-  currentAnimation: {fileID: 7400000, guid: 50f611cad67445a4b96d6b54efab634f, type: 2}
+  currentAnimation: {fileID: 7400000, guid: 2466004b4676de14a92812ccfebd93b9, type: 2}
   animationTime: 0
 --- !u!95 &1064120394
 Animator:
@@ -362,7 +362,7 @@ Animator:
   m_GameObject: {fileID: 1064120388}
   m_Enabled: 0
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 42cf7d1cafe1ab04183a7f9633474516, type: 2}
+  m_Controller: {fileID: 9100000, guid: a8a57ebae4317224d9b1520afa6fb81d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

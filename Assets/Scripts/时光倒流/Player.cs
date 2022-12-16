@@ -9,14 +9,17 @@ public class Player : TimeControlled
 
     public override void TimeUpdate()
     {
+        base.TimeUpdate();
+
         Vector2 pos = transform.position;
 
         pos.y += velocity.y * Time.deltaTime;
         velocity.y -= TimeController.gravity * Time.deltaTime;
 
-        if (pos.y < -4)
+        // 测试代码，限制物体掉落到-1
+        if (pos.y < -1)
         {
-            pos.y = -4;
+            pos.y = -1;
             velocity.y = 0; 
         }
 
