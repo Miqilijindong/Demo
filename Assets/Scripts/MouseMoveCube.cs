@@ -30,16 +30,17 @@ public class MouseMoveCube : MonoBehaviour
 
     private void Update()
     {
-        //将物体由世界坐标系转换为屏幕坐标系
-        Vector3 screenSpace = Camera.main.WorldToScreenPoint(transform.position);//三维物体坐标转屏幕坐标
-        //将鼠标屏幕坐标转为三维坐标，再算出物体位置与鼠标之间的距离
-        Vector3 offset = transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z));
         if (Input.GetMouseButton(0))
         {
+            //将物体由世界坐标系转换为屏幕坐标系
+            Vector3 screenSpace = Camera.main.WorldToScreenPoint(transform.position);//三维物体坐标转屏幕坐标
+            //将鼠标屏幕坐标转为三维坐标，再算出物体位置与鼠标之间的距离
+            Vector3 offset = transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z));
             //得到现在鼠标的2维坐标系位置       
             Vector3 curScreenSpace = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenSpace.z);
+            Vector3 vector3 = Camera.main.ScreenToWorldPoint(curScreenSpace);
             //将当前鼠标的2维位置转换成3维位置，再加上鼠标的移动量
-            Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenSpace) + offset;
+            Vector3 curPosition = vector3 + offset;
             //curPosition就是物体应该的移动向量赋给transform的position属性
             transform.position = curPosition;
         }

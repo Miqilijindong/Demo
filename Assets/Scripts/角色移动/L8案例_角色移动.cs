@@ -79,43 +79,8 @@ public class L8案例_角色移动 : MonoBehaviour
     }
 
     /**
-     * 想用辐射4的移动方式，但是目前没有实现，因为方向问题
+     * 辐射4的移动方式
      */
-    void move3()
-    {
-        float v = Input.GetAxis("Vertical");
-        float h = Input.GetAxis("Horizontal");
-        Vector3 vector3;
-        if (v != 0 || h != 0 )
-        {
-            animator.SetBool("run", true);
-            vector3 = new Vector3(h, 0, v);
-            characterController.SimpleMove(vector3 * speed);
-            //characterController.SimpleMove(camTransform.right * h * speed * Time.deltaTime + camForward * v * speed * Time.deltaTime);
-        }
-        else
-        {
-            animator.SetBool("run", false);
-        }
-
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            transform.eulerAngles = new Vector3(0, 0, 0) * roSpeed;
-        }
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            transform.eulerAngles = new Vector3(0, -180, 0) * roSpeed;
-        }
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            transform.eulerAngles = new Vector3(0, 90, 0) * roSpeed;
-        }
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            transform.eulerAngles = new Vector3(0, -90, 0) * roSpeed;
-        }
-    }
-
     void Move()
     {
 

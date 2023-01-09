@@ -53,7 +53,7 @@
     <UnityVersion>2021.3.10f1c2</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="D:\Program Files\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\子弹\FirePoint.cs" />
@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\L5_15UI事件2.cs" />
     <Compile Include="Assets\Scripts\Test.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
+    <Compile Include="Assets\Scripts\ITween\iTween.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\Scripts\Demo3.cs" />
     <Compile Include="Assets\Scripts\L3_2Sprite.cs" />
@@ -115,6 +116,8 @@
     <Compile Include="Assets\Scripts\RegisterPanelClass.cs" />
     <Compile Include="Assets\Scripts\SingletonClass.cs" />
     <Compile Include="Assets\Scripts\2.14-17\TStruct.cs" />
+    <Compile Include="Assets\Scripts\ImageClass.cs" />
+    <Compile Include="Assets\Scripts\ITween\ITweenTest.cs" />
     <Compile Include="Assets\Scripts\UserInfoClass.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
@@ -188,16 +191,15 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\Scripts\L2_8生命周期.cs" />
     <Compile Include="Assets\Scripts\Extern.cs" />
-    <Compile Include="Assets\Scripts\MouseMoveCamera.cs" />
     <Compile Include="Assets\Scripts\SpriteAndOverrideSprite.cs" />
-    <Compile Include="Assets\Scripts\ITween\iTween.cs" />
-    <Compile Include="Assets\Scripts\ITween\ITweenTest.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Shader\NewUnlitShader.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\Arts\JJ_Casual RPG Character - 8Ekard v1.1\readme.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\Shader\NewSurfaceShader.shader" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
@@ -210,8 +212,10 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\Shader\笔记.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\Shader\Simple VertexFragment Shader.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
