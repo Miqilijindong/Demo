@@ -32,7 +32,6 @@ public class L9案例 : MonoBehaviour
                 navMeshAgent.SetDestination(raycast.point);
                 navMeshAgent.isStopped = false;
                 animator.SetBool("run", true); 
-
             }
         }
         // 计算两点之间的距离(vector3 - vector3).magnitude

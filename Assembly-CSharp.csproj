@@ -71,7 +71,7 @@
     <Compile Include="Assets\Scripts\L6_6物理射线.cs" />
     <Compile Include="Assets\Scripts\力扣\划分数组为连续的集合.cs" />
     <Compile Include="Assets\Scripts\排序算法\桶排序.cs" />
-    <Compile Include="Assets\Scripts\HashTableClasss.cs" />
+    <Compile Include="Assets\Scripts\HashTableClass.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
     <Compile Include="Assets\Scripts\L5_15UI事件2.cs" />
     <Compile Include="Assets\Scripts\Test.cs" />
@@ -84,7 +84,7 @@
     <Compile Include="Assets\Scripts\角色移动\Cam360View.cs" />
     <Compile Include="Assets\Scripts\L5_11ScrollView.cs" />
     <Compile Include="Assets\Scripts\L9案例\L9案例.cs" />
-    <Compile Include="Assets\Scenes\方块保卫战\playerClass.cs" />
+    <Compile Include="Assets\Scripts\方块保卫战\playerClass.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\3.1-4 委托\ClassFunc.cs" />
     <Compile Include="Assets\Scripts\排序算法\希尔排序.cs" />
@@ -99,7 +99,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\Scripts\排序算法\堆排序.cs" />
     <Compile Include="Assets\Scripts\时光倒流\TimeControlled.cs" />
-    <Compile Include="Assets\Scenes\方块保卫战\GameController.cs" />
+    <Compile Include="Assets\Scripts\方块保卫战\GameController.cs" />
     <Compile Include="Assets\Scripts\AbstractClass.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
     <Compile Include="Assets\Scripts\力扣\最大二叉树.cs" />
@@ -129,7 +129,6 @@
     <Compile Include="Assets\Scripts\L8_3jumpAnimation.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\Scripts\L10案例.cs" />
-    <Compile Include="Assets\Scripts\HashTableClass.cs" />
     <Compile Include="Assets\Scripts\L5_15UI事件.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
     <Compile Include="Assets\Scripts\EventTriggerClass.cs" />
@@ -140,7 +139,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\Scripts\L5_8Slider.cs" />
     <Compile Include="Assets\Scripts\L2_10协同程序Class.cs" />
-    <Compile Include="Assets\Scenes\方块保卫战\UIManager.cs" />
+    <Compile Include="Assets\Scripts\方块保卫战\UIManager.cs" />
     <Compile Include="Assets\Scripts\L5_6Toggle.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
     <Compile Include="Assets\Scripts\排序算法\基数排序.cs" />
@@ -186,12 +185,15 @@
     <Compile Include="Assets\Scripts\L6_7刚体移动.cs" />
     <Compile Include="Assets\Scripts\L4_5小球.cs" />
     <Compile Include="Assets\Scripts\2.8-13\TClass.cs" />
-    <Compile Include="Assets\Scenes\方块保卫战\enemyClass.cs" />
+    <Compile Include="Assets\Scripts\方块保卫战\enemyClass.cs" />
     <Compile Include="Assets\Scenes\2D_Dungeon\Cinemachine\CameraController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\Scripts\L2_8生命周期.cs" />
     <Compile Include="Assets\Scripts\Extern.cs" />
     <Compile Include="Assets\Scripts\SpriteAndOverrideSprite.cs" />
+    <Compile Include="Assets\Scripts\状态机\IState.cs" />
+    <Compile Include="Assets\Scripts\状态机\IdleState.cs" />
+    <Compile Include="Assets\Scripts\状态机\FSM.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shader\NewUnlitShader.shader" />
