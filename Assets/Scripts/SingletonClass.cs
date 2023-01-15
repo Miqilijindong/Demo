@@ -27,6 +27,11 @@ public class test
 
 }
 
+public class test2
+{
+    public int a;
+}
+
 /**
  * 设计模式单例模式
  */
@@ -37,6 +42,8 @@ public class SingletonClass : MonoBehaviour
     void Start()
     {
         test test;
+        int test2 = new test2().a;
+
     }
 
     // Update is called once per frame
