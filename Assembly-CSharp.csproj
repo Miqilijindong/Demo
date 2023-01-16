@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\TypeChange.cs" />
     <Compile Include="Assets\Scripts\QueueClass.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
+    <Compile Include="Assets\Scripts\状态机\IState.cs" />
     <Compile Include="Assets\Scripts\L9_1导航系统.cs" />
     <Compile Include="Assets\Scripts\3.1-4 委托\BoardCast.cs" />
     <Compile Include="Assets\Scripts\Day4.cs" />
@@ -102,9 +103,12 @@
     <Compile Include="Assets\Scripts\方块保卫战\GameController.cs" />
     <Compile Include="Assets\Scripts\AbstractClass.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
+    <Compile Include="Assets\Scripts\对象池\BezierPathController.cs" />
     <Compile Include="Assets\Scripts\力扣\最大二叉树.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
+    <Compile Include="Assets\Scripts\状态机\FSM.cs" />
     <Compile Include="Assets\Scripts\L3_32D刚体.cs" />
+    <Compile Include="Assets\Scripts\对象池\ObjectPool.cs" />
     <Compile Include="Assets\Scripts\L5_4Button.cs" />
     <Compile Include="Assets\Scripts\角色移动\L8案例_角色移动.cs" />
     <Compile Include="Assets\Scripts\设计模式\状态设计模式.cs" />
@@ -123,6 +127,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
+    <Compile Include="Assets\Scripts\BGScaler\CameraController_Scaler.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\Scripts\子弹\ShowScreenPos.cs" />
     <Compile Include="Assets\Scripts\排序算法\选择排序算法.cs" />
@@ -134,6 +139,7 @@
     <Compile Include="Assets\Scripts\EventTriggerClass.cs" />
     <Compile Include="Assets\Scripts\排序算法\归并排序.cs" />
     <Compile Include="Assets\Scripts\2D_Dungeon\Prop.cs" />
+    <Compile Include="Assets\Scripts\BGScaler\BGController.cs" />
     <Compile Include="Assets\Scripts\L10_5游戏场景加载.cs" />
     <Compile Include="Assets\Scripts\L10_4数据存档.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
@@ -148,6 +154,7 @@
     <Compile Include="Assets\Scripts\时光倒流\Player.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
     <Compile Include="Assets\Scripts\3.1-4 委托\ActionClass.cs" />
+    <Compile Include="Assets\UI-DotLine\MeshDotLine.cs" />
     <Compile Include="Assets\Scripts\3.1-4 委托\delegateClass.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\Scripts\2.8-13\Sealed.cs" />
@@ -165,13 +172,16 @@
     <Compile Include="Assets\Scripts\特性\Obsolete.cs" />
     <Compile Include="Assets\Scripts\StackClass.cs" />
     <Compile Include="Assets\Scripts\SealedClass.cs" />
+    <Compile Include="Assets\Scripts\对象池\Manager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\Scripts\排序算法\快速排序.cs" />
     <Compile Include="Assets\Scripts\L3_42D碰撞事件.cs" />
     <Compile Include="Assets\Scripts\MouseMoveCube.cs" />
     <Compile Include="Assets\Scripts\L2_11常用工具Class.cs" />
+    <Compile Include="Assets\Scripts\状态机\IdleState.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\Scripts\特性\Caller.cs" />
+    <Compile Include="Assets\UI-DotLine\GeoDotLineDemo.cs" />
     <Compile Include="Assets\Scripts\计时.cs" />
     <Compile Include="Assets\Scripts\Reflect.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
@@ -182,6 +192,8 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\Scripts\L10_6声息系统.cs" />
     <Compile Include="Assets\Scenes\2D_Dungeon\Cinemachine\CinemachineTest.cs" />
+    <Compile Include="Assets\Scripts\对象池\Stuff.cs" />
+    <Compile Include="Assets\Scripts\BreakGroundScroll.cs" />
     <Compile Include="Assets\Scripts\L6_7刚体移动.cs" />
     <Compile Include="Assets\Scripts\L4_5小球.cs" />
     <Compile Include="Assets\Scripts\2.8-13\TClass.cs" />
@@ -191,9 +203,6 @@
     <Compile Include="Assets\Scripts\L2_8生命周期.cs" />
     <Compile Include="Assets\Scripts\Extern.cs" />
     <Compile Include="Assets\Scripts\SpriteAndOverrideSprite.cs" />
-    <Compile Include="Assets\Scripts\状态机\IState.cs" />
-    <Compile Include="Assets\Scripts\状态机\IdleState.cs" />
-    <Compile Include="Assets\Scripts\状态机\FSM.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shader\NewUnlitShader.shader" />
@@ -214,6 +223,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\UI-DotLine\GeoDotLine.shader" />
     <None Include="Assets\Shader\笔记.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
@@ -222,8 +232,10 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\UI-DotLine\3DTextShader.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\UI-DotLine\DotLine.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
   </ItemGroup>
