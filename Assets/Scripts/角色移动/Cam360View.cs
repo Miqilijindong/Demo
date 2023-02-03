@@ -10,7 +10,7 @@ public class Cam360View : MonoBehaviour
     public float ySpeed = 200;
     public float mSpeed = 200;
     public float yMinLimit = -50;
-    public float yManLimit = 50;
+    public float yMaxLimit = 50;
     public float distance = 10;
     public float minDistance = 2;
     public float MaxDistance = 30;
@@ -37,7 +37,7 @@ public class Cam360View : MonoBehaviour
             {
                 x += Input.GetAxis("Mouse X") * xSpeed * 0.02f;
                 y -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
-                y = ClampAngle(y, yMinLimit, yManLimit);
+                y = ClampAngle(y, yMinLimit, yMaxLimit);
             }
             distance -= Input.GetAxis("Mouse ScrollWheel") * mSpeed;
             distance = Mathf.Clamp(distance, minDistance, MaxDistance);

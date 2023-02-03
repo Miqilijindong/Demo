@@ -76,6 +76,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
     <Compile Include="Assets\Scripts\L5_15UI事件2.cs" />
     <Compile Include="Assets\Scripts\Test.cs" />
+    <Compile Include="Assets\Scripts\spiderman\BaseSwing.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\Scripts\ITween\iTween.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="Assets\Scripts\3.1-4 委托\ClassFunc.cs" />
     <Compile Include="Assets\Scripts\排序算法\希尔排序.cs" />
     <Compile Include="Assets\Scripts\2.8-13\TInterfact.cs" />
+    <Compile Include="Assets\Scripts\spiderman\MoveCam.cs" />
     <Compile Include="Assets\Scripts\LoginPanelClass.cs" />
     <Compile Include="Assets\Scripts\AnimationController\L8_4Demo.cs" />
     <Compile Include="Assets\Scripts\L10_2实例化.cs" />
@@ -126,6 +128,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
+    <Compile Include="Assets\Scripts\spiderman\UIManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
     <Compile Include="Assets\Scripts\BGScaler\CameraController_Scaler.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
@@ -136,7 +139,9 @@
     <Compile Include="Assets\Scripts\L10案例.cs" />
     <Compile Include="Assets\Scripts\L5_15UI事件.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
+    <Compile Include="Assets\Scripts\向量.cs" />
     <Compile Include="Assets\Scripts\EventTriggerClass.cs" />
+    <Compile Include="Assets\Scripts\spiderman\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\排序算法\归并排序.cs" />
     <Compile Include="Assets\Scripts\2D_Dungeon\Prop.cs" />
     <Compile Include="Assets\Scripts\BGScaler\BGController.cs" />
@@ -196,6 +201,7 @@
     <Compile Include="Assets\Scripts\BreakGroundScroll.cs" />
     <Compile Include="Assets\Scripts\L6_7刚体移动.cs" />
     <Compile Include="Assets\Scripts\L4_5小球.cs" />
+    <Compile Include="Assets\Scripts\spiderman\PlayerCam.cs" />
     <Compile Include="Assets\Scripts\2.8-13\TClass.cs" />
     <Compile Include="Assets\Scripts\方块保卫战\enemyClass.cs" />
     <Compile Include="Assets\Scenes\2D_Dungeon\Cinemachine\CameraController.cs" />
@@ -203,6 +209,7 @@
     <Compile Include="Assets\Scripts\L2_8生命周期.cs" />
     <Compile Include="Assets\Scripts\Extern.cs" />
     <Compile Include="Assets\Scripts\SpriteAndOverrideSprite.cs" />
+    <Compile Include="Assets\Scripts\spiderman\Sliding.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shader\NewUnlitShader.shader" />
@@ -918,6 +925,9 @@
     <Reference Include="Unity.2D.IK.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.IK.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.ProBuilder">
+      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.2D.Path.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Path.Editor.dll</HintPath>
     </Reference>
@@ -984,6 +994,9 @@
     <Reference Include="PPv2URPConverters">
       <HintPath>Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.ProBuilder.AddOns.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.AddOns.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
@@ -1011,6 +1024,9 @@
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.ProBuilder.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
     </Reference>
@@ -1037,6 +1053,9 @@
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
+      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Shared.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>

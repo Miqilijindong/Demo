@@ -19,7 +19,7 @@ public class L3_32D刚体 : MonoBehaviour
         // 改变力
         rigidbody2D.velocity = new Vector2(0, 1);
 
-        // 施加力
+        // 施加力---如果是跟刚体相关的话，最好用FixedUpdate，跟物理逻辑相关的代码
         //rigidbody2D.AddForce(Vector2.up);
 
     }
