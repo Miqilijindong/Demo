@@ -152,6 +152,7 @@
     <Compile Include="Assets\Scripts\L2_10协同程序Class.cs" />
     <Compile Include="Assets\Scripts\方块保卫战\UIManager.cs" />
     <Compile Include="Assets\Scripts\L5_6Toggle.cs" />
+    <Compile Include="Assets\Scripts\spiderman\WallRunning.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
     <Compile Include="Assets\Scripts\排序算法\基数排序.cs" />
     <Compile Include="Assets\Scripts\排序算法\插入排序.cs" />
@@ -204,12 +205,12 @@
     <Compile Include="Assets\Scripts\spiderman\PlayerCam.cs" />
     <Compile Include="Assets\Scripts\2.8-13\TClass.cs" />
     <Compile Include="Assets\Scripts\方块保卫战\enemyClass.cs" />
+    <Compile Include="Assets\Scripts\spiderman\Sliding.cs" />
     <Compile Include="Assets\Scenes\2D_Dungeon\Cinemachine\CameraController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\Scripts\L2_8生命周期.cs" />
     <Compile Include="Assets\Scripts\Extern.cs" />
     <Compile Include="Assets\Scripts\SpriteAndOverrideSprite.cs" />
-    <Compile Include="Assets\Scripts\spiderman\Sliding.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shader\NewUnlitShader.shader" />

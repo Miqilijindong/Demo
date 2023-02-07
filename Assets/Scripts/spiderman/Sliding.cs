@@ -29,8 +29,6 @@ public class Sliding : MonoBehaviour
     private float horizontalInput;
     private float verticalInput;
 
-    private bool sliding;
-
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -49,7 +47,7 @@ public class Sliding : MonoBehaviour
             StartSlide();
         }
 
-        if (Input.GetKeyUp(slideKey) && sliding)
+        if (Input.GetKeyUp(slideKey) && pm.sliding)
         {
             StopSlide();
         }
@@ -57,7 +55,7 @@ public class Sliding : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (sliding)
+        if (pm.sliding)
         {
             SlideMovement();
         }
@@ -65,7 +63,7 @@ public class Sliding : MonoBehaviour
 
     private void StartSlide()
     {
-        sliding = true;
+        pm.sliding = true;
 
         playerObj.localScale = new Vector3(playerObj.localScale.x, slideYScale, playerObj.localScale.z);
         rb.AddForce(Vector3.down * 5f, ForceMode.Impulse);
@@ -73,10 +71,14 @@ public class Sliding : MonoBehaviour
         sliderTimer = maxSlideTime;
     }
 
+    /// <summary>
+    /// 下蹲滑铲
+    /// </summary>
     private void SlideMovement()
     {
         Vector3 inputDirection = verticalInput * orientation.forward + horizontalInput * orientation.right;
 
+        // 问题一:如果是在斜坡且向上滑铲的话，会一直走else，然后就会无限滑铲
         if (!pm.OnSlope() && rb.velocity.y > -0.1f)
         {
             rb.AddForce(inputDirection.normalized * slideForce, ForceMode.Force);
@@ -97,7 +99,7 @@ public class Sliding : MonoBehaviour
 
     public void StopSlide()
     {
-        sliding = false;
+        pm.sliding = false;
 
         playerObj.localScale = new Vector3(playerObj.localScale.x, startYScale, playerObj.localScale.z);
     }

@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+///  Input.GetAxisRaw  当在游戏运行的时候,按下你设置好的键盘就会返回 1和-1这两个值
+///  Input.GetAxis 当按下你设置的建则会返回一个类似加速度的值  0.1-->0.3 -->0.1然后将会依次减少..类似刹车和开车.
+/// </summary>
 public class L8_7角色控制 : MonoBehaviour
 {
     public CharacterController characterController;

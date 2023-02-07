@@ -10,12 +10,23 @@ public class PlayerMovement : MonoBehaviour
     private float moveSpeed;
     public float walkSpeed;
     /// <summary>
-    /// å†²åˆºé€Ÿåº¦
+    /// ³å´ÌËÙ¶È
     /// </summary>
     public float sprintSpeed;
+    /// <summary>
+    ///  »¬²ùËÙ¶È
+    /// </summary>
+    public float slideSpeed;
+    public float wallRunSpeed;
+
+    private float desiredMoveSpeed;
+    private float lastDesiredMoveSpeed;
+
+    public float speedIncreaseMultiplier;
+    public float slopeIncreaseMultiplier;
 
     /// <summary>
-    /// åœ°é¢é˜»åŠ›
+    /// µØÃæ×èÁ¦
     /// </summary>
     public float groundDrag;
 
@@ -30,16 +41,16 @@ public class PlayerMovement : MonoBehaviour
     public float crouchYScale;
     private float startYScale;
 
-    [Header("Keybings")]
+    [Header("Keybinds")]
     public KeyCode jumpKey = KeyCode.Space;
     public KeyCode SprintKey = KeyCode.LeftShift;
-    public KeyCode crouchKey = KeyCode.LeftControl;
+    public KeyCode crouchKey = KeyCode.C;
 
     /// <summary>
-    /// åœ°é¢åˆ¤æ–­
+    /// µØÃæÅĞ¶Ï
     /// </summary>
     [Header("Ground Check")]
-    //[Tooltip("åœ°é¢åˆ¤æ–­")]// ç¼–è¾‘å™¨æ³¨é‡Š
+    //[Tooltip("µØÃæÅĞ¶Ï")]// ±à¼­Æ÷×¢ÊÍ
     public float playerHeight;
     public LayerMask whatIsGround;
     bool grounded;
@@ -56,11 +67,18 @@ public class PlayerMovement : MonoBehaviour
     {
         walking,
         sprinting,
+        wallruning,
         crouching,
+        sliding,
         air
     }
 
-    public TMP_Text SpeedText;
+    public bool sliding;
+    public bool crouching;
+    public bool wallrunning;
+
+    public TMP_Text text_speed;
+    public TMP_Text text_mode;
 
     float horizontalInput;
     float verticalInput;
@@ -81,26 +99,27 @@ public class PlayerMovement : MonoBehaviour
         startYScale = transform.localScale.y;
 
         rb.freezeRotation = true;
-        //-None          ä¸åº”ç”¨æ’å€¼ã€‚
-        //-Interpolate   æ ¹æ®å‰ä¸€å¸§çš„å˜æ¢æ¥å¹³æ»‘å˜æ¢ã€‚
-        //-Extrapolate   æ ¹æ®ä¸‹ä¸€å¸§çš„ä¼°è®¡å˜æ¢æ¥å¹³æ»‘å˜æ¢ã€‚
+        //-None          ²»Ó¦ÓÃ²åÖµ¡£
+        //-Interpolate   ¸ù¾İÇ°Ò»Ö¡µÄ±ä»»À´Æ½»¬±ä»»¡£
+        //-Extrapolate   ¸ù¾İÏÂÒ»Ö¡µÄ¹À¼Æ±ä»»À´Æ½»¬±ä»»¡£
         rb.interpolation = RigidbodyInterpolation.Interpolate;
-        //Collision Detection ç”¨äºé˜²æ­¢å¿«é€Ÿç§»åŠ¨çš„å¯¹è±¡ç©¿è¿‡å…¶ä»–å¯¹è±¡è€Œä¸æ£€æµ‹ç¢°æ’ã€‚
-        //-Discrete                 å¯¹åœºæ™¯ä¸­çš„æ‰€æœ‰å…¶ä»–ç¢°æ’ä½“ä½¿ç”¨ç¦»æ•£ç¢°æ’æ£€æµ‹ã€‚å…¶ä»–ç¢°æ’ä½“åœ¨æµ‹è¯•ç¢°æ’æ—¶ä¼šä½¿ç”¨ç¦»æ•£ç¢°æ’æ£€æµ‹ã€‚ç”¨äºæ­£å¸¸ç¢°æ’ï¼ˆè¿™æ˜¯é»˜è®¤å€¼ï¼‰ã€‚
-        //-Continuous               å¯¹åŠ¨æ€ç¢°æ’ä½“ï¼ˆå…·æœ‰åˆšä½“ï¼‰ä½¿ç”¨ç¦»æ•£ç¢°æ’æ£€æµ‹ï¼Œå¹¶å¯¹é™æ€ç¢°æ’ä½“ï¼ˆæ²¡æœ‰åˆšä½“ï¼‰ä½¿ç”¨åŸºäºæ‰«æ çš„è¿ç»­ç¢°æ’æ£€æµ‹ã€‚è®¾ç½®ä¸º__è¿ç»­åŠ¨æ€(Continuous Dynamic)__ çš„åˆšä½“å°†åœ¨æµ‹è¯•ä¸è¯¥åˆšä½“çš„ç¢°æ’æ—¶ä½¿ç”¨è¿ç»­ç¢°æ’æ£€æµ‹ã€‚å…¶ä»–åˆšä½“å°†ä½¿ç”¨ç¦»æ•£ç¢°æ’æ£€æµ‹ã€‚ç”¨äº__è¿ç»­åŠ¨æ€(Continuous Dynamic)__ æ£€æµ‹éœ€è¦ç¢°æ’çš„å¯¹è±¡ã€‚ï¼ˆæ­¤å±æ€§å¯¹ç‰©ç†æ€§èƒ½æœ‰å¾ˆå¤§å½±å“ï¼Œå¦‚æœæ²¡æœ‰å¿«é€Ÿå¯¹è±¡çš„ç¢°æ’é—®é¢˜ï¼Œè¯·å°†å…¶ä¿ç•™ä¸º Discrete è®¾ç½®ï¼‰
-        //-Continuous Dynamic       å¯¹è®¾ç½®ä¸º__è¿ç»­(Continuous)__ å’Œ__è¿ç»­åŠ¨æ€(Continuous Dynamic)__ ç¢°æ’çš„æ¸¸æˆå¯¹è±¡ä½¿ç”¨åŸºäºæ‰«æ çš„è¿ç»­ç¢°æ’æ£€æµ‹ã€‚è¿˜å°†å¯¹é™æ€ç¢°æ’ä½“ï¼ˆæ²¡æœ‰åˆšä½“ï¼‰ä½¿ç”¨è¿ç»­ç¢°æ’æ£€æµ‹ã€‚å¯¹äºæ‰€æœ‰å…¶ä»–ç¢°æ’ä½“ï¼Œä½¿ç”¨ç¦»æ•£ç¢°æ’æ£€æµ‹ã€‚ç”¨äºå¿«é€Ÿç§»åŠ¨çš„å¯¹è±¡ã€‚
-        //-Continuous Speculative   å¯¹åˆšä½“å’Œç¢°æ’ä½“ä½¿ç”¨æ¨æµ‹æ€§è¿ç»­ç¢°æ’æ£€æµ‹ã€‚è¿™ä¹Ÿæ˜¯å¯ä»¥è®¾ç½®è¿åŠ¨ç‰©ä½“çš„å”¯ä¸€ CCD æ¨¡å¼ã€‚è¯¥æ–¹æ³•é€šå¸¸æ¯”åŸºäºæ‰«æ çš„è¿ç»­ç¢°æ’æ£€æµ‹çš„æˆæœ¬æ›´ä½ã€‚
+        //Collision Detection ÓÃÓÚ·ÀÖ¹¿ìËÙÒÆ¶¯µÄ¶ÔÏó´©¹ıÆäËû¶ÔÏó¶ø²»¼ì²âÅö×²¡£
+        //-Discrete                 ¶Ô³¡¾°ÖĞµÄËùÓĞÆäËûÅö×²ÌåÊ¹ÓÃÀëÉ¢Åö×²¼ì²â¡£ÆäËûÅö×²ÌåÔÚ²âÊÔÅö×²Ê±»áÊ¹ÓÃÀëÉ¢Åö×²¼ì²â¡£ÓÃÓÚÕı³£Åö×²£¨ÕâÊÇÄ¬ÈÏÖµ£©¡£
+        //-Continuous               ¶Ô¶¯Ì¬Åö×²Ìå£¨¾ßÓĞ¸ÕÌå£©Ê¹ÓÃÀëÉ¢Åö×²¼ì²â£¬²¢¶Ô¾²Ì¬Åö×²Ìå£¨Ã»ÓĞ¸ÕÌå£©Ê¹ÓÃ»ùÓÚÉ¨ÂÓµÄÁ¬ĞøÅö×²¼ì²â¡£ÉèÖÃÎª__Á¬Ğø¶¯Ì¬(Continuous Dynamic)__ µÄ¸ÕÌå½«ÔÚ²âÊÔÓë¸Ã¸ÕÌåµÄÅö×²Ê±Ê¹ÓÃÁ¬ĞøÅö×²¼ì²â¡£ÆäËû¸ÕÌå½«Ê¹ÓÃÀëÉ¢Åö×²¼ì²â¡£ÓÃÓÚ__Á¬Ğø¶¯Ì¬(Continuous Dynamic)__ ¼ì²âĞèÒªÅö×²µÄ¶ÔÏó¡££¨´ËÊôĞÔ¶ÔÎïÀíĞÔÄÜÓĞºÜ´óÓ°Ïì£¬Èç¹ûÃ»ÓĞ¿ìËÙ¶ÔÏóµÄÅö×²ÎÊÌâ£¬Çë½«Æä±£ÁôÎª Discrete ÉèÖÃ£©
+        //-Continuous Dynamic       ¶ÔÉèÖÃÎª__Á¬Ğø(Continuous)__ ºÍ__Á¬Ğø¶¯Ì¬(Continuous Dynamic)__ Åö×²µÄÓÎÏ·¶ÔÏóÊ¹ÓÃ»ùÓÚÉ¨ÂÓµÄÁ¬ĞøÅö×²¼ì²â¡£»¹½«¶Ô¾²Ì¬Åö×²Ìå£¨Ã»ÓĞ¸ÕÌå£©Ê¹ÓÃÁ¬ĞøÅö×²¼ì²â¡£¶ÔÓÚËùÓĞÆäËûÅö×²Ìå£¬Ê¹ÓÃÀëÉ¢Åö×²¼ì²â¡£ÓÃÓÚ¿ìËÙÒÆ¶¯µÄ¶ÔÏó¡£
+        //-Continuous Speculative   ¶Ô¸ÕÌåºÍÅö×²ÌåÊ¹ÓÃÍÆ²âĞÔÁ¬ĞøÅö×²¼ì²â¡£ÕâÒ²ÊÇ¿ÉÒÔÉèÖÃÔË¶¯ÎïÌåµÄÎ¨Ò» CCD Ä£Ê½¡£¸Ã·½·¨Í¨³£±È»ùÓÚÉ¨ÂÓµÄÁ¬ĞøÅö×²¼ì²âµÄ³É±¾¸üµÍ¡£
         rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
     }
 
     private void Update()
     {
-        // åœ°é¢å°„çº¿åˆ¤æ–­
+        // µØÃæÉäÏßÅĞ¶Ï
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
 
         MyInput();
         SpeedControl();
         StateHandler();
+        TextStuff();
 
         if (grounded)
         {
@@ -119,8 +138,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void MyInput()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
-        verticalInput = Input.GetAxis("Vertical");
+        horizontalInput = Input.GetAxisRaw("Horizontal");
+        verticalInput = Input.GetAxisRaw("Vertical");
 
         if (Input.GetKey(jumpKey) && readyToJump && grounded)
         {
@@ -131,14 +150,14 @@ public class PlayerMovement : MonoBehaviour
             Invoke(nameof(ResetJump), jumpCoolDown);
         }
 
-        // å¼€å§‹è¹²ä¸‹
+        // ¿ªÊ¼¶×ÏÂ
         if (Input.GetKeyDown(crouchKey))
         {
             transform.localScale = new Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
             rb.AddForce(Vector3.down * 5f, ForceMode.Impulse);
         }
 
-        // åœæ­¢è¹²ä¸‹
+        // Í£Ö¹¶×ÏÂ
         if (Input.GetKeyUp(crouchKey))
         {
             transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
@@ -147,52 +166,108 @@ public class PlayerMovement : MonoBehaviour
 
     public void StateHandler()
     {
-        if (Input.GetKey(crouchKey))
+        if (wallrunning)
+        {
+            state = MovementState.wallruning;
+            desiredMoveSpeed = wallRunSpeed;
+        }
+        else if (sliding)
+        {
+            state = MovementState.sliding;
+
+            if (OnSlope() && rb.velocity.y < 0.1f)
+            {
+                desiredMoveSpeed = slideSpeed;
+            }
+            else
+            {
+                desiredMoveSpeed = crouchSpeed;
+            }
+        }
+
+        else if (Input.GetKey(crouchKey))
         {
             state = MovementState.crouching;
-            moveSpeed = crouchSpeed;
+            desiredMoveSpeed = crouchSpeed;
         }
         else if (grounded && Input.GetKey(SprintKey))
         {
             state = MovementState.sprinting;
-            moveSpeed = sprintSpeed;
+            desiredMoveSpeed = sprintSpeed;
         }
         else if (grounded)
         {
             state = MovementState.walking;
-            moveSpeed = walkSpeed;
+            desiredMoveSpeed = walkSpeed;
         }
         else
         {
             state = MovementState.air;
         }
+
+        if (Mathf.Abs(desiredMoveSpeed - lastDesiredMoveSpeed) > 4f && moveSpeed != 0)
+        {
+            StopAllCoroutines();
+            StartCoroutine(SmoothlyLerpMoveSpeed());
+        }
+        else
+        {
+            moveSpeed = desiredMoveSpeed;
+        }
+
+        lastDesiredMoveSpeed = desiredMoveSpeed;
+    }
+
+    private IEnumerator SmoothlyLerpMoveSpeed()
+    {
+        float time = 0;
+        float difference = Mathf.Abs(desiredMoveSpeed - moveSpeed);
+        float startValue = moveSpeed;
+
+        while (time < difference)
+        {
+            moveSpeed = Mathf.Lerp(startValue, desiredMoveSpeed, time / difference);
+
+            if (OnSlope())
+            {
+                float slopeAngle = Vector3.Angle(Vector3.up, slopeHit.normal);
+                float slopeAngleIncrease = 1 + (slopeAngle / 90f);
+
+                time += Time.deltaTime * speedIncreaseMultiplier * slopeIncreaseMultiplier * slopeAngleIncrease;
+            }
+            else
+            {
+                time += Time.deltaTime * speedIncreaseMultiplier;
+            }
+            yield return null;
+        }
+
+        moveSpeed = desiredMoveSpeed;
     }
 
     public void MovePlayer()
     {
-        // è®¡ç®—ç§»åŠ¨ä½ç½®
+        // ¼ÆËãÒÆ¶¯Î»ÖÃ
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
-        // åˆ¤æ–­æ˜¯å¦åœ¨æ–œé¢
+        // ÅĞ¶ÏÊÇ·ñÔÚĞ±Ãæ
         if (OnSlope() && !exitingSlope)
         {
-            Vector3 slopeVec = GetSlopeMoveDirection(moveDirection);
-            rb.AddForce(slopeVec.normalized * moveSpeed * 20f, ForceMode.Force);
+            rb.AddForce(GetSlopeMoveDirection(moveDirection) * moveSpeed * 20f, ForceMode.Force);
 
             if (rb.velocity.y > 0)
             {
-                // è¿™é‡Œæ˜¯åº”ä¸ºèµ°ä¸Šæ–œå¡ï¼Œç„¶åä¼šå¼¹è·³
+                // ÕâÀïÊÇÓ¦Îª×ßÉÏĞ±ÆÂ£¬È»ºó»áµ¯Ìø
                 rb.AddForce(Vector3.down * 80f, ForceMode.Force);
             }
         }
-
-        if (grounded)
+        else if (grounded)
         {
-            // Accelerationã€Forceã€Impulse å’Œ VelocityChange
-            //Accelerationï¼š     æ— è§†ç‰©ä½“åˆšä½“è´¨é‡ç»™å…¶æ–½åŠ åŠ é€Ÿåº¦ã€‚
-            //Forceï¼š            å‘åˆšä½“æ–½åŠ è¿ç»­çš„åŠ›ï¼ˆæ„å‘³ç€ç‰©ä½“å—åˆ°forceå‚æ•°çš„åŠ›ï¼Œæ—¶é—´ä¸ºä¸€å¸§çš„æ—¶é—´ï¼‰ï¼Œè€ƒè™‘å…¶è´¨é‡ï¼Œå³åŒæ ·çš„åŠ›æ–½åŠ åœ¨è¶Šé‡çš„ç‰©ä½“ä¸Šäº§ç”Ÿçš„åŠ é€Ÿåº¦è¶Šå°ã€‚
-            //Impulseï¼š          å‘åˆšä½“æ–½åŠ ç¬æ—¶çš„åŠ›ï¼ˆç›¸å½“äºç‰©ä½“ç¬é—´è·å¾—å—åˆ°forceå‚æ•°çš„åŠ›å½±å“ä¸€ç§’é’Ÿæ—¶é—´çš„æ•ˆæœï¼‰ï¼Œè€ƒè™‘å…¶è´¨é‡ï¼Œå³åŒæ ·çš„åŠ›æ–½åŠ åœ¨è¶Šé‡çš„ç‰©ä½“ä¸Šäº§ç”Ÿçš„åŠ é€Ÿåº¦è¶Šå°ã€‚
-            //VelocityChangeï¼š   æ— è§†åˆšä½“è´¨é‡åœ¨ç‰©ä½“åŸæœ‰é€Ÿåº¦çš„åŸºç¡€ä¸Šç»™ç‰©ä½“æ–½åŠ ä¸€ä¸ªé€Ÿåº¦å‘é‡ã€‚
+            // Acceleration¡¢Force¡¢Impulse ºÍ VelocityChange
+            //Acceleration£º     ÎŞÊÓÎïÌå¸ÕÌåÖÊÁ¿¸øÆäÊ©¼Ó¼ÓËÙ¶È¡£
+            //Force£º            Ïò¸ÕÌåÊ©¼ÓÁ¬ĞøµÄÁ¦£¨ÒâÎ¶×ÅÎïÌåÊÜµ½force²ÎÊıµÄÁ¦£¬Ê±¼äÎªÒ»Ö¡µÄÊ±¼ä£©£¬¿¼ÂÇÆäÖÊÁ¿£¬¼´Í¬ÑùµÄÁ¦Ê©¼ÓÔÚÔ½ÖØµÄÎïÌåÉÏ²úÉúµÄ¼ÓËÙ¶ÈÔ½Ğ¡¡£
+            //Impulse£º          Ïò¸ÕÌåÊ©¼ÓË²Ê±µÄÁ¦£¨Ïàµ±ÓÚÎïÌåË²¼ä»ñµÃÊÜµ½force²ÎÊıµÄÁ¦Ó°ÏìÒ»ÃëÖÓÊ±¼äµÄĞ§¹û£©£¬¿¼ÂÇÆäÖÊÁ¿£¬¼´Í¬ÑùµÄÁ¦Ê©¼ÓÔÚÔ½ÖØµÄÎïÌåÉÏ²úÉúµÄ¼ÓËÙ¶ÈÔ½Ğ¡¡£
+            //VelocityChange£º   ÎŞÊÓ¸ÕÌåÖÊÁ¿ÔÚÎïÌåÔ­ÓĞËÙ¶ÈµÄ»ù´¡ÉÏ¸øÎïÌåÊ©¼ÓÒ»¸öËÙ¶ÈÏòÁ¿¡£
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
         }
         else if (!grounded)
@@ -203,14 +278,17 @@ public class PlayerMovement : MonoBehaviour
         rb.useGravity = !OnSlope();
     }
 
+    float test;
+
     /// <summary>
-    /// æ§åˆ¶é€Ÿåº¦
-    /// è¿™é‡Œæœ‰ä¸ªé—®é¢˜ï¼Œå› ä¸ºåˆšä½“æ–½åŠ åŠ›æ˜¯åœ¨FixedUpdateé‡ŒåŠ çš„ï¼Œç„¶åæ§åˆ¶é€Ÿåº¦å´æ˜¯åœ¨Updateé‡ŒåŠ çš„ï¼Œå¯¼è‡´ä¼šæœ‰æ–­æ–­ç»­ç»­çš„é€Ÿåº¦è¶…è¿‡moveSpeed
-    /// å¦‚æœå¸§é€Ÿè¿‡ä½ï¼Œå°±ä¼šå¯¼è‡´é€Ÿåº¦çªç ´moveSpeed
+    /// ¿ØÖÆËÙ¶È
+    /// ÕâÀïÓĞ¸öÎÊÌâ£¬ÒòÎª¸ÕÌåÊ©¼ÓÁ¦ÊÇÔÚFixedUpdateÀï¼ÓµÄ£¬È»ºó¿ØÖÆËÙ¶ÈÈ´ÊÇÔÚUpdateÀï¼ÓµÄ£¬µ¼ÖÂ»áÓĞ¶Ï¶ÏĞøĞøµÄËÙ¶È³¬¹ımoveSpeed
+    /// Èç¹ûÖ¡ËÙ¹ıµÍ£¬¾Í»áµ¼ÖÂËÙ¶ÈÍ»ÆÆmoveSpeed
     /// </summary>
     private void SpeedControl()
     {
-        if (OnSlope() && !exitingSlope)
+        bool v = OnSlope();
+        if (v && !exitingSlope)
         {
             if (rb.velocity.magnitude > moveSpeed)
             {
@@ -229,18 +307,22 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-
-        SpeedText.text = "Speed:" + rb.velocity.magnitude.ToString("f0");
+        //if (rb.velocity.magnitude < test)
+        //{
+        //    Debug.Log("´òÓ¡ÈÕÖ¾");
+        //}
+        //test = rb.velocity.magnitude;
+        //SpeedText.text = "Speed:" + rb.velocity.magnitude.ToString("f1");
     }
 
     public void Jump()
     {
         exitingSlope = true;
 
-        // é‡ç½®é€Ÿç‡
+        // ÖØÖÃËÙÂÊ
         rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
-        // æ–½åŠ ä¸€ä¸ªç¬æ—¶çš„åŠ›
+        // Ê©¼ÓÒ»¸öË²Ê±µÄÁ¦
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
     }
 
@@ -255,12 +337,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Physics.Raycast(transform.position, Vector3.down, out slopeHit, playerHeight * 0.5f + 0.3f))
         {
-            // raycashhit.normal = æ³•çº¿
+            // raycashhit.normal = ·¨Ïß
             float angle = Vector3.Angle(Vector3.up, slopeHit.normal);
-            if (angle < maxSlopeAngle && angle != 0)
-            {
-                return true;
-            }
+            return angle < maxSlopeAngle && angle != 0;
         }
 
         return false;
@@ -269,5 +348,24 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 GetSlopeMoveDirection(Vector3 direction)
     {
         return Vector3.ProjectOnPlane(direction, slopeHit.normal).normalized;
+    }
+
+    private void TextStuff()
+    {
+        Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+
+        if (OnSlope())
+            text_speed.SetText("Speed: " + Round(rb.velocity.magnitude, 1) + " / " + Round(moveSpeed, 1));
+
+        else
+            text_speed.SetText("Speed: " + Round(flatVel.magnitude, 1) + " / " + Round(moveSpeed, 1));
+
+        text_mode.SetText(state.ToString());
+    }
+
+    public static float Round(float value, int digits)
+    {
+        float mult = Mathf.Pow(10.0f, (float)digits);
+        return Mathf.Round(value * mult) / mult;
     }
 }
