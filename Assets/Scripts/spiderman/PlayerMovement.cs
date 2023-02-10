@@ -18,7 +18,12 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     public float slideSpeed;
     public float wallRunSpeed;
+    public float climbSpeed;
+    public float airMinSpeed;
 
+    /// <summary>
+    /// 设定的移速
+    /// </summary>
     private float desiredMoveSpeed;
     private float lastDesiredMoveSpeed;
 
@@ -53,12 +58,16 @@ public class PlayerMovement : MonoBehaviour
     //[Tooltip("地面判断")]// 编辑器注释
     public float playerHeight;
     public LayerMask whatIsGround;
-    bool grounded;
+    public LayerMask whatIsWall;
+    public bool grounded;
 
     [Header("Slope Handling")]
     public float maxSlopeAngle;
     private RaycastHit slopeHit;
     private bool exitingSlope;
+
+    [Header("References")]
+    public Climbing climbingScript;
 
     public Transform orientation;
 
@@ -68,6 +77,7 @@ public class PlayerMovement : MonoBehaviour
         walking,
         sprinting,
         wallruning,
+        climbing,
         crouching,
         sliding,
         air
@@ -75,7 +85,11 @@ public class PlayerMovement : MonoBehaviour
 
     public bool sliding;
     public bool crouching;
+    /// <summary>
+    /// 是否在靠墙跑
+    /// </summary>
     public bool wallrunning;
+    public bool climbing;
 
     public TMP_Text text_speed;
     public TMP_Text text_mode;
@@ -115,6 +129,7 @@ public class PlayerMovement : MonoBehaviour
     {
         // 地面射线判断
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
+        grounded = grounded ? grounded : Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsWall);
 
         MyInput();
         SpeedControl();
@@ -166,6 +181,11 @@ public class PlayerMovement : MonoBehaviour
 
     public void StateHandler()
     {
+        if (climbing)
+        {
+            state = MovementState.climbing;
+            desiredMoveSpeed = climbSpeed;
+        }
         if (wallrunning)
         {
             state = MovementState.wallruning;
@@ -203,6 +223,9 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             state = MovementState.air;
+
+            if (moveSpeed < airMinSpeed)
+                desiredMoveSpeed = airMinSpeed;
         }
 
         if (Mathf.Abs(desiredMoveSpeed - lastDesiredMoveSpeed) > 4f && moveSpeed != 0)
@@ -247,6 +270,10 @@ public class PlayerMovement : MonoBehaviour
 
     public void MovePlayer()
     {
+        if (climbingScript.exitingWall)
+        {
+            return;
+        }
         // 计算移动位置
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
@@ -275,7 +302,10 @@ public class PlayerMovement : MonoBehaviour
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
         }
 
-        rb.useGravity = !OnSlope();
+        if (!wallrunning)
+        {
+            rb.useGravity = !OnSlope();
+        }
     }
 
     float test;

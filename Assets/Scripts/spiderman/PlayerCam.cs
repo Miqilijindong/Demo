@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 /// <summary>
 /// 玩家摄像机类
@@ -16,6 +17,7 @@ public class PlayerCam : MonoBehaviour
     /// 如果是Pivot(中心点)的话，就只是当前物体的中心点上。
     /// </summary>
     public Transform Orientation;
+    public Transform camHolder;
 
     float xRotation;
     float yRotation;
@@ -42,7 +44,18 @@ public class PlayerCam : MonoBehaviour
 
         xRotation  = Mathf.Clamp(xRotation, -90, 90);
 
-        transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
+        camHolder.rotation = Quaternion.Euler(xRotation, yRotation, 0);
         Orientation.rotation = Quaternion.Euler(0, yRotation, 0);
+    }
+
+    public void DoFov(float endValue)
+    {
+        // 修改摄像机的视野 
+        GetComponent<Camera>().DOFieldOfView(endValue, 0.25f);
+    }
+
+    public void DoTile(float zTilt)
+    {
+        transform.DOLocalRotate(new Vector3(0, 0, zTilt), 0.25f);
     }
 }
