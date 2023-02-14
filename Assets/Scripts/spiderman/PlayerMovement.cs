@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     public float slideSpeed;
     public float wallRunSpeed;
     public float climbSpeed;
+    public float vaultSpeed;
     public float airMinSpeed;
 
     /// <summary>
@@ -74,10 +75,13 @@ public class PlayerMovement : MonoBehaviour
     public MovementState state;
     public enum MovementState
     {
+        freeze,
+        unlimited,
         walking,
         sprinting,
         wallruning,
         climbing,
+        vaulting,
         crouching,
         sliding,
         air
@@ -90,6 +94,11 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     public bool wallrunning;
     public bool climbing;
+    public bool vaulting;
+    public bool freeze;
+    public bool unlimited;
+
+    public bool restricted;
 
     public TMP_Text text_speed;
     public TMP_Text text_mode;
@@ -179,14 +188,32 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    bool keepMomentum;
     public void StateHandler()
     {
-        if (climbing)
+        if (freeze)
+        {
+            state = MovementState.freeze;
+            rb.velocity = Vector3.zero;
+            desiredMoveSpeed = 0f;
+        }
+        else if (unlimited)
+        {
+            state = MovementState.unlimited;
+            desiredMoveSpeed = 999f;
+        }
+        else if (vaulting)
+        {
+            state = MovementState.vaulting;
+            desiredMoveSpeed = vaultSpeed;
+        }
+
+        else if (climbing)
         {
             state = MovementState.climbing;
             desiredMoveSpeed = climbSpeed;
         }
-        if (wallrunning)
+        else if (wallrunning)
         {
             state = MovementState.wallruning;
             desiredMoveSpeed = wallRunSpeed;
@@ -198,6 +225,7 @@ public class PlayerMovement : MonoBehaviour
             if (OnSlope() && rb.velocity.y < 0.1f)
             {
                 desiredMoveSpeed = slideSpeed;
+                keepMomentum = true;
             }
             else
             {
@@ -228,7 +256,7 @@ public class PlayerMovement : MonoBehaviour
                 desiredMoveSpeed = airMinSpeed;
         }
 
-        if (Mathf.Abs(desiredMoveSpeed - lastDesiredMoveSpeed) > 4f && moveSpeed != 0)
+        /*if (Mathf.Abs(desiredMoveSpeed - lastDesiredMoveSpeed) > 4f && moveSpeed != 0)
         {
             StopAllCoroutines();
             StartCoroutine(SmoothlyLerpMoveSpeed());
@@ -238,7 +266,26 @@ public class PlayerMovement : MonoBehaviour
             moveSpeed = desiredMoveSpeed;
         }
 
+        lastDesiredMoveSpeed = desiredMoveSpeed;*/
+
+        bool desiredMoveSpeedHasChanged = desiredMoveSpeed != lastDesiredMoveSpeed;
+
+        if (desiredMoveSpeedHasChanged)
+        {
+            if (keepMomentum)
+            {
+                StopAllCoroutines();
+                StartCoroutine(SmoothlyLerpMoveSpeed());
+            }
+            else
+            {
+                moveSpeed = desiredMoveSpeed;
+            }
+        }
+
         lastDesiredMoveSpeed = desiredMoveSpeed;
+        // deactivate keepMomentum
+        if (Mathf.Abs(desiredMoveSpeed - moveSpeed) < 0.1f) keepMomentum = false;
     }
 
     private IEnumerator SmoothlyLerpMoveSpeed()
@@ -270,6 +317,8 @@ public class PlayerMovement : MonoBehaviour
 
     public void MovePlayer()
     {
+        if (restricted) return;
+
         if (climbingScript.exitingWall)
         {
             return;

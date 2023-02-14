@@ -63,12 +63,14 @@ public class WallRunning : MonoBehaviour
     public PlayerCam cam;
     private PlayerMovement pm;
     private Rigidbody rb;
+    private LedgeGrabbing lg;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         pm = GetComponent<PlayerMovement>();
+        lg = GetComponent<LedgeGrabbing>();
     }
 
     // Update is called once per frame
@@ -234,6 +236,11 @@ public class WallRunning : MonoBehaviour
     /// </summary>
     private void WallJump()
     {
+        if (lg.holding || lg.exitingLedge)
+        {
+            return;
+        }
+
         // ½øÈëÌø³öÅÀÇ½×´Ì¬
         exitingWall = true;
         exitWallTimer = exitWallTime;
