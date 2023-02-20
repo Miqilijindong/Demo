@@ -5,4 +5,5 @@ Cinemachine
 	首先Package Manager安装Cinemachine，然后右键就可以创建了，然后场景会多一个名为CM vcam1的物体，挂载这CinemachineVirtualCamera的组件
 	
 想要实现这种不会穿墙的摄像头效果，我们只需要在CinemachineVirtualCamera的Extensions中添加CinemachineCollider即可。
+其次可以修改Cinemachine Collider.strategy = Pull Camera Forward; 这样子的话，当物体挡住摄像机时，会直接变到旁边去，而不是慢慢拉进(这个方法很好的复刻了生化危机2的镜头切换)
 

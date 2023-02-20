@@ -27,7 +27,7 @@ public class CameraController_Scaler : MonoBehaviour
 
     private void SetCameraSize()
     {
-        cameraHeightSize = Screen.height / 100.0f;
+        cameraHeightSize = Screen.height / 100.0f;  
         gameCamera.orthographicSize = cameraHeightSize / 2.0f;
 
         float aspect = (float)Screen.height / (float)Screen.width;

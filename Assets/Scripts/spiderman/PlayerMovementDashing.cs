@@ -4,7 +4,12 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+/// <summary>
+/// 玩家运动冲刺版
+/// 打算用原版的了，不用这个
+/// </summary>
+[Obsolete]
+public class PlayerMovementDashing : MonoBehaviour
 {
     [Header("Movement")]
     private float moveSpeed;
@@ -20,14 +25,11 @@ public class PlayerMovement : MonoBehaviour
     public float wallRunSpeed;
     public float climbSpeed;
     public float vaultSpeed;
-    public float airMinSpeed;
     /// <summary>
     /// 弹射速度
     /// </summary>
     public float dashSpeed;
-    public float dashSpeedChangeFactor;
-
-    public float maxYSpeed;
+    public float airMinSpeed;
 
     /// <summary>
     /// 设定的移速
@@ -197,20 +199,13 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// 保持动态延续
-    /// 类似滑铲一样
-    /// </summary>
-    public bool keepMomentum;
-    private MovementState lastState;
+    bool keepMomentum;
     public void StateHandler()
     {
         if (dashing)
         {
             state = MovementState.dashing;
             desiredMoveSpeed = dashSpeed;
-            speedChangeFactor = dashSpeedChangeFactor;
-            //keepMomentum = true;// 这里放有问题，会导致冲刺前的速度被延续了
         }
         else if (freeze)
         {
@@ -274,15 +269,8 @@ public class PlayerMovement : MonoBehaviour
             state = MovementState.air;
 
             if (moveSpeed < airMinSpeed)
-            {
                 desiredMoveSpeed = airMinSpeed;
-            }
-            else
-            {
-                desiredMoveSpeed = sprintSpeed;
-            }
         }
-
 
         /*if (Mathf.Abs(desiredMoveSpeed - lastDesiredMoveSpeed) > 4f && moveSpeed != 0)
         {
@@ -295,8 +283,8 @@ public class PlayerMovement : MonoBehaviour
         }
 
         lastDesiredMoveSpeed = desiredMoveSpeed;*/
+
         bool desiredMoveSpeedHasChanged = desiredMoveSpeed != lastDesiredMoveSpeed;
-        if (lastState == MovementState.dashing) keepMomentum = true;
 
         if (desiredMoveSpeedHasChanged)
         {
@@ -312,8 +300,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
         lastDesiredMoveSpeed = desiredMoveSpeed;
-        lastState = state;
-
         // deactivate keepMomentum
         if (Mathf.Abs(desiredMoveSpeed - moveSpeed) < 0.1f) keepMomentum = false;
     }
@@ -324,8 +310,6 @@ public class PlayerMovement : MonoBehaviour
         float time = 0;
         float difference = Mathf.Abs(desiredMoveSpeed - moveSpeed);
         float startValue = moveSpeed;
-
-        float boostFactor = speedChangeFactor;
 
         while (time < difference)
         {
@@ -338,13 +322,6 @@ public class PlayerMovement : MonoBehaviour
 
                 time += Time.deltaTime * speedIncreaseMultiplier * slopeIncreaseMultiplier * slopeAngleIncrease;
             }
-            // 当推进时间 == 冲刺推进时间
-            else if (boostFactor == dashSpeedChangeFactor)
-            {
-                time += Time.deltaTime * boostFactor;
-
-                yield return null;
-            }
             else
             {
                 time += Time.deltaTime * speedIncreaseMultiplier;
@@ -352,21 +329,19 @@ public class PlayerMovement : MonoBehaviour
             yield return null;
         }
 
-        speedChangeFactor = 1f;
         moveSpeed = desiredMoveSpeed;
+        speedChangeFactor = 1f;
         keepMomentum = false;
     }
 
     public void MovePlayer()
     {
         if (restricted) return;
-        //if (state == MovementState.dashing) return;// 这里注释掉是因为如果在地上冲刺的话，由于第二帧就开始由于无法移动，然后就不知道为什么的开始减速了，然后又因为状态变回walking，所以速度又可以加了，就会从7/18，变成12/16，看起来效果就是冲刺了一点，然后又冲刺了一点，有种二段冲刺的感觉
 
         if (climbingScript != null && climbingScript.exitingWall)
         {
             return;
         }
-
         // 计算移动位置
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
@@ -428,11 +403,6 @@ public class PlayerMovement : MonoBehaviour
                 Vector3 limitedVel = flatVel.normalized * moveSpeed;
                 rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
             }
-        }
-
-        if (maxYSpeed != 0 && rb.velocity.y > maxYSpeed)
-        {
-            rb.velocity = new Vector3(rb.velocity.x, maxYSpeed, rb.velocity.z);
         }
 
         //if (rb.velocity.magnitude < test)
