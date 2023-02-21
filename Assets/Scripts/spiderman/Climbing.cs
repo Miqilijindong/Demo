@@ -67,7 +67,7 @@ public class Climbing : MonoBehaviour
     public void StateMachine()
     {
         // 当在墙体悬挂时，停止爬墙
-        if (lg.holding)
+        if (lg != null && lg.holding)
         {
             if (climbing)
             {

@@ -102,11 +102,14 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\Scripts\排序算法\堆排序.cs" />
     <Compile Include="Assets\Scripts\时光倒流\TimeControlled.cs" />
+    <Compile Include="Assets\Scripts\spiderman\Climbing.cs" />
     <Compile Include="Assets\Scripts\方块保卫战\GameController.cs" />
     <Compile Include="Assets\Scripts\AbstractClass.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
     <Compile Include="Assets\Scripts\对象池\BezierPathController.cs" />
+    <Compile Include="Assets\Scripts\spiderman\PlayerMovementDashing.cs" />
     <Compile Include="Assets\Scripts\力扣\最大二叉树.cs" />
+    <Compile Include="Assets\Scripts\spiderman\Grappling.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\Scripts\状态机\FSM.cs" />
     <Compile Include="Assets\Scripts\L3_32D刚体.cs" />
@@ -116,7 +119,9 @@
     <Compile Include="Assets\Scripts\设计模式\状态设计模式.cs" />
     <Compile Include="Assets\Scripts\MainPanelClass.cs" />
     <Compile Include="Assets\Scripts\时光倒流\TimeController.cs" />
+    <Compile Include="Assets\Scripts\RandomScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
+    <Compile Include="Assets\Scripts\spiderman\Dashing.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
     <Compile Include="Assets\Scripts\L10_3Resources.cs" />
     <Compile Include="Assets\Scripts\RegisterPanelClass.cs" />
@@ -167,6 +172,7 @@
     <Compile Include="Assets\Scripts\L2_6GameObjectClass.cs" />
     <Compile Include="Assets\Scripts\子弹\Bullet.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
+    <Compile Include="Assets\Scripts\spiderman\LedgeGrabbing.cs" />
     <Compile Include="Assets\Scripts\2D_Dungeon\RoomDataExtractor.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\Scripts\排序算法\冒泡排序.cs" />
@@ -174,6 +180,7 @@
     <Compile Include="Assets\Scripts\Day5_class.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\Scripts\排序算法\计数排序.cs" />
+    <Compile Include="Assets\Scripts\ThreePersonMovement\ThreePersonCam.cs" />
     <Compile Include="Assets\Scripts\L2_9InvokeClass.cs" />
     <Compile Include="Assets\Scripts\特性\Obsolete.cs" />
     <Compile Include="Assets\Scripts\StackClass.cs" />
@@ -197,6 +204,7 @@
     <Compile Include="Assets\Scripts\2D_Dungeon\SimpleDungeonGenerator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\Scripts\L10_6声息系统.cs" />
+    <Compile Include="Assets\Scripts\spiderman\PlayerMovementGrappling.cs" />
     <Compile Include="Assets\Scenes\2D_Dungeon\Cinemachine\CinemachineTest.cs" />
     <Compile Include="Assets\Scripts\对象池\Stuff.cs" />
     <Compile Include="Assets\Scripts\BreakGroundScroll.cs" />
@@ -205,6 +213,7 @@
     <Compile Include="Assets\Scripts\spiderman\PlayerCam.cs" />
     <Compile Include="Assets\Scripts\2.8-13\TClass.cs" />
     <Compile Include="Assets\Scripts\方块保卫战\enemyClass.cs" />
+    <Compile Include="Assets\Scripts\SafeAreaFitter.cs" />
     <Compile Include="Assets\Scripts\spiderman\Sliding.cs" />
     <Compile Include="Assets\Scenes\2D_Dungeon\Cinemachine\CameraController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
@@ -503,11 +512,14 @@
     <Reference Include="Unity.Burst.Cecil">
       <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Burst.Cecil.Rocks">
-      <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
+    <Reference Include="DOTween">
+      <HintPath>Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Cecil.Rocks">
+      <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
     </Reference>
     <Reference Include="ReportGeneratorMerged">
       <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.0.1\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
@@ -1096,6 +1108,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{7405B0C2-8C09-B5F9-1158-26143DD6F644}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
