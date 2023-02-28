@@ -1,0 +1,15 @@
+s(displacement)				位移距离
+u(initial velocity)			初速度
+v(final velocity)			最终速度
+(average velocity)			平均速度
+a(acceleration)				加速度
+t(time)						时间
+
+acceleration	n.	加速，加快；加速度
+
+displacement = (initial velocity + final velocity) / 2 * time
+final velocity = initial velocity + acceleration * time
+displacement = initial velocity * time + acceleration * time * time / 2
+displacement = final velocity * time - acceleration * time * time / 2
+final acceleration * final acceleration = initial velocity * initial velocity + 2 * acceleration * time
+average velocity = displacement / time = (initial velocity + final velocity) / 2

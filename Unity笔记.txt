@@ -1,0 +1,56 @@
+让物体与特定物体不触发碰撞
+在 Edit -> Project Settings -> Physics 中我们就需要配置各个层之间的碰撞关系
+https://blog.csdn.net/Cy_coding/article/details/111048077
+
+屏幕长宽
+screen.weight和screen.height
+
+.Net中对enum的使用
+https://blog.csdn.net/u014361280/article/details/114587433
+
+
+UI才会对摆放顺序相关，物体不相关
+物体可以用sort group来排序渲染，越大越后渲染，就显示在最前面
+
+TransForm.X = L(10,10)这种排序只对物体有效，UI是没用的
+
+Cinemachine---https://cloud.tencent.com/developer/article/2089895
+	unity提供的一种摄像机组件，使用这个组件可以减少很代码就可以实现物体跟随等需求。	
+	使用方法
+		首先Package Manager安装Cinemachine，然后右键就可以创建了，然后场景会多一个名为CM vcam1的物体，挂载这CinemachineVirtualCamera的组件。
+	想要实现这种不会穿墙的摄像头效果，我们只需要在CinemachineVirtualCamera的Extensions中添加CinemachineCollider即可。
+	其次可以修改Cinemachine Collider.strategy = Pull Camera Forward; 这样子的话，当物体挡住摄像机时，会直接变到旁边去，而不是慢慢拉进(这个方法很好的复刻了生化危机2的镜头切换)
+	如果要看game视图里的方格，要点开Aim
+	CinemachineCollider.Avoid Obstacles---若不勾选，则不会尝试移动Camera来避开障碍物，但是会根据障碍物来报告shot quality。
+	CinemachineCollider.Distance Limit---设置从Camera射出射线的最大长度，若值为0即指Camera到目标的距离。超过该长度的障碍物会被忽略。
+
+
+按住按字母“V”，鼠标在某个“Cube”上滑动，系统会自动找该“Cube”的顶点，把鼠标移进顶点坐标的小方框里面，鼠标左键移动，选中的“Cube”的顶点会自动虚浮到另一个“Cube”的顶点上，具体如下图
+
+alt+P 打开该物体的inspector
+
+當Canvas.SortingLayer為null時，會導致Dropdown無法隱藏。
+
+當物體active==false時，GameObject.Find()會找不到，所以需要用父物體transform.find()來找
+
+
+Projection有两个模式： ---平常用透视模式屏幕坐标转世界坐标就会有问题，一直等于(0,1,-10)
+透视模式：摄像机以透视角度渲染对象，距离相机越远，游戏对象显示越小，有透视感。
+正交模式：摄像机均匀渲染对象，不管距离相机多远，游戏对象显示大小不变，没有透视感。
+
+EventSystem.current.IsPointerOverGameObject() ---点击UI上了(前面最好先判断是否点击左键了)
+
+toggle---用来做按钮不错，可以切换图片
+
+GameCamera(script)这个用来适应手机分辨率切换很好，自适应
+
+
+2021.3.10f1c2
+	锚点为0,0,0时，pos = zero的话，不是在左下角，还是会到中间位置
+	
+	
+// 测试设置帧数
+	Application.targetFrameRate = 120;
+	
+ctrl+shift+T找文件
+alt+\找函数

@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\Bin\Debug\</OutputPath>
-    <DefineConstants>UNITY_2021_3_10;UNITY_2021_3;UNITY_2021;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;USE_SEARCH_TABLE;USE_SEARCH_MODULE;USE_PROPERTY_DATABASE;USE_SEARCH_EXTENSION_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;PLATFORM_STANDALONE;TEXTCORE_1_0_OR_NEWER;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_NVIDIA;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_IG;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>UNITY_2021_3_10;UNITY_2021_3;UNITY_2021;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;USE_SEARCH_TABLE;USE_SEARCH_MODULE;USE_PROPERTY_DATABASE;USE_SEARCH_EXTENSION_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;ENABLE_MANAGED_UNITYTLS;INCLUDE_DYNAMIC_GI;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;ENABLE_ACCELERATOR_CLIENT_DEBUGGING;PLATFORM_STANDALONE;TEXTCORE_1_0_OR_NEWER;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_NVIDIA;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;NET_STANDARD;NET_STANDARD_2_1;NETSTANDARD;NETSTANDARD2_1;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_IG;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_INPUT_SYSTEM;ENABLE_LEGACY_INPUT_MANAGER;CROSS_PLATFORM_INPUT;UNITY_POST_PROCESSING_STACK_V2;ODIN_INSPECTOR;ODIN_INSPECTOR_3;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -59,29 +59,39 @@
     <Compile Include="Assets\Scripts\子弹\FirePoint.cs" />
     <Compile Include="Assets\Scripts\2.8-13\Abstract.cs" />
     <Compile Include="Assets\Scripts\2.8-13\StaticClass.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Character\CharacterKinematics.cs" />
     <Compile Include="Assets\Scripts\L8_7角色控制.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Legacy\ExplosiveBarrelScript.cs" />
     <Compile Include="Assets\Scripts\L2_5TransformClass.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Animation\CharacterAnimationEventHandler.cs" />
     <Compile Include="Assets\Scripts\TypeChange.cs" />
     <Compile Include="Assets\Scripts\QueueClass.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Weapons\WeaponAttachmentManagerBehaviour.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\Scripts\状态机\IState.cs" />
     <Compile Include="Assets\Scripts\L9_1导航系统.cs" />
     <Compile Include="Assets\Scripts\3.1-4 委托\BoardCast.cs" />
     <Compile Include="Assets\Scripts\Day4.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Services\IAudioManagerService.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\Scripts\L6_6物理射线.cs" />
     <Compile Include="Assets\Scripts\力扣\划分数组为连续的集合.cs" />
+    <Compile Include="Assets\Scripts\rope-tutorial-master\Spring.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Legacy\Projectile.cs" />
     <Compile Include="Assets\Scripts\排序算法\桶排序.cs" />
     <Compile Include="Assets\Scripts\HashTableClass.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
+    <Compile Include="Assets\Scripts\rope-tutorial-master\GrapplingGun.cs" />
     <Compile Include="Assets\Scripts\L5_15UI事件2.cs" />
     <Compile Include="Assets\Scripts\Test.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Interface\ImageWeapon.cs" />
     <Compile Include="Assets\Scripts\spiderman\BaseSwing.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\Scripts\ITween\iTween.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\Scripts\Demo3.cs" />
     <Compile Include="Assets\Scripts\L3_2Sprite.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Weapons\Weapon.cs" />
     <Compile Include="Assets\Scripts\FloatWindowClass.cs" />
     <Compile Include="Assets\Scripts\角色移动\Cam360View.cs" />
     <Compile Include="Assets\Scripts\L5_11ScrollView.cs" />
@@ -89,6 +99,7 @@
     <Compile Include="Assets\Scripts\方块保卫战\playerClass.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\3.1-4 委托\ClassFunc.cs" />
+    <Compile Include="Assets\Infima Games\Tools\Log.cs" />
     <Compile Include="Assets\Scripts\排序算法\希尔排序.cs" />
     <Compile Include="Assets\Scripts\2.8-13\TInterfact.cs" />
     <Compile Include="Assets\Scripts\spiderman\MoveCam.cs" />
@@ -99,45 +110,71 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
     <Compile Include="Assets\Scripts\2D_Dungeon\PropPlacementManager.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Services\Bootstraper.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
+    <Compile Include="Assets\Infima Games\Tools\Looping\RLoops.cs" />
     <Compile Include="Assets\Scripts\排序算法\堆排序.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Services\ServiceLocator.cs" />
     <Compile Include="Assets\Scripts\时光倒流\TimeControlled.cs" />
     <Compile Include="Assets\Scripts\spiderman\Climbing.cs" />
     <Compile Include="Assets\Scripts\方块保卫战\GameController.cs" />
     <Compile Include="Assets\Scripts\AbstractClass.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Camera\CameraLook.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
     <Compile Include="Assets\Scripts\对象池\BezierPathController.cs" />
     <Compile Include="Assets\Scripts\spiderman\PlayerMovementDashing.cs" />
     <Compile Include="Assets\Scripts\力扣\最大二叉树.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Animation\AnimationReceiver.cs" />
     <Compile Include="Assets\Scripts\spiderman\Grappling.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Character\Character.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\Scripts\状态机\FSM.cs" />
     <Compile Include="Assets\Scripts\L3_32D刚体.cs" />
     <Compile Include="Assets\Scripts\对象池\ObjectPool.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Interface\ElementText.cs" />
     <Compile Include="Assets\Scripts\L5_4Button.cs" />
     <Compile Include="Assets\Scripts\角色移动\L8案例_角色移动.cs" />
     <Compile Include="Assets\Scripts\设计模式\状态设计模式.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Weapons\UtilitiesWeapons.cs" />
     <Compile Include="Assets\Scripts\MainPanelClass.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Animation\PlaySoundBehaviour.cs" />
     <Compile Include="Assets\Scripts\时光倒流\TimeController.cs" />
     <Compile Include="Assets\Scripts\RandomScript.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Weapons\Scope.cs" />
+    <Compile Include="Assets\Scripts\rope-tutorial-master\GrapplingRope.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Character\Movement.cs" />
+    <Compile Include="Assets\Scripts\rope-tutorial-master\MoveCamera.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
+    <Compile Include="Assets\Scripts\rope-tutorial-master\RotateGun.cs" />
     <Compile Include="Assets\Scripts\spiderman\Dashing.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
     <Compile Include="Assets\Scripts\L10_3Resources.cs" />
     <Compile Include="Assets\Scripts\RegisterPanelClass.cs" />
     <Compile Include="Assets\Scripts\SingletonClass.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Services\AudioManagerService.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Utilities\UtilitiesArrays.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Character\MovementBehaviour.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Interface\CanvasSpawner.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Character\Inventory.cs" />
     <Compile Include="Assets\Scripts\2.14-17\TStruct.cs" />
     <Compile Include="Assets\Scripts\ImageClass.cs" />
     <Compile Include="Assets\Scripts\ITween\ITweenTest.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Interface\TextAmmunitionTotal.cs" />
     <Compile Include="Assets\Scripts\UserInfoClass.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Weapons\Magazine.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Services\IGameService.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Interface\TextAmmunitionCurrent.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
     <Compile Include="Assets\Scripts\spiderman\UIManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
     <Compile Include="Assets\Scripts\BGScaler\CameraController_Scaler.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Interface\TextTimescale.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Legacy\PlayParticles.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\Scripts\子弹\ShowScreenPos.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Legacy\DebrisScript.cs" />
     <Compile Include="Assets\Scripts\排序算法\选择排序算法.cs" />
     <Compile Include="Assets\Scripts\L8_3jumpAnimation.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
@@ -147,31 +184,45 @@
     <Compile Include="Assets\Scripts\向量.cs" />
     <Compile Include="Assets\Scripts\EventTriggerClass.cs" />
     <Compile Include="Assets\Scripts\spiderman\PlayerMovement.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Weapons\Muzzle.cs" />
     <Compile Include="Assets\Scripts\排序算法\归并排序.cs" />
     <Compile Include="Assets\Scripts\2D_Dungeon\Prop.cs" />
     <Compile Include="Assets\Scripts\BGScaler\BGController.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Animation\WeaponAnimationEventHandler.cs" />
     <Compile Include="Assets\Scripts\L10_5游戏场景加载.cs" />
     <Compile Include="Assets\Scripts\L10_4数据存档.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Legacy\CasingScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\Scripts\L5_8Slider.cs" />
     <Compile Include="Assets\Scripts\L2_10协同程序Class.cs" />
     <Compile Include="Assets\Scripts\方块保卫战\UIManager.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Weapons\WeaponBehaviour.cs" />
     <Compile Include="Assets\Scripts\L5_6Toggle.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Character\InventoryBehaviour.cs" />
     <Compile Include="Assets\Scripts\spiderman\WallRunning.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Animation\PlaySoundCharacterBehaviour.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Character\CharacterBehaviour.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Utilities\TimeHandler.cs" />
     <Compile Include="Assets\Scripts\排序算法\基数排序.cs" />
     <Compile Include="Assets\Scripts\排序算法\插入排序.cs" />
     <Compile Include="Assets\Scripts\2D_Dungeon\DungeonData.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Interface\TextTutorial.cs" />
     <Compile Include="Assets\Scripts\时光倒流\Player.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
     <Compile Include="Assets\Scripts\3.1-4 委托\ActionClass.cs" />
     <Compile Include="Assets\UI-DotLine\MeshDotLine.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Legacy\ProjectileScript.cs" />
     <Compile Include="Assets\Scripts\3.1-4 委托\delegateClass.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Weapons\ScopeBehaviour.cs" />
     <Compile Include="Assets\Scripts\2.8-13\Sealed.cs" />
     <Compile Include="Assets\Scripts\L2_6GameObjectClass.cs" />
+    <Compile Include="Assets\Infima Games\Tools\Looping\LoopUtilities.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Legacy\GasTankScript.cs" />
     <Compile Include="Assets\Scripts\子弹\Bullet.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Interface\Element.cs" />
     <Compile Include="Assets\Scripts\spiderman\LedgeGrabbing.cs" />
     <Compile Include="Assets\Scripts\2D_Dungeon\RoomDataExtractor.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
@@ -181,8 +232,10 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\Scripts\排序算法\计数排序.cs" />
     <Compile Include="Assets\Scripts\ThreePersonMovement\ThreePersonCam.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Services\IGameModeService.cs" />
     <Compile Include="Assets\Scripts\L2_9InvokeClass.cs" />
     <Compile Include="Assets\Scripts\特性\Obsolete.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Legacy\TargetScript.cs" />
     <Compile Include="Assets\Scripts\StackClass.cs" />
     <Compile Include="Assets\Scripts\SealedClass.cs" />
     <Compile Include="Assets\Scripts\对象池\Manager.cs" />
@@ -190,21 +243,32 @@
     <Compile Include="Assets\Scripts\排序算法\快速排序.cs" />
     <Compile Include="Assets\Scripts\L3_42D碰撞事件.cs" />
     <Compile Include="Assets\Scripts\MouseMoveCube.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Legacy\ExplosionScript.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Interface\Crosshair.cs" />
     <Compile Include="Assets\Scripts\L2_11常用工具Class.cs" />
     <Compile Include="Assets\Scripts\状态机\IdleState.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Legacy\ImpactScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\Scripts\特性\Caller.cs" />
     <Compile Include="Assets\UI-DotLine\GeoDotLineDemo.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Weapons\MagazineBehaviour.cs" />
     <Compile Include="Assets\Scripts\计时.cs" />
     <Compile Include="Assets\Scripts\Reflect.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\Scripts\L3_52D触发事件.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Interface\TextMouseLock.cs" />
     <Compile Include="Assets\Scripts\2D_Dungeon\AgentPlacer.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Services\AudioSettings.cs" />
     <Compile Include="Assets\Scripts\DictionaryClass.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Weapons\WeaponAttachmentManager.cs" />
     <Compile Include="Assets\Scripts\2D_Dungeon\SimpleDungeonGenerator.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Weapons\MuzzleBehaviour.cs" />
+    <Compile Include="Assets\Scripts\rope-tutorial-master\PlayerMovement.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Services\GameModeService.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\Scripts\L10_6声息系统.cs" />
     <Compile Include="Assets\Scripts\spiderman\PlayerMovementGrappling.cs" />
+    <Compile Include="Assets\Infima Games\Tools\Looping\Loops.cs" />
     <Compile Include="Assets\Scenes\2D_Dungeon\Cinemachine\CinemachineTest.cs" />
     <Compile Include="Assets\Scripts\对象池\Stuff.cs" />
     <Compile Include="Assets\Scripts\BreakGroundScroll.cs" />
@@ -212,6 +276,7 @@
     <Compile Include="Assets\Scripts\L4_5小球.cs" />
     <Compile Include="Assets\Scripts\spiderman\PlayerCam.cs" />
     <Compile Include="Assets\Scripts\2.8-13\TClass.cs" />
+    <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Demo\DisplayMaterialName.cs" />
     <Compile Include="Assets\Scripts\方块保卫战\enemyClass.cs" />
     <Compile Include="Assets\Scripts\SafeAreaFitter.cs" />
     <Compile Include="Assets\Scripts\spiderman\Sliding.cs" />
@@ -223,6 +288,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shader\NewUnlitShader.shader" />
+    <None Include="Assets\Scripts\Kinematic Equations\E01_introduction.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\Arts\JJ_Casual RPG Character - 8Ekard v1.1\readme.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
@@ -255,6 +321,7 @@
     <None Include="Assets\UI-DotLine\DotLine.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
+    <None Include="Assets\Scripts\Kinematic Equations\English.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -500,6 +567,12 @@
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>D:\Program Files\Unity\Hub\Editor\2021.3.10f1c2\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Analytics.StandardEvents">
+      <HintPath>Library\PackageCache\com.unity.analytics@3.6.12\AnalyticsStandardEvents\Unity.Analytics.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.Editor">
+      <HintPath>Library\PackageCache\com.unity.analytics@3.6.12\Unity.Analytics.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Burst.Unsafe">
       <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.Unsafe.dll</HintPath>
     </Reference>
@@ -520,6 +593,9 @@
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Rocks">
       <HintPath>Library\PackageCache\com.unity.burst@1.7.3\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.Tracker">
+      <HintPath>Library\PackageCache\com.unity.analytics@3.6.12\Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="ReportGeneratorMerged">
       <HintPath>Library\PackageCache\com.unity.testtools.codecoverage@1.0.1\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
@@ -962,8 +1038,14 @@
     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
+    <Reference Include="Analytics">
+      <HintPath>Library\ScriptAssemblies\Analytics.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.DataPrivacy">
+      <HintPath>Library\ScriptAssemblies\Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="Unity.EditorCoroutines.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
@@ -1040,11 +1122,14 @@
     <Reference Include="Unity.ProBuilder.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Flow">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+    <Reference Include="Unity.Postprocessing.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Flow">
+      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Extras.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
@@ -1064,11 +1149,11 @@
     <Reference Include="Unity.Burst">
       <HintPath>Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
-      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Shared.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
@@ -1093,6 +1178,9 @@
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
+      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>

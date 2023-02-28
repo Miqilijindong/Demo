@@ -44,6 +44,7 @@ namespace Assets.Scripts.对象池
             if (Input.GetMouseButtonUp(0) && !EventSystem.current.IsPointerOverGameObject())
             {
                 Stuff stuff = objectPool.GetObject();
+                inGameObject.Add(stuff);
                 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 mousePos.z = transform.position.z;
                 stuff.Init(mousePos);

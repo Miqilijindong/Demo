@@ -13755,6 +13755,8 @@ MonoBehaviour:
     m_Bits: 1024
   grounded: 0
   maxSlopeAngle: 40
+  cam: {fileID: 1167909704}
+  grappleFov: 95
   climbingScript: {fileID: 2116605880}
   orientation: {fileID: 1847608830}
   state: 0
