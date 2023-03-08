@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+/// <summary>
+/// ¹³×¦
+/// </summary>
 public class PlayerMovementGrappling : MonoBehaviour
 {
     [Header("Movement")]

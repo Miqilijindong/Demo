@@ -230,3 +230,11 @@ Random.Range(0,1)；//返回结果永远是0!
 
 21日
 如果任务栏合并后，想要移动同一个软件的位置，要下载第三方插件才可以弄，可以试试 7+ Taskbar Tweake ， 这样就可以调整位置了
+
+3月1日
+Game-Development 	地铁跑酷
+sevenup 			德州
+
+用玉兔打包出来的package必须要先点addressaables Hosting 然后启动服务Enable
+但是不知道为什么不用连接服务也可以启动，这个以后建议看看为什么
+
