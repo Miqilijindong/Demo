@@ -21,9 +21,9 @@ public class AboutWhereClass : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        new MyClass<UsingEnum<TestEnum>, TestStruct>();
-        TestStruct testStruct = new TestStruct();
-        M<TestStruct>(testStruct);
+        new MyClass<UsingEnum<TestEnum>, TestStruct2>();
+        TestStruct2 testStruct = new TestStruct2();
+        M<TestStruct2>(testStruct);
     }
 
     // Update is called once per frame
@@ -38,7 +38,7 @@ public enum TestEnum
     a, b
 }
 
-public struct TestStruct
+public struct TestStruct2
 {
     public int a;
     public int b;
