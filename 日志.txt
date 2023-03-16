@@ -255,3 +255,31 @@ addressables是我们公司现在所使用的热更新方式
 11号
 今天用玉兔删了一些不用的资源，然后打包时发现，手机之前有aa热更新的bundle的资源话，后续都不会出错，但是卸载后，就是更新一遍bundle资源，所以以后测试的话，尽量要删掉后重新安装再测试。
 RuntimeConsole，手机模拟器打印日志
+
+12号
+今天发现如果使用的是aa热更新模式的话，对应的aa group里的所有资源的path都要改成local的，不然就会去服务器获取资源的。
+
+[HideInInspector]---正如他字面意思一样，只是隐藏而已，如果在之前就赋值过的话，只是看不到而已，但实际上是赋值了
+
+string的换行有点奇葩，如果直接在Inspector里用的话，是无法换行的，要先删除掉这个成员变量，然后再改回来就可以换行了，比如下面的。
+Click your Hold cards
+and change your Bet Amount then
+place your Bet and Draw!
+直接复制过去就是变成一行的了，但是用下面的
+Click your Hold cards then\nor change your Bet Amount\nplace your Bet and Draw!
+然后先删掉成员变量，然后再改回来，就可以在Inspector里做到换行了
+
+快速生成get、set
+ctrl+e、ctrl+r
+
+15号
+C#中两个问号（“?”）的作用是判断“?”左边的对象是否为null,如果不为null则使用“?”左边的对象,如果为null则使用“?”右边的对象.
+
+16号
+Till palette---2D游戏制作可以看看这个
+https://www.bilibili.com/video/BV1ot4y1478z/?vd_source=4ac54d84d41be78d177cc1fa9e4bfd26
+选择切换Tile
+Ctrl+left mouse0
+删除Tile
+Shift+left mouse1
+[]进行旋转，Shift+[]可以翻转

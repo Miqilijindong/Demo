@@ -85,7 +85,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
     <Compile Include="Assets\Scripts\rope-tutorial-master\GrapplingGun.cs" />
     <Compile Include="Assets\Scripts\L5_15UI事件2.cs" />
-    <Compile Include="Assets\Scripts\Kinematic Equations\E02_missileProblem\Timer.cs" />
+    <Compile Include="Assets\Kinematic Equations\E02_missileProblem\Timer.cs" />
     <Compile Include="Assets\Scripts\Test.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Interface\ImageWeapon.cs" />
     <Compile Include="Assets\Scripts\spiderman\BaseSwing.cs" />
@@ -193,7 +193,7 @@
     <Compile Include="Assets\Scripts\排序算法\归并排序.cs" />
     <Compile Include="Assets\Scripts\AboutWhere\AboutWhereClass.cs" />
     <Compile Include="Assets\Scripts\2D_Dungeon\Prop.cs" />
-    <Compile Include="Assets\Scripts\Kinematic Equations\E02_missileProblem\Motor.cs" />
+    <Compile Include="Assets\Kinematic Equations\E02_missileProblem\Motor.cs" />
     <Compile Include="Assets\Scripts\BGScaler\BGController.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Animation\WeaponAnimationEventHandler.cs" />
     <Compile Include="Assets\Scripts\L10_5游戏场景加载.cs" />
@@ -240,6 +240,7 @@
     <Compile Include="Assets\Scripts\排序算法\计数排序.cs" />
     <Compile Include="Assets\Scripts\ThreePersonMovement\ThreePersonCam.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Services\IGameModeService.cs" />
+    <Compile Include="Assets\Scripts\特性\RequireComponentClass.cs" />
     <Compile Include="Assets\Scripts\L2_9InvokeClass.cs" />
     <Compile Include="Assets\Scripts\特性\Obsolete.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Legacy\TargetScript.cs" />
@@ -267,7 +268,7 @@
     <Compile Include="Assets\Scripts\2D_Dungeon\AgentPlacer.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Services\AudioSettings.cs" />
     <Compile Include="Assets\Scripts\DictionaryClass.cs" />
-    <Compile Include="Assets\Scripts\Kinematic Equations\E03_ballProblem\BallLauncher.cs" />
+    <Compile Include="Assets\Kinematic Equations\E03_ballProblem\BallLauncher.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Weapons\WeaponAttachmentManager.cs" />
     <Compile Include="Assets\Scripts\2D_Dungeon\SimpleDungeonGenerator.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Weapons\MuzzleBehaviour.cs" />
@@ -296,7 +297,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shader\NewUnlitShader.shader" />
-    <None Include="Assets\Scripts\Kinematic Equations\E01_introduction.txt" />
+    <None Include="Assets\Kinematic Equations\E01_introduction.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\Arts\JJ_Casual RPG Character - 8Ekard v1.1\readme.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
@@ -329,7 +330,7 @@
     <None Include="Assets\UI-DotLine\DotLine.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
-    <None Include="Assets\Scripts\Kinematic Equations\English.txt" />
+    <None Include="Assets\Kinematic Equations\English.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

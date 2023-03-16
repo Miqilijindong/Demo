@@ -17,6 +17,10 @@ public class Grappling : MonoBehaviour
     [Header("Grappling")]
     public float maxGrappleDistance;
     public float grappleDelayTime;
+    /// <summary>
+    /// 钩爪最小高度
+    /// 以免出负数导致向下跳跃
+    /// </summary>
     public float overShootYAxis;
 
     private Vector3 grapplePoint;
@@ -89,8 +93,10 @@ public class Grappling : MonoBehaviour
         Vector3 lowestPoint = new Vector3(transform.position.x, transform.position.y - 1f, transform.position.z);
 
         float grapplePointRelativeYPos = grapplePoint.y - lowestPoint.y;
+        // 高度
         float hightestPointOnArc = grapplePointRelativeYPos + overShootYAxis;
 
+        // 当高度小于0时，改用默认Y轴高度
         if (grapplePointRelativeYPos < 0)
         {
             hightestPointOnArc = overShootYAxis;

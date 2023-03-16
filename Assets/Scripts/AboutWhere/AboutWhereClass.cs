@@ -21,7 +21,7 @@ public class AboutWhereClass : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        new MyClass<UsingEnum<TestEnum>, TestStruct2>();
+        MyClass<UsingEnum<TestEnum>, TestStruct2> myClass = new MyClass<UsingEnum<TestEnum>, TestStruct2>();
         TestStruct2 testStruct = new TestStruct2();
         M<TestStruct2>(testStruct);
     }

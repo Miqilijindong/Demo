@@ -4,6 +4,7 @@ using UnityEngine;
 
 /// <summary>
 /// 篮球发射器
+/// https://www.youtube.com/watch?v=IvT8hjy6q4o
 /// </summary>
 public class BallLauncher : MonoBehaviour
 {
@@ -13,15 +14,20 @@ public class BallLauncher : MonoBehaviour
     /// <summary>
     /// 高度
     /// </summary>
+    [Header("高度，需要大于target.y - ball.y")]
+    [Tooltip("注释:当你移动到inspector对应组件的属性，会显示提示框")]
     public float h = 25;
     public float gravity = -18;
-
 
     // Start is called before the first frame update
     void Start()
     {
         // 发射之前禁用重力
         ball.useGravity = false;
+
+        string a = null;
+        print(a ?? "123");
+
     }
 
     // Update is called once per frame
@@ -31,6 +37,10 @@ public class BallLauncher : MonoBehaviour
         {
             Launch();
         }
+
+#if UNITY_EDITOR
+        DrawPath();
+#endif
     }
 
     /// <summary>
@@ -47,11 +57,17 @@ public class BallLauncher : MonoBehaviour
     void DrawPath()
     {
         LaunchData launchData = CalculateLaunchData();
+        Vector3 previousDrawPoint = ball.position;
 
         int resolution = 30;
         for (int i = 1; i <= resolution; i++)
         {
             float simulationTime = i / (float)resolution * launchData.timeToTarget;
+            Vector3 displacement = launchData.initialVelocity * simulationTime + Vector3.up * gravity * simulationTime * simulationTime / 2f;
+            Vector3 drawPoint = ball.position + displacement;
+            // 这个是只能在game视图里看到而已
+            Debug.DrawLine(previousDrawPoint, drawPoint, Color.green);
+            previousDrawPoint = drawPoint;
         }
     }
 

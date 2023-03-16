@@ -46,6 +46,10 @@ public class Parameter
     /// </summary>
     public float chaseSpeed;
     /// <summary>
+    /// 发呆时间
+    /// </summary>
+    public float idleTime;
+    /// <summary>
     /// 巡逻位置
     /// </summary>
     public Transform[] patrolPoints;
