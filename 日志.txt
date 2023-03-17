@@ -191,7 +191,7 @@ compileOnly fileTree(dir:'libs', include:['*.jar'], ['*.aar'])
 Filter Mode : 过滤模式
 	可以看看这个链接:https://blog.csdn.net/qq_28474981/article/details/84502557
 	里面讲了不少关于像素问题
-	
+	像素游戏的话应该用point(no filter)
 	
 25日
 2021.3.10f1c2
@@ -283,3 +283,14 @@ Ctrl+left mouse0
 删除Tile
 Shift+left mouse1
 []进行旋转，Shift+[]可以翻转
+如果用Tile Palette的话，一定要注意Sprite的宽高，必须要一样的，比如Sprite里设置的Pixels Per Unit = 16，那么Sprite Editor里的Position.W和Position.H也要等于16的倍数，不然会导致Tile Palette尺寸不对应，他会自动去矫正分辨率
+如果是那种比尺寸小的，可以试着修改Sprite Editor改大一点，多点空白没什么
+像是2D游戏，角色向着墙壁移动会卡在墙壁上，只要把玩家rigidbody2D.Friction改成0就可以了
+
+Sprite的修改
+	Texture Type		Sprite(2D and UI)
+	Sprite Mode			Multiple
+	Pixels Per Unit 	16
+	Filter Mode			Point(no filter)
+	Compression			None
+另外，当你用Game视图去看的话，方块之间可能有缝隙，但是你换成Full HD或者其他符合屏幕分辨率的话，就没问题了
