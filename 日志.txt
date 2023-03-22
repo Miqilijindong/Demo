@@ -294,3 +294,11 @@ Sprite的修改
 	Filter Mode			Point(no filter)
 	Compression			None
 另外，当你用Game视图去看的话，方块之间可能有缝隙，但是你换成Full HD或者其他符合屏幕分辨率的话，就没问题了
+像是用Tile Map开发的话，记得不要用Ctrl + D，这样会导致上一个图层的东西复制下来。最好还是new一个新的Tile Map
+而且最好是只有Platforms添加Composite Collider 2D和Tilemap Collider 2D
+
+Composite collider 2D
+Tilemap Collider 2D and Used By Composite
+
+
+inspector如果设置成Debug的话，可以看到private的参数
