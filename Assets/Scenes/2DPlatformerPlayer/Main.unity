@@ -36532,7 +36532,7 @@ Rigidbody2D:
   m_Material: {fileID: 6200000, guid: 42ffacf851a78dc40ad3ebeca2d4936e, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!212 &1670641289
 SpriteRenderer:
@@ -36651,6 +36651,9 @@ MonoBehaviour:
   wallCheckDistance: 0.4
   wallHopForce: 10
   wallJumpForce: 20
+  jumpTimerSet: 0.15
+  turnTimerSet: 0.1
+  wallJumpTimerSet: 0.5
   whatIsGround:
     serializedVersion: 2
     m_Bits: 65536
