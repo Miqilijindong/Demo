@@ -146,7 +146,7 @@ public class PlayerController : MonoBehaviour
     private void CheckIfCanJump()
     {
         // 这里要判断是否在地上，同时也要判断Y速率是否为负数，如果是向上的话，就不能补充跳跃次数
-        if (isGround && rb.velocity.y <= 0)
+        if ((isGround && rb.velocity.y <= 0) || isWallSliding)
         {
             amountOfJumpsLeft = amountOfJumps;
         }
@@ -185,7 +185,7 @@ public class PlayerController : MonoBehaviour
 
     private void Jump()
     {
-        if (canJump/* && rb.velocity.y <= 0*/)
+        if (canJump && ! isWallSliding/* && rb.velocity.y <= 0*/)
         {
             //rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
