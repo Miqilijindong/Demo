@@ -444,6 +444,10 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("IsWallSliding", isWallSliding);
     }
 
+    /// <summary>
+    /// 这个是由动画函数调用的
+    /// 当动画播放结束后调用
+    /// </summary>
     public void FinishLedgeClimb()
     {
         canClimbLedge = false;
