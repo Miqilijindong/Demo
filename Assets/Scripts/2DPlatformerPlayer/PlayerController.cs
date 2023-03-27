@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     public Transform groundCheck;
     public Transform wallCheck;
+    public Transform ledgeCheck;
     public float playerMoveSpeed;
     public float jumpForce;
     public float wallSlidingSpeed;
@@ -35,6 +36,11 @@ public class PlayerController : MonoBehaviour
     public float jumpTimerSet = 0.15f;
     public float turnTimerSet = 0.1f;
     public float wallJumpTimerSet = 0.5f;
+
+    public float ledgeClimbXOffset1 = 0f;
+    public float ledgeClimbYOffset1 = 0f;
+    public float ledgeClimbXOffset2 = 0f;
+    public float ledgeClimbYOffset2 = 0f;
 
     public LayerMask whatIsGround;
 
@@ -75,11 +81,17 @@ public class PlayerController : MonoBehaviour
     private bool canMove;
     private bool canFlip;
     private bool hasWallJump;
+    private bool isTouchingLedge;
+    private bool canClimbLedge = false;
+    private bool ledgeDetected;
 
     private float jumpTimer;
     private float turnTimer;
     private float wallJumpTimer;
 
+    private Vector2 ledgePosBot;
+    private Vector2 ledgePos1;
+    private Vector2 ledgePos2;
 
     // Start is called before the first frame update
     void Start()
@@ -101,6 +113,7 @@ public class PlayerController : MonoBehaviour
         CheckIfCanJump();
         CheckIfWallSliding();
         CheckJump();
+        CheckLedgeClimb();
     }
 
     private void FixedUpdate()
@@ -138,7 +151,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (!canMove)
+        if (turnTimer >= 0)
         {
             turnTimer -= Time.deltaTime;
 
@@ -335,7 +348,8 @@ public class PlayerController : MonoBehaviour
             else if (wallJumpTimer <= 0f)
             {
                 hasWallJump = false;
-            } else
+            }
+            else
             {
                 wallJumpTimer -= Time.deltaTime;
             }
@@ -381,13 +395,44 @@ public class PlayerController : MonoBehaviour
     private void CheckIfWallSliding()
     {
         // 贴着墙，不在地面上，向下掉落时
-        if (isTouchWall && horizontal == facingDirection && rb.velocity.y < 0)
+        if (isTouchWall && horizontal == facingDirection && rb.velocity.y < 0 && !canClimbLedge)
         {
             isWallSliding = true;
         }
         else
         {
             isWallSliding = false;
+        }
+    }
+
+    private void CheckLedgeClimb()
+    {
+        if (ledgeDetected && !canClimbLedge)
+        {
+            canClimbLedge = true;
+
+            if (isFaceRight)
+            {
+                // Mathf.Floor()返回向下取整
+                ledgePos1 = new Vector2(Mathf.Floor(ledgePosBot.x + wallCheckDistance) - ledgeClimbXOffset1, Mathf.Floor(ledgePosBot.y) + ledgeClimbYOffset1);
+                ledgePos2 = new Vector2(Mathf.Floor(ledgePosBot.x + wallCheckDistance) + ledgeClimbXOffset2, Mathf.Floor(ledgePosBot.y) + ledgeClimbYOffset2);
+            }
+            else
+            {
+                // Mathf.Ceil()返回向上取整
+                ledgePos1 = new Vector2(Mathf.Ceil(ledgePosBot.x - wallCheckDistance) + ledgeClimbXOffset1, Mathf.Floor(ledgePosBot.y) + ledgeClimbYOffset1);
+                ledgePos2 = new Vector2(Mathf.Ceil(ledgePosBot.x - wallCheckDistance) - ledgeClimbXOffset2, Mathf.Floor(ledgePosBot.y) + ledgeClimbYOffset2);
+            }
+
+            canMove = false;
+            canFlip = false;
+
+            animator.SetBool("canClimbLedge", canClimbLedge);
+        }
+
+        if (canClimbLedge)
+        {
+            transform.position = ledgePos1;
         }
     }
 
@@ -399,10 +444,27 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("IsWallSliding", isWallSliding);
     }
 
+    public void FinishLedgeClimb()
+    {
+        canClimbLedge = false;
+        transform.position = ledgePos2;
+        canMove = true;
+        canFlip = true;
+        ledgeDetected = false;
+        animator.SetBool("canClimbLedge", canClimbLedge);
+    }
+
     private void CheckSurroundings()
     {
         isGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
         isTouchWall = Physics2D.Raycast(wallCheck.position, transform.right, wallCheckDistance, whatIsGround);
+        isTouchingLedge = Physics2D.Raycast(ledgeCheck.position, transform.right, wallCheckDistance, whatIsGround);
+
+        if (isTouchWall && !isTouchingLedge && !ledgeDetected)
+        {
+            ledgeDetected = true;
+            ledgePosBot = wallCheck.position;
+        }
     }
 
     Vector2 wallCheckPointPos;
