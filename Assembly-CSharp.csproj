@@ -182,6 +182,7 @@
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Legacy\DebrisScript.cs" />
     <Compile Include="Assets\Scripts\排序算法\选择排序算法.cs" />
     <Compile Include="Assets\Scripts\L8_3jumpAnimation.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\PlayerAfterImagePool.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\Scripts\L10案例.cs" />
     <Compile Include="Assets\Scripts\L5_15UI事件.cs" />
@@ -234,6 +235,7 @@
     <Compile Include="Assets\Scripts\2D_Dungeon\RoomDataExtractor.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\Scripts\排序算法\冒泡排序.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\PlayerAfterImageSprite.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
     <Compile Include="Assets\Scripts\Day5_class.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
