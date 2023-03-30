@@ -302,3 +302,10 @@ Tilemap Collider 2D and Used By Composite
 
 
 inspector如果设置成Debug的话，可以看到private的参数
+
+
+30日
+当用Grid Layer Group且要移动padding时，就需要刷新UI
+grid.padding.top -= oneDistance;
+// 刷新GridGroupUI
+LayoutRebuilder.ForceRebuildLayoutImmediate(rectTransform);

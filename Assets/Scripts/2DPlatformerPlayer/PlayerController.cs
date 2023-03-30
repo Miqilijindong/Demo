@@ -210,7 +210,7 @@ public class PlayerController : MonoBehaviour
 
                 // 这里从此方向后期可以改改，改成可操控的比较合适
                 rb.velocity = new Vector2(dashSpeed * facingDirection, rb.velocity.y);
-                dashTime -= Time.deltaTime;
+                dashTimeLeft -= Time.deltaTime;
 
                 if (MathF.Abs(transform.position.x - lastImageXpos) > distanceBetweenImages)
                 {
