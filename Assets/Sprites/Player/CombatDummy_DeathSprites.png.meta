@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: de65d7ca3a7001f42b7085997a00df99
+guid: 3333c1d8751981045938665fe0119daf
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -129,7 +129,175 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Copy of Rogue_Run1_0
+      name: CombatDummy_DeathSprites_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff39c2c3b634a0144a33199c84ddb323
+      internalID: -1265671260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CombatDummy_DeathSprites_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dce8022d5a5cc8644a6195f1a127d5ed
+      internalID: 376170754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CombatDummy_DeathSprites_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b482bb6c72979241ad782e6f3c14fa0
+      internalID: 1003290627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CombatDummy_DeathSprites_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74ec74445627e5c48915cc9112c85f83
+      internalID: -1549961785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CombatDummy_DeathSprites_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ea4b76d75ce71d439762982d6894e3b
+      internalID: 1375591780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CombatDummy_DeathSprites_5
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1f3e2d9353267a4c99f5d7c94678da7
+      internalID: 726995301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CombatDummy_DeathSprites_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de42cf2f354d1de4eb21b16afd5117ab
+      internalID: -207603613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CombatDummy_DeathSprites_7
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3adb10a469c9eeb44be6970342a8b361
+      internalID: -554851919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CombatDummy_DeathSprites_8
       rect:
         serializedVersion: 2
         x: 0
@@ -143,14 +311,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d236bd40aa6943e4c858c59fbbd20d7e
-      internalID: 1260505780
+      spriteID: dc37fd34f4526dc4fa5928b8608734a5
+      internalID: -1638276533
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Copy of Rogue_Run1_1
+      name: CombatDummy_DeathSprites_9
       rect:
         serializedVersion: 2
         x: 64
@@ -164,14 +332,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 944558ef264e19345a68a38fd171be00
-      internalID: -1384034581
+      spriteID: 26c438314cb9f2042950bb87cad067ca
+      internalID: -1903301240
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Copy of Rogue_Run1_2
+      name: CombatDummy_DeathSprites_10
       rect:
         serializedVersion: 2
         x: 128
@@ -185,14 +353,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad6871ac28ccec84f95edd3cf672ffda
-      internalID: 633159788
+      spriteID: fb077c37f8eabca45926a2e0c22f6062
+      internalID: -1098448919
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Copy of Rogue_Run1_3
+      name: CombatDummy_DeathSprites_11
       rect:
         serializedVersion: 2
         x: 192
@@ -206,14 +374,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 628314b8a512c4a4d9bde373deaa25c3
-      internalID: -1900436216
+      spriteID: 57c7d4a33138972449e65df6a7a9e110
+      internalID: 835282924
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Copy of Rogue_Run1_4
+      name: CombatDummy_DeathSprites_12
       rect:
         serializedVersion: 2
         x: 256
@@ -227,155 +395,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44e24e3ff6292964391f91b79aa70ed4
-      internalID: 409757301
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Copy of Rogue_Run1_5
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 53f273c57221dc14bbd939bae13e25eb
-      internalID: 217586943
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Copy of Rogue_Run1_6
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2c1bf97fe059e2846a8390036aaa948f
-      internalID: -1537033892
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Copy of Rogue_Run1_7
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8c8c208b0da4e4e43a1074e35937c2ae
-      internalID: 1654583274
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Copy of Rogue_Run1_8
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3b21807165c96d4439c68fbc1b0526b0
-      internalID: -603468041
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Copy of Rogue_Run1_9
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 05be1a6e39dae9841aa3610cba3b837a
-      internalID: 433644901
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Copy of Rogue_Run1_10
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cf26585c0ca64a3448641df73d14b3b0
-      internalID: 513437419
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Copy of Rogue_Run1_11
-      rect:
-        serializedVersion: 2
-        x: 704
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f42246ca37876704db6f32f711a98ccc
-      internalID: 339727032
+      spriteID: d2d46d5ce78848444ba9cd45c6976da3
+      internalID: 1660142239
       vertices: []
       indices: 
       edges: []
@@ -383,7 +404,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 46da1e87e2235604fafa837f0114e0e6
+    spriteID: 5bbc80c209b86fd4d9a2a471ba0bb71b
     internalID: 0
     vertices: []
     indices: 
@@ -391,18 +412,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Copy of Rogue_Run1_8: -603468041
-      Copy of Rogue_Run1_2: 633159788
-      Copy of Rogue_Run1_5: 217586943
-      Copy of Rogue_Run1_3: -1900436216
-      Copy of Rogue_Run1_7: 1654583274
-      Copy of Rogue_Run1_6: -1537033892
-      Copy of Rogue_Run1_1: -1384034581
-      Copy of Rogue_Run1_0: 1260505780
-      Copy of Rogue_Run1_10: 513437419
-      Copy of Rogue_Run1_11: 339727032
-      Copy of Rogue_Run1_4: 409757301
-      Copy of Rogue_Run1_9: 433644901
+      CombatDummy_DeathSprites_3: -1549961785
+      CombatDummy_DeathSprites_6: -207603613
+      CombatDummy_DeathSprites_11: 835282924
+      CombatDummy_DeathSprites_1: 376170754
+      CombatDummy_DeathSprites_0: -1265671260
+      CombatDummy_DeathSprites_5: 726995301
+      CombatDummy_DeathSprites_7: -554851919
+      CombatDummy_DeathSprites_12: 1660142239
+      CombatDummy_DeathSprites_9: -1903301240
+      CombatDummy_DeathSprites_2: 1003290627
+      CombatDummy_DeathSprites_4: 1375591780
+      CombatDummy_DeathSprites_10: -1098448919
+      CombatDummy_DeathSprites_8: -1638276533
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

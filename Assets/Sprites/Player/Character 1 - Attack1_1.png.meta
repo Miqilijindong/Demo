@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: de65d7ca3a7001f42b7085997a00df99
+guid: fe55eecf77cc9a94bbff4c987f991722
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -129,7 +129,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Copy of Rogue_Run1_0
+      name: Character 1 - Attack1_1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -143,14 +143,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d236bd40aa6943e4c858c59fbbd20d7e
-      internalID: 1260505780
+      spriteID: c8266f46d272dab40b586fbdd17d910d
+      internalID: -451064204
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Copy of Rogue_Run1_1
+      name: Character 1 - Attack1_1_1
       rect:
         serializedVersion: 2
         x: 64
@@ -164,14 +164,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 944558ef264e19345a68a38fd171be00
-      internalID: -1384034581
+      spriteID: 534ac93cbdf00914f963f3aa9b3b4eb9
+      internalID: 777733472
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Copy of Rogue_Run1_2
+      name: Character 1 - Attack1_1_2
       rect:
         serializedVersion: 2
         x: 128
@@ -185,14 +185,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad6871ac28ccec84f95edd3cf672ffda
-      internalID: 633159788
+      spriteID: 5186df58f0fe9374882241bbcbf56394
+      internalID: -984811126
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Copy of Rogue_Run1_3
+      name: Character 1 - Attack1_1_3
       rect:
         serializedVersion: 2
         x: 192
@@ -206,14 +206,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 628314b8a512c4a4d9bde373deaa25c3
-      internalID: -1900436216
+      spriteID: 1ef133b17d6617540877b9fe8877cc72
+      internalID: -672308670
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Copy of Rogue_Run1_4
+      name: Character 1 - Attack1_1_4
       rect:
         serializedVersion: 2
         x: 256
@@ -227,155 +227,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44e24e3ff6292964391f91b79aa70ed4
-      internalID: 409757301
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Copy of Rogue_Run1_5
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 53f273c57221dc14bbd939bae13e25eb
-      internalID: 217586943
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Copy of Rogue_Run1_6
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2c1bf97fe059e2846a8390036aaa948f
-      internalID: -1537033892
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Copy of Rogue_Run1_7
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8c8c208b0da4e4e43a1074e35937c2ae
-      internalID: 1654583274
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Copy of Rogue_Run1_8
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3b21807165c96d4439c68fbc1b0526b0
-      internalID: -603468041
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Copy of Rogue_Run1_9
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 05be1a6e39dae9841aa3610cba3b837a
-      internalID: 433644901
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Copy of Rogue_Run1_10
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cf26585c0ca64a3448641df73d14b3b0
-      internalID: 513437419
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Copy of Rogue_Run1_11
-      rect:
-        serializedVersion: 2
-        x: 704
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f42246ca37876704db6f32f711a98ccc
-      internalID: 339727032
+      spriteID: 1ce2f98b1fa678d4389057f433e6ffd1
+      internalID: -577562512
       vertices: []
       indices: 
       edges: []
@@ -383,7 +236,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 46da1e87e2235604fafa837f0114e0e6
+    spriteID: d9afeb5d13f37e44ab5245bbe7abd8c0
     internalID: 0
     vertices: []
     indices: 
@@ -391,18 +244,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Copy of Rogue_Run1_8: -603468041
-      Copy of Rogue_Run1_2: 633159788
-      Copy of Rogue_Run1_5: 217586943
-      Copy of Rogue_Run1_3: -1900436216
-      Copy of Rogue_Run1_7: 1654583274
-      Copy of Rogue_Run1_6: -1537033892
-      Copy of Rogue_Run1_1: -1384034581
-      Copy of Rogue_Run1_0: 1260505780
-      Copy of Rogue_Run1_10: 513437419
-      Copy of Rogue_Run1_11: 339727032
-      Copy of Rogue_Run1_4: 409757301
-      Copy of Rogue_Run1_9: 433644901
+      Character 1 - Attack1_1_3: -672308670
+      Character 1 - Attack1_1_2: -984811126
+      Character 1 - Attack1_1_0: -451064204
+      Character 1 - Attack1_1_1: 777733472
+      Character 1 - Attack1_1_4: -577562512
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

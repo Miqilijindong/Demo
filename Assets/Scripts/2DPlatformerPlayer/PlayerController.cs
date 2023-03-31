@@ -209,7 +209,7 @@ public class PlayerController : MonoBehaviour
                 canFlip = false;
 
                 // 这里从此方向后期可以改改，改成可操控的比较合适
-                rb.velocity = new Vector2(dashSpeed * facingDirection, rb.velocity.y);
+                rb.velocity = new Vector2(dashSpeed * facingDirection, 0);
                 dashTimeLeft -= Time.deltaTime;
 
                 if (MathF.Abs(transform.position.x - lastImageXpos) > distanceBetweenImages)
@@ -339,6 +339,15 @@ public class PlayerController : MonoBehaviour
         {
             Flip();
         }
+
+        /*if (MathF.Abs(rb.velocity.x) >= 0.01f)
+        {
+            isWalking = true;
+        }
+        else
+        {
+            isWalking = false;
+        }*/
     }
 
     private void Flip()
@@ -527,6 +536,16 @@ public class PlayerController : MonoBehaviour
             ledgeDetected = true;
             ledgePosBot = wallCheck.position;
         }
+    }
+
+    public void DisableFlip()
+    {
+        canFlip = false;
+    }
+
+    public void EnAbleFlip()
+    {
+        canFlip = true;
     }
 
     Vector2 wallCheckPointPos;
