@@ -16,6 +16,7 @@ TagManager:
   - Wood (Static)
   - Dirt (Static)
   - Wood
+  - Eneym
   layers:
   - Default
   - TransparentFX
@@ -34,9 +35,9 @@ TagManager:
   - Invisible Wall
   - Projectile
   - WhatIsGround
-  - 
-  - 
-  - 
+  - Damageable
+  - Dead
+  - Player
   - 
   - 
   - 
@@ -64,6 +65,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2454415517
+    locked: 0
+  - name: Enemy
+    uniqueID: 577936959
     locked: 0
   - name: Foreground Decoration
     uniqueID: 646234729

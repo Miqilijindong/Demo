@@ -1,3 +1,6 @@
-substitute n. 		代替品
-decoration n.       装饰品、装饰、勋章、装潢、装潢风格
-Friction n.			不和、分歧；摩擦力；摩擦
+substitute 			n.代替品
+decoration 			n.装饰品、装饰、勋章、装潢、装潢风格
+Friction 			n.不和、分歧；摩擦力；摩擦
+dummy 				n.人体模型；玩具娃娃；笨蛋；奶头；adj.假的；仿真的；v.假动作
+torque				n.转矩，扭矩；v.加转矩
+combat				n.战斗；争论；v.与...做斗争；防止；adj.战斗的；为...斗争的

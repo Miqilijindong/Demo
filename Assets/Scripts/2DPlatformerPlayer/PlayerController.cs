@@ -85,6 +85,9 @@ public class PlayerController : MonoBehaviour
     private bool canFlip;
     private bool hasWallJump;
     private bool isTouchingLedge;
+    /// <summary>
+    /// 判断是否能爬墙
+    /// </summary>
     private bool canClimbLedge = false;
     private bool ledgeDetected;
     private bool isDashing;
@@ -137,7 +140,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
-            if (isGround || (amountOfJumpsLeft > 0 && isTouchWall))
+            if ((isGround || (amountOfJumpsLeft > 0 && isTouchWall)))
             {
                 NormalJump();
             }
@@ -438,7 +441,8 @@ public class PlayerController : MonoBehaviour
 
     private void WallJump()
     {
-        if (canWallJump)
+        // 这里要判断不能是爬墙状态，不然会导致canFlip = true，就可以在爬墙的时候转向了
+        if (canWallJump && !canClimbLedge)
         {
             rb.velocity = new Vector2(rb.velocity.x, 0f);
             isWallSliding = false;
@@ -449,6 +453,7 @@ public class PlayerController : MonoBehaviour
             jumpTimer = 0;
             isAttemptingToJump = false;
             checkJumpMultiplier = true;
+
             turnTimer = 0;
             canMove = true;
             canFlip = true;
@@ -557,5 +562,10 @@ public class PlayerController : MonoBehaviour
 
         Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
         Gizmos.DrawLine(transform.position, wallCheckPointPos);
+    }
+
+    public int GetFacingDirection()
+    {
+        return facingDirection;
     }
 }
