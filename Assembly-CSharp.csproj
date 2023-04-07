@@ -237,6 +237,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\Scripts\排序算法\冒泡排序.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\PlayerAfterImageSprite.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\BasicEnemyController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
     <Compile Include="Assets\Scripts\Day5_class.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
@@ -259,6 +260,7 @@
     <Compile Include="Assets\Scripts\L2_11常用工具Class.cs" />
     <Compile Include="Assets\Scripts\状态机\IdleState.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Legacy\ImpactScript.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\ParticleController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\Scripts\特性\Caller.cs" />
     <Compile Include="Assets\UI-DotLine\GeoDotLineDemo.cs" />
@@ -299,8 +301,6 @@
     <Compile Include="Assets\Scripts\Extern.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\CombatDummyController.cs" />
     <Compile Include="Assets\Scripts\SpriteAndOverrideSprite.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\ParticleController.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\BasicEnemyController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shader\NewUnlitShader.shader" />
