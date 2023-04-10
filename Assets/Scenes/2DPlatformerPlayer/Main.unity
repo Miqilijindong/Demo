@@ -36429,8 +36429,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawnPoint: {fileID: 1200333972}
-  player: {fileID: 0}
-  respawnTime: 0
+  player: {fileID: 8764800403507771553, guid: a6b4a7abf2073214697993c1885cd742, type: 3}
+  respawnTime: 5
 --- !u!4 &1002480812
 Transform:
   m_ObjectHideFlags: 0

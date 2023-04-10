@@ -107,6 +107,7 @@
     <Compile Include="Assets\Scripts\2.8-13\TInterfact.cs" />
     <Compile Include="Assets\Scripts\spiderman\MoveCam.cs" />
     <Compile Include="Assets\Scripts\LoginPanelClass.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\AnimationController\L8_4Demo.cs" />
     <Compile Include="Assets\Scripts\L10_2实例化.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
@@ -288,6 +289,7 @@
     <Compile Include="Assets\Scripts\对象池\Stuff.cs" />
     <Compile Include="Assets\Scripts\BreakGroundScroll.cs" />
     <Compile Include="Assets\Scripts\L6_7刚体移动.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\GameManager\GameManager.cs" />
     <Compile Include="Assets\Scripts\L4_5小球.cs" />
     <Compile Include="Assets\Scripts\spiderman\PlayerCam.cs" />
     <Compile Include="Assets\Scripts\2.8-13\TClass.cs" />
@@ -301,8 +303,6 @@
     <Compile Include="Assets\Scripts\Extern.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\CombatDummyController.cs" />
     <Compile Include="Assets\Scripts\SpriteAndOverrideSprite.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerStats.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\GameManager\GameManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shader\NewUnlitShader.shader" />
