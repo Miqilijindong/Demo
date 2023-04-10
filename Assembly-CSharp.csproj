@@ -145,7 +145,7 @@
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Animation\PlaySoundBehaviour.cs" />
     <Compile Include="Assets\Scripts\时光倒流\TimeController.cs" />
     <Compile Include="Assets\Scripts\RandomScript.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\PlayerCombatController.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerCombatController.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Weapons\Scope.cs" />
     <Compile Include="Assets\Scripts\rope-tutorial-master\GrapplingRope.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Character\Movement.cs" />
@@ -183,7 +183,7 @@
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Legacy\DebrisScript.cs" />
     <Compile Include="Assets\Scripts\排序算法\选择排序算法.cs" />
     <Compile Include="Assets\Scripts\L8_3jumpAnimation.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\PlayerAfterImagePool.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerAfterImagePool.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\Scripts\L10案例.cs" />
     <Compile Include="Assets\Scripts\L5_15UI事件.cs" />
@@ -236,7 +236,7 @@
     <Compile Include="Assets\Scripts\2D_Dungeon\RoomDataExtractor.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\Scripts\排序算法\冒泡排序.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\PlayerAfterImageSprite.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerAfterImageSprite.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\BasicEnemyController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
     <Compile Include="Assets\Scripts\Day5_class.cs" />
@@ -260,7 +260,7 @@
     <Compile Include="Assets\Scripts\L2_11常用工具Class.cs" />
     <Compile Include="Assets\Scripts\状态机\IdleState.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Legacy\ImpactScript.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\ParticleController.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Particles\ParticleController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\Scripts\特性\Caller.cs" />
     <Compile Include="Assets\UI-DotLine\GeoDotLineDemo.cs" />
@@ -269,7 +269,7 @@
     <Compile Include="Assets\Scripts\Reflect.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\Scripts\L3_52D触发事件.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerController.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Interface\TextMouseLock.cs" />
     <Compile Include="Assets\Scripts\2D_Dungeon\AgentPlacer.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Services\AudioSettings.cs" />
@@ -299,8 +299,10 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\Scripts\L2_8生命周期.cs" />
     <Compile Include="Assets\Scripts\Extern.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\CombatDummyController.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\CombatDummyController.cs" />
     <Compile Include="Assets\Scripts\SpriteAndOverrideSprite.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerStats.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\GameManager\GameManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shader\NewUnlitShader.shader" />

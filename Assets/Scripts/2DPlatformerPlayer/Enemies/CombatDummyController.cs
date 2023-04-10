@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// 假人模型控制类
+/// </summary>
 public class CombatDummyController : MonoBehaviour
 {
     [SerializeField]
@@ -47,10 +50,19 @@ public class CombatDummyController : MonoBehaviour
         CheckKnockback();
     }
 
-    private void Damage(float[] amount)
+    private void Damage(float[] details)
     {
-        currentHealth -= amount[0];
-        playerFacingDirection = pc.GetFacingDirection();
+        currentHealth -= details[0];
+        //playerFacingDirection = pc.GetFacingDirection();
+
+        if (details[1] < aliveGO.transform.position.x)
+        {
+            playerFacingDirection = 1;
+        }
+        else
+        {
+            playerFacingDirection = -1;
+        }
 
         Instantiate(hitParticle, aliveGO.transform.position, Quaternion.Euler(0f, 0f, Random.Range(0f, 360f)));
 

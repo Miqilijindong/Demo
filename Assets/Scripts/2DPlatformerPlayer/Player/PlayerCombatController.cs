@@ -24,10 +24,15 @@ public class PlayerCombatController : MonoBehaviour
 
     private Animator anim;
 
+    private PlayerController PC;
+    private PlayerStats PS;
+
     private void Start()
     {
         anim = GetComponent<Animator>();
         anim.SetBool("canAttack", combatEnable);
+        PC = GetComponent<PlayerController>();
+        PS = GetComponent<PlayerStats>();
     }
 
     private void Update()
@@ -63,7 +68,7 @@ public class PlayerCombatController : MonoBehaviour
             }
         }
 
-        if (Time.time >= lastInputTime +inputTime)
+        if (Time.time >= lastInputTime + inputTime)
         {
             // 等待下一个输入，这样就可以派生攻击2
             gotInput = false;
@@ -88,6 +93,33 @@ public class PlayerCombatController : MonoBehaviour
         isAttacking = false;
         anim.SetBool("isAttacking", isAttacking);
         anim.SetBool("attack1", false);
+    }
+
+    /// <summary>
+    /// 伤害计算
+    /// </summary>
+    /// <param name="attackDetails">0.是伤害数值，1.攻击的方向</param>
+    private void Damage(float[] attackDetails)
+    {
+        if (PC.GetDashStatus())
+        {
+            return;
+        }
+
+        int direction;
+
+        PS.DecreaseHealth(attackDetails[0]);
+
+        if (attackDetails[1] < transform.position.x)
+        {
+            direction = 1;
+        }
+        else
+        {
+            direction = -1;
+        }
+
+        PC.Knockback(direction);
     }
 
     private void OnDrawGizmos()
