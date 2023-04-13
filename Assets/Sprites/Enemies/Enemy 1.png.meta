@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 96754109648341b45b5909a6970f15d5
+guid: 1f8238d54c9b66f418d82e83123a8ae6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -36,9 +36,9 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
-    wrapW: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -129,7 +129,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CombatDummy_DeathSprites_0
+      name: Enemy 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -143,14 +143,161 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff39c2c3b634a0144a33199c84ddb323
-      internalID: -1265671260
+      spriteID: 79813087ea4f1584d902bb5d278fd666
+      internalID: 543983966
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CombatDummy_DeathSprites_1
+      name: Enemy 1_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 116fc91e2a3f0d74b9847530fab6d6e0
+      internalID: 377526887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 1_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0860d43b18690c4e8741238c4e71930
+      internalID: -744605064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 1_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2a84890bbcbbf74587291ea432db920
+      internalID: 1387200424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 1_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16f3d0e38ce8d0a4caa18f623b10bbc1
+      internalID: -1648429350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 1_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d2d30faa7e10ea4bb228b02f80243d9
+      internalID: 2112215840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 1_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6ce94c7fbff7194280894460d6e6aeb
+      internalID: -1362314916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 1_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 622874bd244f7b7429c901743374decd
+      internalID: -1617673627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 1_8
       rect:
         serializedVersion: 2
         x: 0
@@ -164,14 +311,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dce8022d5a5cc8644a6195f1a127d5ed
-      internalID: 376170754
+      spriteID: 82565de4df39b8e409f92a4ebd63c7e0
+      internalID: -227702602
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CombatDummy_DeathSprites_2
+      name: Enemy 1_9
       rect:
         serializedVersion: 2
         x: 64
@@ -185,14 +332,56 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b482bb6c72979241ad782e6f3c14fa0
-      internalID: 1003290627
+      spriteID: 14c942a8bdfbc5e41a5a972589f6b29a
+      internalID: -2080086101
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CombatDummy_DeathSprites_3
+      name: Enemy 1_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5d28ddcbf98e9b42ac35307022e659f
+      internalID: -5467733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 1_11
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f0f490c31ec65e45be682b5954b7fd2
+      internalID: 1994897374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 1_12
       rect:
         serializedVersion: 2
         x: 0
@@ -206,14 +395,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74ec74445627e5c48915cc9112c85f83
-      internalID: -1549961785
+      spriteID: 75243541bbd860c4a88245083fb2cddf
+      internalID: 1424301089
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CombatDummy_DeathSprites_4
+      name: Enemy 1_13
       rect:
         serializedVersion: 2
         x: 64
@@ -227,14 +416,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ea4b76d75ce71d439762982d6894e3b
-      internalID: 1375591780
+      spriteID: 3885d1c40a73cf144a7dd5752b3e3232
+      internalID: -828938559
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CombatDummy_DeathSprites_5
+      name: Enemy 1_14
       rect:
         serializedVersion: 2
         x: 128
@@ -248,14 +437,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1f3e2d9353267a4c99f5d7c94678da7
-      internalID: 726995301
+      spriteID: 30d36e15c3d2bfb469d0ab81d0f44cec
+      internalID: -2061856840
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CombatDummy_DeathSprites_6
+      name: Enemy 1_15
       rect:
         serializedVersion: 2
         x: 192
@@ -269,14 +458,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de42cf2f354d1de4eb21b16afd5117ab
-      internalID: -207603613
+      spriteID: b3b8ef70405c1b9428120ffa4f6a1b59
+      internalID: -1679394707
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CombatDummy_DeathSprites_7
+      name: Enemy 1_16
       rect:
         serializedVersion: 2
         x: 256
@@ -290,14 +479,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3adb10a469c9eeb44be6970342a8b361
-      internalID: -554851919
+      spriteID: b0448e7de6d89c540bacf7db3e5117a2
+      internalID: 813821786
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CombatDummy_DeathSprites_8
+      name: Enemy 1_17
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d2f79be7b49cf14bb461cbd3262cd02
+      internalID: 946865915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy 1_18
       rect:
         serializedVersion: 2
         x: 0
@@ -311,14 +521,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc37fd34f4526dc4fa5928b8608734a5
-      internalID: -1638276533
+      spriteID: 6b765d9612152f149b09f5d8cdd1aa4d
+      internalID: 106624638
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CombatDummy_DeathSprites_9
+      name: Enemy 1_19
       rect:
         serializedVersion: 2
         x: 64
@@ -332,14 +542,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26c438314cb9f2042950bb87cad067ca
-      internalID: -1903301240
+      spriteID: ec0f9943e848b304bbd51d2d8375c449
+      internalID: 588191615
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CombatDummy_DeathSprites_10
+      name: Enemy 1_20
       rect:
         serializedVersion: 2
         x: 128
@@ -353,14 +563,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb077c37f8eabca45926a2e0c22f6062
-      internalID: -1098448919
+      spriteID: 1ee31fe76b348994eb2bc71b8facabf1
+      internalID: -1051096235
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CombatDummy_DeathSprites_11
+      name: Enemy 1_21
       rect:
         serializedVersion: 2
         x: 192
@@ -374,29 +584,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57c7d4a33138972449e65df6a7a9e110
-      internalID: 835282924
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CombatDummy_DeathSprites_12
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d2d46d5ce78848444ba9cd45c6976da3
-      internalID: 1660142239
+      spriteID: a1b4778db6c89a748be8064a965f650d
+      internalID: 739897040
       vertices: []
       indices: 
       edges: []
@@ -404,7 +593,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5bbc80c209b86fd4d9a2a471ba0bb71b
+    spriteID: b876b82ea872ca7418cc515bb3327126
     internalID: 0
     vertices: []
     indices: 
@@ -412,19 +601,28 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      CombatDummy_DeathSprites_3: -1549961785
-      CombatDummy_DeathSprites_6: -207603613
-      CombatDummy_DeathSprites_11: 835282924
-      CombatDummy_DeathSprites_1: 376170754
-      CombatDummy_DeathSprites_0: -1265671260
-      CombatDummy_DeathSprites_5: 726995301
-      CombatDummy_DeathSprites_7: -554851919
-      CombatDummy_DeathSprites_12: 1660142239
-      CombatDummy_DeathSprites_9: -1903301240
-      CombatDummy_DeathSprites_2: 1003290627
-      CombatDummy_DeathSprites_4: 1375591780
-      CombatDummy_DeathSprites_10: -1098448919
-      CombatDummy_DeathSprites_8: -1638276533
+      Enemy 1_7: -1617673627
+      Enemy 1_6: -1362314916
+      Enemy 1_18: 106624638
+      Enemy 1_12: 1424301089
+      Enemy 1_16: 813821786
+      Enemy 1_5: 2112215840
+      Enemy 1_1: 377526887
+      Enemy 1_11: 1994897374
+      Enemy 1_9: -2080086101
+      Enemy 1_15: -1679394707
+      Enemy 1_8: -227702602
+      Enemy 1_20: -1051096235
+      Enemy 1_13: -828938559
+      Enemy 1_2: -744605064
+      Enemy 1_10: -5467733
+      Enemy 1_17: 946865915
+      Enemy 1_14: -2061856840
+      Enemy 1_19: 588191615
+      Enemy 1_21: 739897040
+      Enemy 1_0: 543983966
+      Enemy 1_4: -1648429350
+      Enemy 1_3: 1387200424
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

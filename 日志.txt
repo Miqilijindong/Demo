@@ -314,3 +314,15 @@ LayoutRebuilder.ForceRebuildLayoutImmediate(rectTransform);
 Billiards	台球游戏
 tetris_YeXiao	俄罗斯方块
 flappyBoat		飞行小船
+
+11日
+昨天修改了2D平台游戏，加入了怪物的碰撞攻击检测以及玩家受到伤害的反应。在提交代码时，第一次提交只更新了存在文件内容，新文件忘了提交，后面想偷懒点了Amend Last Commit(修改最后一次提交)，但是由于我已经push上去了，导致代码冲突，但是一直没发现是我移动了文件，导致我回滚的时候，新代码地址和旧代码地址都有了。一直没找到正确的错误，搞到了18:30才修复成功。
+并且vs产生了一个错误the project file was unloaded(项目文件无法被加载)，右键点击项目重新reload就可以了。
+
+12日
+void test(int a = 10, int b = 1) {};
+像是如上的函数参数默认值以及指定传参。
+test();
+test(5, 5);
+test(int b = 5);
+test(b : 5);

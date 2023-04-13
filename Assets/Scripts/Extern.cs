@@ -73,6 +73,10 @@ class Rectangle : Polygon
     }
 }
 
+
+/// <summary>
+/// 关于继承之间的关系
+/// </summary>
 public class Extern : MonoBehaviour
 {
 

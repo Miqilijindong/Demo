@@ -124,6 +124,7 @@
     <Compile Include="Assets\Scripts\spiderman\Climbing.cs" />
     <Compile Include="Assets\Scripts\方块保卫战\GameController.cs" />
     <Compile Include="Assets\Scripts\AboutParent\AboutParentClass.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\EnemySpecific\Enemy1\E1_IdleState.cs" />
     <Compile Include="Assets\Scripts\AbstractClass.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Camera\CameraLook.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
@@ -134,6 +135,7 @@
     <Compile Include="Assets\Scripts\spiderman\Grappling.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Character\Character.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\Data\D_MoveState.cs" />
     <Compile Include="Assets\Scripts\状态机\FSM.cs" />
     <Compile Include="Assets\Scripts\L3_32D刚体.cs" />
     <Compile Include="Assets\Scripts\对象池\ObjectPool.cs" />
@@ -164,6 +166,7 @@
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Interface\CanvasSpawner.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Character\Inventory.cs" />
     <Compile Include="Assets\Scripts\2.14-17\TStruct.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\EnemySpecific\Enemy1\Enemy1.cs" />
     <Compile Include="Assets\Scripts\ImageClass.cs" />
     <Compile Include="Assets\Scripts\ITween\ITweenTest.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Interface\TextAmmunitionTotal.cs" />
@@ -177,6 +180,7 @@
     <Compile Include="Assets\Scripts\spiderman\UIManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
     <Compile Include="Assets\Scripts\BGScaler\CameraController_Scaler.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\Data\D_IdleState.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Interface\TextTimescale.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Legacy\PlayParticles.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
@@ -190,6 +194,7 @@
     <Compile Include="Assets\Scripts\L5_15UI事件.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
     <Compile Include="Assets\Scripts\向量.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\EnemySpecific\Enemy1\E1_MoveState.cs" />
     <Compile Include="Assets\Scripts\EventTriggerClass.cs" />
     <Compile Include="Assets\Scripts\spiderman\PlayerMovement.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Weapons\Muzzle.cs" />
@@ -226,8 +231,10 @@
     <Compile Include="Assets\Scripts\3.1-4 委托\delegateClass.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Weapons\ScopeBehaviour.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\MoveState.cs" />
     <Compile Include="Assets\Scripts\2.8-13\Sealed.cs" />
     <Compile Include="Assets\Scripts\L2_6GameObjectClass.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\IdleState.cs" />
     <Compile Include="Assets\Infima Games\Tools\Looping\LoopUtilities.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Legacy\GasTankScript.cs" />
     <Compile Include="Assets\Scripts\子弹\Bullet.cs" />
@@ -260,6 +267,8 @@
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Interface\Crosshair.cs" />
     <Compile Include="Assets\Scripts\L2_11常用工具Class.cs" />
     <Compile Include="Assets\Scripts\状态机\IdleState.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State Machine\State.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State Machine\FiniteStateMachine.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Legacy\ImpactScript.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Particles\ParticleController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
@@ -273,6 +282,7 @@
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerController.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Interface\TextMouseLock.cs" />
     <Compile Include="Assets\Scripts\2D_Dungeon\AgentPlacer.cs" />
+    <Compile Include="Assets\Scripts\力扣\RomanToIntClass.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Services\AudioSettings.cs" />
     <Compile Include="Assets\Scripts\DictionaryClass.cs" />
     <Compile Include="Assets\Kinematic Equations\E03_ballProblem\BallLauncher.cs" />
@@ -290,8 +300,10 @@
     <Compile Include="Assets\Scripts\BreakGroundScroll.cs" />
     <Compile Include="Assets\Scripts\L6_7刚体移动.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\GameManager\GameManager.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State Machine\Entity.cs" />
     <Compile Include="Assets\Scripts\L4_5小球.cs" />
     <Compile Include="Assets\Scripts\spiderman\PlayerCam.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\Data\D_Entity.cs" />
     <Compile Include="Assets\Scripts\2.8-13\TClass.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Demo\DisplayMaterialName.cs" />
     <Compile Include="Assets\Scripts\方块保卫战\enemyClass.cs" />
