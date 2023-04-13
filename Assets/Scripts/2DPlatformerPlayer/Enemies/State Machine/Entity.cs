@@ -17,6 +17,8 @@ public class Entity : MonoBehaviour
     private Transform wallCheck;
     [SerializeField]
     private Transform ledgeCheck;
+    [SerializeField]
+    private Transform playerDetectedCheck;
 
     private Vector2 velocityWorkspace;
 
@@ -46,14 +48,40 @@ public class Entity : MonoBehaviour
         rb.velocity = velocityWorkspace;
     }
 
+    /// <summary>
+    /// ¼ì²âÇ½±Ú
+    /// </summary>
+    /// <returns></returns>
     public virtual bool CheckWall()
     {
         return Physics2D.Raycast(wallCheck.position, aliveGo.transform.right, entityData.wallCheckDistance, entityData.whatIsGround);
     }
 
+    /// <summary>
+    /// ¼ì²âµØÃæ
+    /// </summary>
+    /// <returns></returns>
     public virtual bool CheckLedge()
     {
         return Physics2D.Raycast(ledgeCheck.position, Vector2.down, entityData.ledgeCheckDistance, entityData.whatIsGround);
+    }
+
+    /// <summary>
+    /// ¼ì²âÍæ¼Ò×îÐ¡¾àÀë
+    /// </summary>
+    /// <returns></returns>
+    public virtual bool CheckPlayerInMinAgroRange()
+    {
+        return Physics2D.Raycast(playerDetectedCheck.position, aliveGo.transform.right, entityData.minAgroDistance, entityData.whatIsPlayer);
+    }
+
+    /// <summary>
+    /// ¼ì²âÍæ¼Ò×î´ó¾àÀë
+    /// </summary>
+    /// <returns></returns>
+    public virtual bool CheckPlayerInMaxAgroRange()
+    {
+        return Physics2D.Raycast(playerDetectedCheck.position, aliveGo.transform.right, entityData.maxAgroDistance, entityData.whatIsPlayer);
     }
 
     public virtual void Flip()
