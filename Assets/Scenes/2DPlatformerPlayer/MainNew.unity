@@ -284,7 +284,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 164345254}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 325cdfdc282bd504db3b3d0f4b642674, type: 3}
+  m_Script: {fileID: 11500000, guid: d0d151a89db0788439081d7fe3a5747f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   entityData: {fileID: 11400000, guid: 23fd68ae597c230418e8b5e8d405d963, type: 2}
@@ -294,6 +294,9 @@ MonoBehaviour:
   idleStateData: {fileID: 11400000, guid: 89d7d0b7c709f6e41ac60ce102a33c06, type: 2}
   moveStateData: {fileID: 11400000, guid: cd96237dae0af41449f5f220e8873ec6, type: 2}
   playerDetectedStateData: {fileID: 11400000, guid: 3fb6baf8b671625429cb0d9016db4d69,
+    type: 2}
+  chargeStateData: {fileID: 11400000, guid: 756404a37945c34439ae58506ffa0905, type: 2}
+  lookForPlayerStateData: {fileID: 11400000, guid: 56c7d5c0525247b4386890e61cca3ff6,
     type: 2}
 --- !u!1 &224187842
 GameObject:

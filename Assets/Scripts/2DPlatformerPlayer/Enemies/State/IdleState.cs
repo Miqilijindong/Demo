@@ -28,7 +28,6 @@ namespace PlatformerPlayer
 
             entity.SetVelocity(0f);
             isIdleTimeOver = false;
-            isPlayerInMinAgroRange = entity.CheckPlayerInMinAgroRange();
             SetRandomIdleTime();
         }
 
@@ -38,7 +37,7 @@ namespace PlatformerPlayer
 
             if (flipAfterIdle)
             {
-                entity.Flip(); 
+                entity.Flip();
             }
         }
 
@@ -55,7 +54,13 @@ namespace PlatformerPlayer
         public override void PhysicsUPdate()
         {
             base.PhysicsUPdate();
-            isPlayerInMinAgroRange = entity.CheckPlayerInMinAgroRange(); 
+        }
+
+        public override void DoChecks()
+        {
+            base.DoChecks();
+
+            isPlayerInMinAgroRange = entity.CheckPlayerInMinAgroRange();
         }
 
         public void SetFlipAfterIdle(bool flip)
@@ -65,7 +70,7 @@ namespace PlatformerPlayer
 
         private void SetRandomIdleTime()
         {
-            idleTime = Random.Range(stateData.minIdleTime, stateData.maxIdleTime); 
+            idleTime = Random.Range(stateData.minIdleTime, stateData.maxIdleTime);
         }
     }
 }

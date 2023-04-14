@@ -4,25 +4,23 @@ using UnityEngine;
 
 public class PlayerDetectedState : State
 {
-    protected D_PlayerDetectedState playerDetectedState;
+    protected D_PlayerDetectedState stateData;
 
     protected bool isPlayerInMinAgroRange;
     protected bool isPlayerInMaxAgroRange;
+    protected bool perfromLongRangeAction;
 
-
-    public PlayerDetectedState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_PlayerDetectedState playerDetectedState) : base(entity, stateMachine, animBoolName)
+    public PlayerDetectedState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_PlayerDetectedState stateData) : base(entity, stateMachine, animBoolName)
     {
-        this.playerDetectedState = playerDetectedState;
+        this.stateData = stateData;
     }
 
     public override void Enter()
     {
         base.Enter();
 
+        perfromLongRangeAction = false;
         entity.SetVelocity(0f);
-
-        isPlayerInMinAgroRange = entity.CheckPlayerInMinAgroRange();
-        isPlayerInMaxAgroRange = entity.CheckPlayerInMaxAgroRange();
     }
 
     public override void Exit()
@@ -33,11 +31,21 @@ public class PlayerDetectedState : State
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+
+        if (Time.time >= startTime + stateData.longRangeActionTime)
+        {
+            perfromLongRangeAction = true;
+        }
     }
 
     public override void PhysicsUPdate()
     {
         base.PhysicsUPdate();
+    }
+
+    public override void DoChecks()
+    {
+        base.DoChecks();
 
         isPlayerInMinAgroRange = entity.CheckPlayerInMinAgroRange();
         isPlayerInMaxAgroRange = entity.CheckPlayerInMaxAgroRange();

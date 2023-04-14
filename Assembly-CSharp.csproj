@@ -166,7 +166,6 @@
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Interface\CanvasSpawner.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Character\Inventory.cs" />
     <Compile Include="Assets\Scripts\2.14-17\TStruct.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\EnemySpecific\Enemy1\Enemy1.cs" />
     <Compile Include="Assets\Scripts\ImageClass.cs" />
     <Compile Include="Assets\Scripts\ITween\ITweenTest.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Interface\TextAmmunitionTotal.cs" />
@@ -315,9 +314,16 @@
     <Compile Include="Assets\Scripts\Extern.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\CombatDummyController.cs" />
     <Compile Include="Assets\Scripts\SpriteAndOverrideSprite.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\EnemySpecific\Enemy1\E1_playerDetectedState.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\EnemySpecific\Enemy1\E1_PlayerDetectedState.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\PlayerDetectedState.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\Data\D_PlayerDetectedState.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\ChargeState.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\EnemySpecific\Enemy1\Enemy1.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\Data\D_ChargeState.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\EnemySpecific\Enemy1\E1_ChargeState.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\LookForPlayerState.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\Data\D_LookForPlayerState.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\EnemySpecific\Enemy1\E1_LookForPlayerState.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shader\NewUnlitShader.shader" />
