@@ -20,7 +20,7 @@ public class PlayerCombatController : MonoBehaviour
     private float inputTime, attack1Radius, attack1Damage;
     private float lastInputTime = Mathf.NegativeInfinity;
 
-    private float[] attackDetails = new float[2];
+    private AttackDetails attackDetails = new AttackDetails();
 
     private Animator anim;
 
@@ -79,8 +79,8 @@ public class PlayerCombatController : MonoBehaviour
     {
         Collider2D[] detectedObjects = Physics2D.OverlapCircleAll(attack1HitBoxPos.position, attack1Radius, whatIsDamageable);
 
-        attackDetails[0] = attack1Damage;
-        attackDetails[1] = transform.position.x;
+        attackDetails.damageAmount = attack1Damage;
+        attackDetails.position = transform.position;
 
         foreach (Collider2D collider in detectedObjects)
         {
@@ -99,7 +99,7 @@ public class PlayerCombatController : MonoBehaviour
     /// 伤害计算
     /// </summary>
     /// <param name="attackDetails">0.是伤害数值，1.攻击的方向</param>
-    private void Damage(float[] attackDetails)
+    private void Damage(AttackDetails attackDetails)
     {
         if (PC.GetDashStatus())
         {
@@ -108,9 +108,9 @@ public class PlayerCombatController : MonoBehaviour
 
         int direction;
 
-        PS.DecreaseHealth(attackDetails[0]);
+        PS.DecreaseHealth(attackDetails.damageAmount);
 
-        if (attackDetails[1] < transform.position.x)
+        if (attackDetails.position.x < transform.position.x)
         {
             direction = 1;
         }

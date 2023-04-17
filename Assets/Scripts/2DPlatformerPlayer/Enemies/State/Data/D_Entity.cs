@@ -26,6 +26,11 @@ public class D_Entity : ScriptableObject
     /// </summary>
     public float minAgroDistance = 3f;
 
+    /// <summary>
+    /// 
+    /// </summary>
+    public float closeRangeActionDistance = 1f;
+
     public LayerMask whatIsGround;
     public LayerMask whatIsPlayer;
 }

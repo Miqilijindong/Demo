@@ -94,6 +94,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\Scripts\Demo3.cs" />
     <Compile Include="Assets\Scripts\L3_2Sprite.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\EnemySpecific\Enemy1\E1_PlayerDetectedState.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Weapons\Weapon.cs" />
     <Compile Include="Assets\Scripts\FloatWindowClass.cs" />
     <Compile Include="Assets\Scripts\角色移动\Cam360View.cs" />
@@ -175,6 +176,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Services\IGameService.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Interface\TextAmmunitionCurrent.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\EnemySpecific\Enemy1\E1_ChargeState.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
     <Compile Include="Assets\Scripts\spiderman\UIManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
@@ -191,6 +193,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\Scripts\L10案例.cs" />
     <Compile Include="Assets\Scripts\L5_15UI事件.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\EnemySpecific\Enemy1\Enemy1.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
     <Compile Include="Assets\Scripts\向量.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\EnemySpecific\Enemy1\E1_MoveState.cs" />
@@ -207,6 +210,7 @@
     <Compile Include="Assets\Scripts\L10_4数据存档.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Legacy\CasingScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\Data\D_LookForPlayerState.cs" />
     <Compile Include="Assets\Scripts\L5_8Slider.cs" />
     <Compile Include="Assets\Scripts\L2_10协同程序Class.cs" />
     <Compile Include="Assets\Scripts\方块保卫战\UIManager.cs" />
@@ -220,10 +224,12 @@
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Utilities\TimeHandler.cs" />
     <Compile Include="Assets\Scripts\排序算法\基数排序.cs" />
     <Compile Include="Assets\Scripts\排序算法\插入排序.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\PlayerDetectedState.cs" />
     <Compile Include="Assets\Scripts\2D_Dungeon\DungeonData.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Interface\TextTutorial.cs" />
     <Compile Include="Assets\Scripts\时光倒流\Player.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\LookForPlayerState.cs" />
     <Compile Include="Assets\Scripts\3.1-4 委托\ActionClass.cs" />
     <Compile Include="Assets\UI-DotLine\MeshDotLine.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Legacy\ProjectileScript.cs" />
@@ -232,6 +238,7 @@
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Weapons\ScopeBehaviour.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\MoveState.cs" />
     <Compile Include="Assets\Scripts\2.8-13\Sealed.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\ChargeState.cs" />
     <Compile Include="Assets\Scripts\L2_6GameObjectClass.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\IdleState.cs" />
     <Compile Include="Assets\Infima Games\Tools\Looping\LoopUtilities.cs" />
@@ -239,6 +246,7 @@
     <Compile Include="Assets\Scripts\子弹\Bullet.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Interface\Element.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\Data\D_PlayerDetectedState.cs" />
     <Compile Include="Assets\Scripts\spiderman\LedgeGrabbing.cs" />
     <Compile Include="Assets\Scripts\2D_Dungeon\RoomDataExtractor.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
@@ -288,6 +296,7 @@
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Weapons\WeaponAttachmentManager.cs" />
     <Compile Include="Assets\Scripts\2D_Dungeon\SimpleDungeonGenerator.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Weapons\MuzzleBehaviour.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\EnemySpecific\Enemy1\E1_LookForPlayerState.cs" />
     <Compile Include="Assets\Scripts\rope-tutorial-master\PlayerMovement.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Services\GameModeService.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
@@ -312,18 +321,16 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\Scripts\L2_8生命周期.cs" />
     <Compile Include="Assets\Scripts\Extern.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\Data\D_ChargeState.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\CombatDummyController.cs" />
     <Compile Include="Assets\Scripts\SpriteAndOverrideSprite.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\EnemySpecific\Enemy1\E1_PlayerDetectedState.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\PlayerDetectedState.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\Data\D_PlayerDetectedState.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\ChargeState.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\EnemySpecific\Enemy1\Enemy1.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\Data\D_ChargeState.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\EnemySpecific\Enemy1\E1_ChargeState.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\LookForPlayerState.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\Data\D_LookForPlayerState.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\EnemySpecific\Enemy1\E1_LookForPlayerState.cs" />
+    <Compile Include="Assets\Scripts\力扣\KidsWithTheGreatestNumberOfCandies.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\AttackState.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\AnimationToStatemachine.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\MeleeAttackState.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\Data\D_MeleeAttackState.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Structs\AttackDetails.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\EnemySpecific\Enemy1\E1_MeleeAttackState.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shader\NewUnlitShader.shader" />

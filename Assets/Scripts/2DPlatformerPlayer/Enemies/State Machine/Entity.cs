@@ -12,6 +12,7 @@ public class Entity : MonoBehaviour
     public Rigidbody2D rb { get; private set; }
     public Animator anim { get; private set; }
     public GameObject aliveGo { get; private set; }
+    public AnimationToStatemachine atsm { get; private set; }
 
     [SerializeField]
     private Transform wallCheck;
@@ -28,6 +29,7 @@ public class Entity : MonoBehaviour
         aliveGo = transform.Find("Alive").gameObject;
         rb = aliveGo.GetComponent<Rigidbody2D>();
         anim = aliveGo.GetComponent<Animator>();
+        atsm = aliveGo.GetComponent<AnimationToStatemachine>();
 
         stateMachine = new FiniteStateMachine();
     }
@@ -84,6 +86,15 @@ public class Entity : MonoBehaviour
         return Physics2D.Raycast(playerDetectedCheck.position, aliveGo.transform.right, entityData.maxAgroDistance, entityData.whatIsPlayer);
     }
 
+    /// <summary>
+    /// 检测接近距离里是否存在玩家 
+    /// </summary>
+    /// <returns></returns>
+    public virtual bool CheckPlayerInCloseRangeAction()
+    {
+        return Physics2D.Raycast(playerDetectedCheck.position, aliveGo.transform.right, entityData.closeRangeActionDistance, entityData.whatIsPlayer);
+    }
+
     public virtual void Flip()
     {
         facingDirection *= -1;
@@ -94,5 +105,9 @@ public class Entity : MonoBehaviour
     {
         Gizmos.DrawLine(wallCheck.position, wallCheck.position + (Vector3)(Vector2.right * facingDirection * entityData.wallCheckDistance));
         Gizmos.DrawLine(ledgeCheck.position, ledgeCheck.position + (Vector3)(Vector2.down * entityData.ledgeCheckDistance));
+
+        Gizmos.DrawWireSphere(playerDetectedCheck.position + (Vector3.right * facingDirection * entityData.closeRangeActionDistance), 0.2f);
+        Gizmos.DrawWireSphere(playerDetectedCheck.position + (Vector3.right * facingDirection * entityData.minAgroDistance), 0.2f);
+        Gizmos.DrawWireSphere(playerDetectedCheck.position + (Vector3.right * facingDirection * entityData.maxAgroDistance), 0.2f);
     }
 }

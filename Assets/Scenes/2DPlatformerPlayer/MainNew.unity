@@ -298,6 +298,9 @@ MonoBehaviour:
   chargeStateData: {fileID: 11400000, guid: 756404a37945c34439ae58506ffa0905, type: 2}
   lookForPlayerStateData: {fileID: 11400000, guid: 56c7d5c0525247b4386890e61cca3ff6,
     type: 2}
+  meleeAttackStateData: {fileID: 11400000, guid: b07e308eefeb5fd44baa2474b3460a87,
+    type: 2}
+  meleeAttackPosition: {fileID: 2097968321}
 --- !u!1 &224187842
 GameObject:
   m_ObjectHideFlags: 0
@@ -35919,7 +35922,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 646234729
-  m_SortingLayer: 6
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 1.5, y: 3, z: 0}
@@ -36138,6 +36141,7 @@ GameObject:
   - component: {fileID: 405126780}
   - component: {fileID: 405126779}
   - component: {fileID: 405126778}
+  - component: {fileID: 405126782}
   m_Layer: 17
   m_Name: Alive
   m_TagString: Untagged
@@ -36161,6 +36165,7 @@ Transform:
   - {fileID: 721868666}
   - {fileID: 269177040}
   - {fileID: 1901548899}
+  - {fileID: 2097968321}
   m_Father: {fileID: 164345255}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -36270,7 +36275,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 577936959
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 543983966, guid: 1f8238d54c9b66f418d82e83123a8ae6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -36283,6 +36288,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &405126782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405126776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eff29a68242a206499dd8253665bd813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &721868665
 GameObject:
   m_ObjectHideFlags: 0
@@ -36307,7 +36324,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 721868665}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9375, y: -0.625, z: 0}
+  m_LocalPosition: {x: 1.04, y: -0.625, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -42489,6 +42506,37 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!1 &2097968320
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2097968321}
+  m_Layer: 17
+  m_Name: MeleeAtackPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2097968321
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097968320}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.263, y: -0.273, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 405126777}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &44465879395310650
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -24,7 +24,11 @@ public class E1_PlayerDetectedState : PlayerDetectedState
     {
         base.LogicUpdate();
 
-        if (perfromLongRangeAction)
+        if (perfromCloseRangeAction)
+        {
+            stateMachine.ChangeState(enemy.meleeAttackState);
+        }
+        else if (perfromLongRangeAction)
         {
             stateMachine.ChangeState(enemy.chargeState);
         }
