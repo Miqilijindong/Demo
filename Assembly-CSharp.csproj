@@ -331,6 +331,13 @@
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\Data\D_MeleeAttackState.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Structs\AttackDetails.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\EnemySpecific\Enemy1\E1_MeleeAttackState.cs" />
+    <Compile Include="Assets\Scripts\力扣\NumberOfWaysToFormATargetStringGivenADictionary.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\StunState.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\Data\D_StunState.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\EnemySpecific\Enemy1\E1_StunState.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\Data\D_DeadState.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\EnemySpecific\Enemy1\E1_DeadState.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\DeadState.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shader\NewUnlitShader.shader" />

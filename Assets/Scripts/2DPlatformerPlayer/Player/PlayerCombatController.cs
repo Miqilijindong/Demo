@@ -15,6 +15,8 @@ public class PlayerCombatController : MonoBehaviour
     [SerializeField]
     private bool combatEnable;
     private bool gotInput, isAttacking, isFirstAttack;
+    [SerializeField]
+    private float stunDamageAmount = 1f;
 
     [SerializeField]
     private float inputTime, attack1Radius, attack1Damage;
@@ -81,6 +83,7 @@ public class PlayerCombatController : MonoBehaviour
 
         attackDetails.damageAmount = attack1Damage;
         attackDetails.position = transform.position;
+        attackDetails.stunDamageAmount = stunDamageAmount;
 
         foreach (Collider2D collider in detectedObjects)
         {

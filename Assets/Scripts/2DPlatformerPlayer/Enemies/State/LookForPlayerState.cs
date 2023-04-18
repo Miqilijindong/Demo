@@ -79,6 +79,10 @@ public class LookForPlayerState : State
         base.PhysicsUPdate();
     }
 
+    /// <summary>
+    /// 设置立刻转身
+    /// </summary>
+    /// <param name="flip"></param>
     public void SetTurnImmediately(bool flip)
     {
         turnImmediatyly = flip;
