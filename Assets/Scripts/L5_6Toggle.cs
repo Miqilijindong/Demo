@@ -20,7 +20,7 @@ public class L5_6Toggle : MonoBehaviour
         Debug.Log("onValueChange" + bl);
     }
 
-    #region 两种获取选中Toggle的方式都可以用，但是关于第二个方法，似乎会有时候不起作用，网上看别人使用时，就说不行，但是我这边没问题
+    #region 两种获取选中Toggle的方式都可以用，但是关于第二个方法，似乎会有时候不起作用，网上看别人使用时，就说不行，但是我这边没问题(toggle group无法直接拖拽父组件。新版本需要在父组件上添加 Toggle Group组件。)
     /// <summary>
     /// 获取被选中的Toggle
     /// </summary>

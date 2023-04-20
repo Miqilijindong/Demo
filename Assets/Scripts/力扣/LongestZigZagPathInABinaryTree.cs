@@ -20,6 +20,12 @@ public class LongestZigZagPathInABinaryTree : MonoBehaviour
         print(v);
     }
 
+    /// <summary>
+    /// 创建层次排序二叉树(这个不行)
+    /// </summary>
+    /// <param name="arr"></param>
+    /// <param name="index"></param>
+    /// <returns></returns>
     public TreeNode BuildTree(int?[] arr, int index)
     {
         if (arr[index] == null)
@@ -44,7 +50,7 @@ public class LongestZigZagPathInABinaryTree : MonoBehaviour
     /// </summary>
     /// <param name="arr"></param>
     /// <returns></returns>
-    public TreeNode CreateTree(int?[] arr)
+    public static TreeNode CreateTree(int?[] arr)
     {
         Queue<TreeNode> q = new Queue<TreeNode>();
 

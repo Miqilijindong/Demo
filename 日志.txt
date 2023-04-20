@@ -326,3 +326,7 @@ test();
 test(5, 5);
 test(int b = 5);
 test(b : 5);
+
+20日
+Image.Raycast Target	判断是否能被射线检测
+5. toggle group无法直接拖拽父组件。新版本需要在父组件上添加 Toggle Group组件。

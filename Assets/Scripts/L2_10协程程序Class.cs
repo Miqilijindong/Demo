@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class L2_10协同程序Class : MonoBehaviour
+public class L2_10协程程序Class : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()

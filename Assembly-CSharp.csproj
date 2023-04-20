@@ -221,7 +221,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\Data\D_LookForPlayerState.cs" />
     <Compile Include="Assets\Scripts\L5_8Slider.cs" />
-    <Compile Include="Assets\Scripts\L2_10协同程序Class.cs" />
+    <Compile Include="Assets\Scripts\L2_10协程程序Class.cs" />
     <Compile Include="Assets\Scripts\方块保卫战\UIManager.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Weapons\WeaponBehaviour.cs" />
     <Compile Include="Assets\Scripts\L5_6Toggle.cs" />
@@ -339,6 +339,7 @@
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\Data\D_ChargeState.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\CombatDummyController.cs" />
     <Compile Include="Assets\Scripts\SpriteAndOverrideSprite.cs" />
+    <Compile Include="Assets\Scripts\力扣\MaximumWidthOfBinaryTree.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shader\NewUnlitShader.shader" />
