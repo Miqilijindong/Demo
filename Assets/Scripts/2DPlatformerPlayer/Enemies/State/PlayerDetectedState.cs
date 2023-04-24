@@ -9,6 +9,9 @@ public class PlayerDetectedState : State
     protected bool isPlayerInMinAgroRange;
     protected bool isPlayerInMaxAgroRange;
     protected bool perfromLongRangeAction;
+    /// <summary>
+    /// 判断近距离是否存在玩家
+    /// </summary>
     protected bool perfromCloseRangeAction;
     protected bool isDetectingLedge;
 

@@ -13,6 +13,9 @@ namespace PlatformerPlayer
 
         protected bool flipAfterIdle;
         protected bool isIdleTimeOver;
+        /// <summary>
+        /// 检测玩家最小距离
+        /// </summary>
         protected bool isPlayerInMinAgroRange;
 
         protected float idleTime;
@@ -63,6 +66,10 @@ namespace PlatformerPlayer
             isPlayerInMinAgroRange = entity.CheckPlayerInMinAgroRange();
         }
 
+        /// <summary>
+        /// 设置Idle后转身
+        /// </summary>
+        /// <param name="flip"></param>
         public void SetFlipAfterIdle(bool flip)
         {
             flipAfterIdle = flip;

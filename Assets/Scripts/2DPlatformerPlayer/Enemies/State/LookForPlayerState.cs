@@ -2,12 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// 看向玩家状态类
+/// </summary>
 public class LookForPlayerState : State
 {
     protected D_LookForPlayerState stateData;
 
+    /// <summary>
+    /// 是否立刻转向
+    /// </summary>
     protected bool turnImmediatyly;
+    /// <summary>
+    /// 判断玩家是否最小距离内
+    /// </summary>
     protected bool isPlayerInMinAgroRange;
+    /// <summary>
+    /// 是否全部执行完毕
+    /// </summary>
     protected bool isAllTurnsDone;
     protected bool isAllTurnsTimeDone;
 
