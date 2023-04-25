@@ -31,7 +31,19 @@ public class E2_PlayerDetectState : PlayerDetectedState
 
         if (perfromCloseRangeAction)
         {
-            stateMachine.ChangeState(enemy.meleeAttackState);
+            if (Time.time >= enemy.dodgeState.startTime + enemy.dodgeStateData.dodgeCooldown)
+            {
+                stateMachine.ChangeState(enemy.dodgeState);
+            }
+            else
+            {
+                stateMachine.ChangeState(enemy.meleeAttackState);
+            }
+
+        }
+        else if (perfromLongRangeAction)
+        {
+            stateMachine.ChangeState(enemy.rangedAttackState);
         }
         else if (!isPlayerInMaxAgroRange)
         {

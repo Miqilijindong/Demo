@@ -6,11 +6,22 @@ public class Enemy2 : Entity
 {
     public E2_IdleState idleState { get; private set; }
     public E2_MoveState moveState { get; private set; }
+    /// <summary>
+    /// 察觉玩家
+    /// </summary>
     public E2_PlayerDetectState playerDetectedState { get; private set; }
+    /// <summary>
+    /// 近战
+    /// </summary>
     public E2_MeleeAttackState meleeAttackState { get; private set; }
+    /// <summary>
+    /// 看向玩家或者说是寻找玩家
+    /// </summary>
     public E2_LookForPlayerState lookForPlayerState { get; private set; }
     public E2_StunState stunState { get; private set; }
     public E2_DeadState deadState { get; private set; }
+    public E2_DodgeState dodgeState { get; private set; }
+    public E2_RangedAttackState rangedAttackState { get; private set; }
 
     [SerializeField]
     private D_MoveState moveStateData;
@@ -26,9 +37,15 @@ public class Enemy2 : Entity
     private D_StunState stunStateData;
     [SerializeField]
     private D_DeadState deadStateData;
+    [SerializeField]
+    public D_DodgeState dodgeStateData;
+    [SerializeField]
+    private D_RangedAttackState rangedAttackStateData;
 
     [SerializeField]
     private Transform meleeAttackPosition;
+    [SerializeField]
+    private Transform rangedAttackPosition;
 
     public override void Start()
     {
@@ -41,10 +58,16 @@ public class Enemy2 : Entity
         lookForPlayerState = new E2_LookForPlayerState(this, stateMachine, "lookForPlayer", lookForPlayerStateData, this);
         stunState = new E2_StunState(this, stateMachine, "stun", stunStateData, this);
         deadState = new E2_DeadState(this, stateMachine, "dead", deadStateData, this);
+        dodgeState = new E2_DodgeState(this, stateMachine, "dodge", dodgeStateData, this);
+        rangedAttackState = new E2_RangedAttackState(this, stateMachine, "rangedAttack", rangedAttackPosition, rangedAttackStateData, this);
 
         stateMachine.Initialize(moveState);
     }
 
+    /// <summary>
+    /// 受伤检测
+    /// </summary>
+    /// <param name="attackDetails"></param>
     public override void Damage(AttackDetails attackDetails)
     {
         base.Damage(attackDetails);
@@ -57,8 +80,13 @@ public class Enemy2 : Entity
         {
             stateMachine.ChangeState(stunState);
         }
+        else if (CheckPlayerInMinAgroRange())
+        {
+            stateMachine.ChangeState(rangedAttackState);
+        }
         else if (!CheckPlayerInMinAgroRange())
         {
+            // 若没检测到玩家在最小距离，则立刻回头找
             lookForPlayerState.SetTurnImmediately(true);
             stateMachine.ChangeState(lookForPlayerState);
         }

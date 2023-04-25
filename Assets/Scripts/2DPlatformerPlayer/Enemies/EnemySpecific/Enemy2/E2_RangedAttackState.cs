@@ -2,13 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// ½üÕ½
-/// </summary>
-public class E2_MeleeAttackState : MeleeAttackState
+public class E2_RangedAttackState : RangedAttackState
 {
     private Enemy2 enemy;
-    public E2_MeleeAttackState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, Transform attackPosition, D_MeleeAttackState stateData, Enemy2 enemy) : base(entity, stateMachine, animBoolName, attackPosition, stateData)
+    public E2_RangedAttackState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, Transform attackPosition, D_RangedAttackState stateData, Enemy2 enemy) : base(entity, stateMachine, animBoolName, attackPosition, stateData)
     {
         this.enemy = enemy;
     }
@@ -43,7 +40,7 @@ public class E2_MeleeAttackState : MeleeAttackState
             {
                 stateMachine.ChangeState(enemy.playerDetectedState);
             }
-            else if (!isPlayerInMinAgroRange)
+            else
             {
                 stateMachine.ChangeState(enemy.lookForPlayerState);
             }
