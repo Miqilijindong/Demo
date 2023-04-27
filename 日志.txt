@@ -330,3 +330,10 @@ test(b : 5);
 20日
 Image.Raycast Target	判断是否能被射线检测
 toggle group无法直接拖拽父组件。新版本需要在父组件上添加 Toggle Group组件。
+ 
+26日
+今天是学习2D平台游戏的第20部分
+开始学习关于Unity的新输入系统 Player Input
+Behavior	是设置给出某个输入时，是通过哪种方式通知的。
+send message	发送消息通知方法	OnDeviceLost， OnDeviceR额gained， OnControlsChanged， OnMovement， OnJump
+Invoke Unity Events		是根据你在Player视图下设置的Actions生成对应的events，又开发者去配置对应的函数	Device Lost(设备丢失)， Device Regained(设备注册)， Controls Changed(控制器切换)
