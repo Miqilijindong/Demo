@@ -5,21 +5,28 @@ using UnityEngine.InputSystem;
 
 /// <summary>
 /// 玩家输入系统，新版的
+/// 
 /// </summary>
 public class PlayerInputHandler : MonoBehaviour
 {
-    private Vector2 movementInput;
+    public Vector2 RawMovementInput { get; private set; }
+    public int NormInputX { get; private set; }
+    public int NormInputY { get; private set; }
 
     public void OnMoveInput(InputAction.CallbackContext context)
     {
-        movementInput = context.ReadValue<Vector2>();
-        Debug.Log(movementInput);
+        RawMovementInput = context.ReadValue<Vector2>();
+
+        // 这里是因为手柄操作时，RawMovementInput.x或者.y不一定等于1,导致动画和人物移动不统一。所以需要加入normalized
+
+        NormInputX = (int)(RawMovementInput * Vector2.right).normalized.x;
+        NormInputY = (int)(RawMovementInput * Vector2.up).normalized.y;
     }
 
     public void OnJumpInput(InputAction.CallbackContext context)
     {
         // context.started和context.performed其实两者都是差不多的
-        if (context.started)
+        /*if (context.started)
         {
             Debug.Log("Jump button pushed down now");
         }
@@ -32,6 +39,8 @@ public class PlayerInputHandler : MonoBehaviour
         if (context.canceled)
         {
             Debug.Log("Jump button has been released");
-        }
+        }*/
+
+
     }
 }
