@@ -14,6 +14,9 @@ namespace PlatformerPlayer
 
         public PlayerIdleState idleState { get; private set; }
         public PlayerMoveState moveState { get; private set; }
+        public PlayerJumpState jumpState { get; private set; }
+        public PlayerInAirState inAirState { get; private set; }
+        public PlayerLandState landState { get; private set; }
 
         [SerializeField]
         private PlayerData playerData;
@@ -23,6 +26,12 @@ namespace PlatformerPlayer
         public Animator anim { get; private set; }
         public PlayerInputHandler inputHandler { get; private set; }
         public Rigidbody2D rb;
+        #endregion
+
+        #region Check Transforms
+        [SerializeField]
+        private Transform groundCheck;
+
         #endregion
 
         #region Other Variables
@@ -39,6 +48,9 @@ namespace PlatformerPlayer
 
             idleState = new PlayerIdleState(this, stateMachine, playerData, "idle");
             moveState = new PlayerMoveState(this, stateMachine, playerData, "move");
+            jumpState = new PlayerJumpState(this, stateMachine, playerData, "inAir");
+            inAirState = new PlayerInAirState(this, stateMachine, playerData, "inAir");
+            landState = new PlayerLandState(this, stateMachine, playerData, "land");
         }
 
         private void Start()
@@ -53,12 +65,12 @@ namespace PlatformerPlayer
 
         private void Update()
         {
+            currentVelocity = rb.velocity;
             stateMachine.CurrentState.LogicUpdate();
         }
 
         private void FixedUpdate()
         {
-            currentVelocity = rb.velocity;
             stateMachine.CurrentState.PhysicsUpdate();
         }
         #endregion
@@ -67,6 +79,13 @@ namespace PlatformerPlayer
         public void SetVelocityX(float velocity)
         {
             workSpace.Set(velocity, currentVelocity.y);
+            rb.velocity = workSpace;
+            currentVelocity = workSpace;
+        }
+
+        public void SetVelocityY(float velocity)
+        {
+            workSpace.Set(currentVelocity.x, velocity);
             rb.velocity = workSpace;
             currentVelocity = workSpace;
         }
@@ -80,6 +99,11 @@ namespace PlatformerPlayer
                 Flip();
             }
         }
+
+        public bool CheckIfGrounded()
+        {
+            return Physics2D.OverlapCircle(groundCheck.position, playerData.groundCheckRadius, playerData.whatIsGround);
+        }
         #endregion
 
         #region Other Functions
@@ -88,6 +112,10 @@ namespace PlatformerPlayer
             faceingDirection *= -1;
             transform.Rotate(0, 180f, 0);
         }
+
+        private void AnimationTrigger() => stateMachine.CurrentState.AnimationTrigger();
+
+        private void AnimationFinishTrigger() => stateMachine.CurrentState.AnimationFinishTrigger();
         #endregion
     }
 }

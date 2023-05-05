@@ -27,14 +27,14 @@ public class PlayerCombatController : MonoBehaviour
     private Animator anim;
 
     private PlayerController PC;
-    private PlayerStats PS;
+    private PlayerStateOld PS;
 
     private void Start()
     {
         anim = GetComponent<Animator>();
         anim.SetBool("canAttack", combatEnable);
         PC = GetComponent<PlayerController>();
-        PS = GetComponent<PlayerStats>();
+        PS = GetComponent<PlayerStateOld>();
     }
 
     private void Update()

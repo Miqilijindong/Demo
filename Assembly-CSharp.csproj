@@ -115,7 +115,7 @@
     <Compile Include="Assets\Scripts\2.8-13\TInterfact.cs" />
     <Compile Include="Assets\Scripts\spiderman\MoveCam.cs" />
     <Compile Include="Assets\Scripts\LoginPanelClass.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\Old\PlayerStats.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\Old\PlayerStateOld.cs" />
     <Compile Include="Assets\Scripts\AnimationController\L8_4Demo.cs" />
     <Compile Include="Assets\Scripts\L10_2实例化.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
@@ -363,6 +363,10 @@
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SuperStates\PlayerGroundedState.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerMoveState.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerIdleState.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerLandState.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerInAirState.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerJumpState.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SuperStates\PlayerAbilityState.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shader\NewUnlitShader.shader" />
