@@ -17,6 +17,9 @@ namespace PlatformerPlayer
         public PlayerJumpState jumpState { get; private set; }
         public PlayerInAirState inAirState { get; private set; }
         public PlayerLandState landState { get; private set; }
+        public PlayerWallSlideState wallSlideState { get; private set; }
+        public PlayerWallGrabState wallGrabState { get; private set; }
+        public PlayerWallClimbState wallClimbState { get; private set; }
 
         [SerializeField]
         private PlayerData playerData;
@@ -31,7 +34,8 @@ namespace PlatformerPlayer
         #region Check Transforms
         [SerializeField]
         private Transform groundCheck;
-
+        [SerializeField]
+        private Transform wallCheck;
         #endregion
 
         #region Other Variables
@@ -51,6 +55,9 @@ namespace PlatformerPlayer
             jumpState = new PlayerJumpState(this, stateMachine, playerData, "inAir");
             inAirState = new PlayerInAirState(this, stateMachine, playerData, "inAir");
             landState = new PlayerLandState(this, stateMachine, playerData, "land");
+            wallSlideState = new PlayerWallSlideState(this, stateMachine, playerData, "wallSlide");
+            wallGrabState = new PlayerWallGrabState(this, stateMachine, playerData, "wallGrab");
+            wallClimbState = new PlayerWallClimbState(this, stateMachine, playerData, "wallClimb");
         }
 
         private void Start()
@@ -103,6 +110,11 @@ namespace PlatformerPlayer
         public bool CheckIfGrounded()
         {
             return Physics2D.OverlapCircle(groundCheck.position, playerData.groundCheckRadius, playerData.whatIsGround);
+        }
+
+        public bool CheckIfTouchingWall()
+        {
+            return Physics2D.Raycast(wallCheck.position, Vector2.right * faceingDirection, playerData.wallCheckDistance, playerData.whatIsGround);
         }
         #endregion
 

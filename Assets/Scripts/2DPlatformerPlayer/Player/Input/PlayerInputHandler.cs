@@ -14,6 +14,7 @@ public class PlayerInputHandler : MonoBehaviour
     public int NormInputY { get; private set; }
     public bool JumpInput { get; private set; }
     public bool JumpInputStop { get; private set; }
+    public bool GrabInput { get; private set; }
 
     [SerializeField]
     private float inputHoldTime = 0.2f;
@@ -30,9 +31,23 @@ public class PlayerInputHandler : MonoBehaviour
         RawMovementInput = context.ReadValue<Vector2>();
 
         // 这里是因为手柄操作时，RawMovementInput.x或者.y不一定等于1,导致动画和人物移动不统一。所以需要加入normalized
+        if (Mathf.Abs(RawMovementInput.x) > 0.25f)
+        {
+            NormInputX = (int)(RawMovementInput * Vector2.right).normalized.x;
+        }
+        else
+        {
+            NormInputX = 0;
+        }
 
-        NormInputX = (int)(RawMovementInput * Vector2.right).normalized.x;
-        NormInputY = (int)(RawMovementInput * Vector2.up).normalized.y;
+        if (Mathf.Abs(RawMovementInput.y) > 0.25f)
+        {
+            NormInputY = (int)(RawMovementInput * Vector2.up).normalized.y;
+        }
+        else
+        {
+            NormInputY = 0;
+        }
     }
 
     public void OnJumpInput(InputAction.CallbackContext context)
@@ -63,6 +78,19 @@ public class PlayerInputHandler : MonoBehaviour
         if (context.canceled)
         {
             JumpInputStop = true;
+        }
+    }
+
+    public void OnGrabInput(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            GrabInput = true;
+        }
+
+        if (context.canceled)
+        {
+            GrabInput = false;
         }
     }
 

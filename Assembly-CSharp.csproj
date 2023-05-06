@@ -60,6 +60,7 @@
     <Compile Include="Assets\Scripts\子弹\FirePoint.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Structs\AttackDetails.cs" />
     <Compile Include="Assets\Scripts\2.8-13\Abstract.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerInAirState.cs" />
     <Compile Include="Assets\Scripts\2.8-13\StaticClass.cs" />
     <Compile Include="Assets\Scripts\AboutParent\ParentClass.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\EnemySpecific\Enemy2\E2_IdleState.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="Assets\Scripts\UIGradient.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\Scripts\状态机\IState.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerMoveState.cs" />
     <Compile Include="Assets\Scripts\L9_1导航系统.cs" />
     <Compile Include="Assets\Scripts\3.1-4 委托\BoardCast.cs" />
     <Compile Include="Assets\Scripts\Day4.cs" />
@@ -90,12 +92,14 @@
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\DeadState.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
     <Compile Include="Assets\Scripts\rope-tutorial-master\GrapplingGun.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerIdleState.cs" />
     <Compile Include="Assets\Scripts\L5_15UI事件2.cs" />
     <Compile Include="Assets\Kinematic Equations\E02_missileProblem\Timer.cs" />
     <Compile Include="Assets\Scripts\Test.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Interface\ImageWeapon.cs" />
     <Compile Include="Assets\Scripts\spiderman\BaseSwing.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SuperStates\PlayerAbilityState.cs" />
     <Compile Include="Assets\Scripts\力扣\LongestZigZagPathInABinaryTree.cs" />
     <Compile Include="Assets\Scripts\ITween\iTween.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
@@ -114,6 +118,8 @@
     <Compile Include="Assets\Scripts\排序算法\希尔排序.cs" />
     <Compile Include="Assets\Scripts\2.8-13\TInterfact.cs" />
     <Compile Include="Assets\Scripts\spiderman\MoveCam.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerJumpState.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerLandState.cs" />
     <Compile Include="Assets\Scripts\LoginPanelClass.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\Old\PlayerStateOld.cs" />
     <Compile Include="Assets\Scripts\AnimationController\L8_4Demo.cs" />
@@ -184,6 +190,7 @@
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Interface\CanvasSpawner.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Character\Inventory.cs" />
     <Compile Include="Assets\Scripts\2.14-17\TStruct.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SuperStates\PlayerGroundedState.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\Data\D_StunState.cs" />
     <Compile Include="Assets\Scripts\ImageClass.cs" />
     <Compile Include="Assets\Scripts\ITween\ITweenTest.cs" />
@@ -360,13 +367,10 @@
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\Data\D_ChargeState.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\CombatDummyController.cs" />
     <Compile Include="Assets\Scripts\SpriteAndOverrideSprite.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SuperStates\PlayerGroundedState.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerMoveState.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerIdleState.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerLandState.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerInAirState.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerJumpState.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SuperStates\PlayerAbilityState.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SuperStates\PlayerTeachingWallState.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerWallSlideState.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerWallGrabState.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerWallClimbState.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shader\NewUnlitShader.shader" />

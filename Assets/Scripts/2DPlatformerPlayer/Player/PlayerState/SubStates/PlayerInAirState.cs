@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class PlayerInAirState : PlayerState
 {
-    private bool isGrounded;
     private int inputX;
+    private bool isGrounded;
+    private bool isTouchingWall;
     private bool jumpInput;
+    private bool grapInput;
     private bool jumpInputStop;
     /// <summary>
     /// 土狼时间---在离开地面时，还有一定的时间能让玩家跳跃
@@ -23,6 +25,7 @@ public class PlayerInAirState : PlayerState
         base.DoChecks();
 
         isGrounded = player.CheckIfGrounded();
+        isTouchingWall = player.CheckIfTouchingWall();
     }
 
     public override void Enter()
@@ -44,6 +47,7 @@ public class PlayerInAirState : PlayerState
         inputX = player.inputHandler.NormInputX;
         jumpInput = player.inputHandler.JumpInput;
         jumpInputStop = player.inputHandler.JumpInputStop;
+        grapInput = player.inputHandler.GrabInput;
 
         CheckJumpMultiplier();
 
@@ -55,6 +59,14 @@ public class PlayerInAirState : PlayerState
         {
             stateMachine.ChangeState(player.jumpState);
             player.inputHandler.UseJumpInput();
+        }
+        else if (isTouchingWall && grapInput)
+        {
+            stateMachine.ChangeState(player.wallGrabState);
+        }
+        else if (isTouchingWall && inputX == player.faceingDirection && player.currentVelocity.y <= 0)
+        {
+            stateMachine.ChangeState(player.wallSlideState);
         }
         else
         {
