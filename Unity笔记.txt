@@ -54,3 +54,4 @@ GameCamera(script)这个用来适应手机分辨率切换很好，自适应
 	
 ctrl+shift+T找文件
 alt+\找函数
+ctrl+tab标签切换

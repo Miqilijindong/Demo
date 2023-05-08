@@ -16,8 +16,14 @@ public class PlayerData : ScriptableObject
     /// </summary>
     public int amountOfJumps = 1;
 
+    [Header("Wall JUmp State")]
+    public float wallJumpVelocity = 20;
+    public float wallJumpTime = 0.4f;
+    public Vector2 wallJumpAngle = new Vector2(1, 2);
+
     [Header("In Air State")]
     public float coyoteTime = 0.2f;
+    public float wallJumpCoyoteTime = 0.1f;
 
     [Header("Wall Slider State")]
     public float wallSliderVelocity = 3f;
@@ -29,6 +35,5 @@ public class PlayerData : ScriptableObject
     public float groundCheckRadius = 0.3f;
     public float wallCheckDistance = 0.5f;
     public LayerMask whatIsGround;
-
 
 }

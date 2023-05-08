@@ -15,11 +15,15 @@ public class PlayerWallSlideState : PlayerTeachingWallState
     {
         base.LogicUpdate();
 
-        player.SetVelocityY(-playerData.wallSliderVelocity);
 
-        if (grabInput && inputY == 0)
+        if (!isExitingState)
         {
-            stateMachine.ChangeState(player.wallGrabState);
+            player.SetVelocityY(-playerData.wallSliderVelocity);
+
+            if (grabInput && inputY == 0)
+            {
+                stateMachine.ChangeState(player.wallGrabState);
+            }
         }
     }
 }

@@ -12,14 +12,42 @@ namespace PlatformerPlayer
         #region State Variables
         public PlayerStateMachine stateMachine { get; private set; }
 
+        /// <summary>
+        /// ¾²Ö¹×´Ì¬
+        /// </summary>
         public PlayerIdleState idleState { get; private set; }
+        /// <summary>
+        /// ÒÆ¶¯×´Ì¬
+        /// </summary>
         public PlayerMoveState moveState { get; private set; }
+        /// <summary>
+        /// ÌøÔ¾×´Ì¬
+        /// </summary>
         public PlayerJumpState jumpState { get; private set; }
+        /// <summary>
+        /// ¿ÕÖÐ×´Ì¬
+        /// </summary>
         public PlayerInAirState inAirState { get; private set; }
+        /// <summary>
+        /// µØÉÏ×´Ì¬
+        /// </summary>
         public PlayerLandState landState { get; private set; }
+        /// <summary>
+        /// Ç½ÉÏÏÂ»¬×´Ì¬
+        /// </summary>
         public PlayerWallSlideState wallSlideState { get; private set; }
+        /// <summary>
+        /// ×¥Ç½×´Ì¬
+        /// </summary>
         public PlayerWallGrabState wallGrabState { get; private set; }
+        /// <summary>
+        /// ÅÀÇ½×´Ì¬
+        /// </summary>
         public PlayerWallClimbState wallClimbState { get; private set; }
+        /// <summary>
+        /// ÅÀÇ½ÌøÔ¾×´Ì¬
+        /// </summary>
+        public PlayerWallJumpState wallJumpState { get; private set; }
 
         [SerializeField]
         private PlayerData playerData;
@@ -58,6 +86,7 @@ namespace PlatformerPlayer
             wallSlideState = new PlayerWallSlideState(this, stateMachine, playerData, "wallSlide");
             wallGrabState = new PlayerWallGrabState(this, stateMachine, playerData, "wallGrab");
             wallClimbState = new PlayerWallClimbState(this, stateMachine, playerData, "wallClimb");
+            wallJumpState = new PlayerWallJumpState(this, stateMachine, playerData, "inAir");
         }
 
         private void Start()
@@ -83,6 +112,14 @@ namespace PlatformerPlayer
         #endregion
 
         #region Set Functions
+        public void SetVelocity(float velocity, Vector2 angle, int direction)
+        {
+            angle.Normalize();
+            workSpace.Set(angle.x * velocity * direction, angle.y * velocity);
+            rb.velocity = workSpace;
+            currentVelocity = workSpace;
+        }
+
         public void SetVelocityX(float velocity)
         {
             workSpace.Set(velocity, currentVelocity.y);
@@ -115,6 +152,11 @@ namespace PlatformerPlayer
         public bool CheckIfTouchingWall()
         {
             return Physics2D.Raycast(wallCheck.position, Vector2.right * faceingDirection, playerData.wallCheckDistance, playerData.whatIsGround);
+        }
+
+        public bool CheckIfTouchingWallBack()
+        {
+            return Physics2D.Raycast(wallCheck.position, Vector2.right * -faceingDirection, playerData.wallCheckDistance, playerData.whatIsGround);
         }
         #endregion
 

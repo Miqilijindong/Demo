@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// 玩家状态基类
+/// 所有状态都要继承这个类
+/// </summary>
 public class PlayerState
 {
     protected PlatformerPlayer.Player player;
@@ -9,6 +13,11 @@ public class PlayerState
     protected PlayerData playerData;
 
     protected bool isAnimatinoFinshed;
+    /// <summary>
+    /// 加入这个是因为当状态的父类发生了ChangeState，然后子类又发生了changeState时，禁止子类ChangeState
+    /// 如：当子类PlayerIdleState.LogicUpdate时，如果父类PlayerGroundState.LogiciUpdate调用了ChangeState，并且子类也调用了，就会导致状态的迅速切换，会出现二段跳
+    /// </summary>
+    protected bool isExitingState;
 
     protected float startTime;
 
@@ -30,11 +39,13 @@ public class PlayerState
         startTime = Time.time;
 
         isAnimatinoFinshed = false;
+        isExitingState = false;
     }
 
     public virtual void Exit()
     {
         player.anim.SetBool(animBoolName, false);
+        isExitingState = true;
         Debug.Log("Exit:" + animBoolName);
     }
 
