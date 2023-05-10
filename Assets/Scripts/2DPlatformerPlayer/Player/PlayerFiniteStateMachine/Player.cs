@@ -183,8 +183,11 @@ namespace PlatformerPlayer
         {
             RaycastHit2D xHit = Physics2D.Raycast(wallCheck.position, Vector2.right * faceingDirection, playerData.wallCheckDistance, playerData.whatIsGround);
             float xDist = xHit.distance;
-            workSpace.Set(xDist * faceingDirection, 0f);
-            RaycastHit2D yHit = Physics2D.Raycast(ledgeCheck.position + (Vector3)(workSpace), Vector2.down, ledgeCheck.position.y - wallCheck.position.y, playerData.whatIsGround);
+
+            workSpace.Set((xDist + 0.015f) * faceingDirection, 0f);
+            //workSpace.Set(xDist * faceingDirection, 0f);// 这里不知道为什么有问题，会导致墙角抓墙位置有问题
+            RaycastHit2D yHit = Physics2D.Raycast(ledgeCheck.position + (Vector3)(workSpace), Vector2.down, ledgeCheck.position.y - wallCheck.position.y + 0.015f, playerData.whatIsGround);
+            //RaycastHit2D yHit = Physics2D.Raycast(ledgeCheck.position + (Vector3)(workSpace), Vector2.down, ledgeCheck.position.y - wallCheck.position.y, playerData.whatIsGround);// 这里不知道为什么有问题，会导致墙角抓墙位置有问题
             float yDist = yHit.distance;
 
             workSpace.Set(wallCheck.position.x + (xDist * faceingDirection), ledgeCheck.position.y - yDist);

@@ -40,7 +40,7 @@ public class PlayerLedgeClimbState : PlayerState
 
         player.SetVelocityZero();
         player.transform.position = detectedPos;
-        cornerPos = player.DetermineCornerPositionTest();
+        cornerPos = player.DetermineCornerPosition();
 
         startPos.Set(cornerPos.x - (player.faceingDirection * playerData.startOffset.x), cornerPos.y - playerData.startOffset.y);
         stopPos.Set(cornerPos.x + (player.faceingDirection * playerData.stopOffset.x), cornerPos.y + playerData.stopOffset.y);
