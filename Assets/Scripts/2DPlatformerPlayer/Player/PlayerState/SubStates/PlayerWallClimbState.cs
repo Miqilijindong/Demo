@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// ≈¿«Ω
 /// </summary>
-public class PlayerWallClimbState : PlayerTeachingWallState
+public class PlayerWallClimbState : PlayerTouchingWallState
 {
     public PlayerWallClimbState(PlatformerPlayer.Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {

@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// ץǽ
 /// </summary>
-public class PlayerWallGrabState : PlayerTeachingWallState
+public class PlayerWallGrabState : PlayerTouchingWallState
 {
     private Vector2 holdPosition;
 

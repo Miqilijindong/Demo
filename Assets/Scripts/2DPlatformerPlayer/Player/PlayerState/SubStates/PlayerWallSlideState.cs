@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// ¿¿Ç½ÏÂ»¬
 /// </summary>
-public class PlayerWallSlideState : PlayerTeachingWallState
+public class PlayerWallSlideState : PlayerTouchingWallState
 {
     public PlayerWallSlideState(PlatformerPlayer.Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {

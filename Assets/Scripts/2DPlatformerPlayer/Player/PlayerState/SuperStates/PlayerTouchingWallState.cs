@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerTeachingWallState : PlayerState
+public class PlayerTouchingWallState : PlayerState
 {
     protected bool isGround;
     protected bool isTouchingWall;
     protected bool grabInput;
     protected bool jumpInput;
+    protected bool isTouchingLedge;
     protected int inputX;
     protected int inputY;
 
 
-    public PlayerTeachingWallState(PlatformerPlayer.Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
+    public PlayerTouchingWallState(PlatformerPlayer.Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
     }
 
@@ -32,6 +33,12 @@ public class PlayerTeachingWallState : PlayerState
 
         isGround = player.CheckIfGrounded();
         isTouchingWall = player.CheckIfTouchingWall();
+        isTouchingLedge = player.CheckIfTouchingLedge();
+
+        if (isTouchingWall && !isTouchingLedge)
+        {
+            player.ledgeClimbState.SetDetectedPosition(player.transform.position);
+        }
     }
 
     public override void Enter()
@@ -66,6 +73,10 @@ public class PlayerTeachingWallState : PlayerState
         else if (!isTouchingWall || (inputX != player.faceingDirection && !grabInput))
         {
             stateMachine.ChangeState(player.inAirState);
+        }
+        else if (isTouchingWall && !isTouchingLedge)
+        {
+            stateMachine.ChangeState(player.ledgeClimbState);
         }
     }
 

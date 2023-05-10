@@ -23,6 +23,8 @@ MonoBehaviour:
   wallJumpCoyoteTime: 0.1
   wallSliderVelocity: 2
   wallClimbVelocity: 3
+  startOffset: {x: 0.4, y: 0.9}
+  stopOffset: {x: 0.4, y: 1}
   groundCheckRadius: 0.3
   wallCheckDistance: 0.5
   whatIsGround:

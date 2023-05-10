@@ -48,6 +48,10 @@ namespace PlatformerPlayer
         /// ÅÀÇ½ÌøÔ¾×´Ì¬
         /// </summary>
         public PlayerWallJumpState wallJumpState { get; private set; }
+        /// <summary>
+        /// ×¥Ç½ÌøÔ¾×´Ì¬
+        /// </summary>
+        public PlayerLedgeClimbState ledgeClimbState { get; private set; }
 
         [SerializeField]
         private PlayerData playerData;
@@ -64,6 +68,8 @@ namespace PlatformerPlayer
         private Transform groundCheck;
         [SerializeField]
         private Transform wallCheck;
+        [SerializeField]
+        private Transform ledgeCheck;
         #endregion
 
         #region Other Variables
@@ -87,6 +93,7 @@ namespace PlatformerPlayer
             wallGrabState = new PlayerWallGrabState(this, stateMachine, playerData, "wallGrab");
             wallClimbState = new PlayerWallClimbState(this, stateMachine, playerData, "wallClimb");
             wallJumpState = new PlayerWallJumpState(this, stateMachine, playerData, "inAir");
+            ledgeClimbState = new PlayerLedgeClimbState(this, stateMachine, playerData, "ledgeClimbState");
         }
 
         private void Start()
@@ -112,6 +119,12 @@ namespace PlatformerPlayer
         #endregion
 
         #region Set Functions
+        public void SetVelocityZero()
+        {
+            rb.velocity = Vector2.zero;
+            currentVelocity = Vector2.zero;
+        }
+
         public void SetVelocity(float velocity, Vector2 angle, int direction)
         {
             angle.Normalize();
@@ -154,6 +167,11 @@ namespace PlatformerPlayer
             return Physics2D.Raycast(wallCheck.position, Vector2.right * faceingDirection, playerData.wallCheckDistance, playerData.whatIsGround);
         }
 
+        public bool CheckIfTouchingLedge()
+        {
+            return Physics2D.Raycast(ledgeCheck.position, Vector2.right * faceingDirection, playerData.wallCheckDistance, playerData.whatIsGround);
+        }
+
         public bool CheckIfTouchingWallBack()
         {
             return Physics2D.Raycast(wallCheck.position, Vector2.right * -faceingDirection, playerData.wallCheckDistance, playerData.whatIsGround);
@@ -161,6 +179,31 @@ namespace PlatformerPlayer
         #endregion
 
         #region Other Functions
+        public Vector2 DetermineCornerPosition()
+        {
+            RaycastHit2D xHit = Physics2D.Raycast(wallCheck.position, Vector2.right * faceingDirection, playerData.wallCheckDistance, playerData.whatIsGround);
+            float xDist = xHit.distance;
+            workSpace.Set(xDist * faceingDirection, 0f);
+            RaycastHit2D yHit = Physics2D.Raycast(ledgeCheck.position + (Vector3)(workSpace), Vector2.down, ledgeCheck.position.y - wallCheck.position.y, playerData.whatIsGround);
+            float yDist = yHit.distance;
+
+            workSpace.Set(wallCheck.position.x + (xDist * faceingDirection), ledgeCheck.position.y - yDist);
+
+            return workSpace;
+        }
+
+        public Vector2 DetermineCornerPositionTest()
+        {
+            RaycastHit2D xHit = Physics2D.Raycast(wallCheck.position, Vector2.right * faceingDirection, playerData.wallCheckDistance, playerData.whatIsGround);
+            float xDist = xHit.distance;
+            workSpace.Set((xDist + 0.015f) * faceingDirection, 0f);
+            RaycastHit2D yHit = Physics2D.Raycast(ledgeCheck.position + (Vector3)(workSpace), Vector2.down, ledgeCheck.position.y - wallCheck.position.y + 0.015f, playerData.whatIsGround);
+            float yDist = yHit.distance;
+
+            workSpace.Set(wallCheck.position.x + (xDist * faceingDirection), ledgeCheck.position.y - yDist);
+            return workSpace;
+        }
+
         private void Flip()
         {
             faceingDirection *= -1;

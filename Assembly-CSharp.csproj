@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\Data\D_MeleeAttackState.cs" />
     <Compile Include="Assets\Scripts\子弹\FirePoint.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Structs\AttackDetails.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerWallSlideState.cs" />
     <Compile Include="Assets\Scripts\2.8-13\Abstract.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerInAirState.cs" />
     <Compile Include="Assets\Scripts\2.8-13\StaticClass.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="Assets\Scripts\状态机\IState.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerMoveState.cs" />
     <Compile Include="Assets\Scripts\L9_1导航系统.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerWallJumpState.cs" />
     <Compile Include="Assets\Scripts\3.1-4 委托\BoardCast.cs" />
     <Compile Include="Assets\Scripts\Day4.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Services\IAudioManagerService.cs" />
@@ -263,6 +265,7 @@
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\LookForPlayerState.cs" />
     <Compile Include="Assets\Scripts\3.1-4 委托\ActionClass.cs" />
     <Compile Include="Assets\UI-DotLine\MeshDotLine.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerLedgeClimbState.cs" />
     <Compile Include="Assets\Scripts\力扣\NumberOfWaysToFormATargetStringGivenADictionary.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\Data\D_DeadState.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Legacy\ProjectileScript.cs" />
@@ -310,8 +313,11 @@
     <Compile Include="Assets\Scripts\MouseMoveCube.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Legacy\ExplosionScript.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Interface\Crosshair.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SuperStates\PlayerTouchingWallState.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\EnemySpecific\Enemy1\E1_MeleeAttackState.cs" />
     <Compile Include="Assets\Scripts\L2_11常用工具Class.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerWallGrabState.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerWallClimbState.cs" />
     <Compile Include="Assets\Scripts\状态机\IdleState.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State Machine\State.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State Machine\FiniteStateMachine.cs" />
@@ -367,11 +373,6 @@
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\Data\D_ChargeState.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\CombatDummyController.cs" />
     <Compile Include="Assets\Scripts\SpriteAndOverrideSprite.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SuperStates\PlayerTeachingWallState.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerWallSlideState.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerWallGrabState.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerWallClimbState.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerWallJumpState.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shader\NewUnlitShader.shader" />
