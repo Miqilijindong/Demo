@@ -344,3 +344,11 @@ Invoke Unity Events		是根据你在Player视图下设置的Actions生成对应�
 
 
 abd
+
+5月9日
+百家乐:大于6的不用加牌，最多两张牌，10点为0。
+
+11日
+今天开发2D平台游戏，开发到鼠标控制冲刺方向时，出现了一个问题。
+就是无法通过input actions获取鼠标移动Position。
+后面发现是game视图，需要把PlayFocused改成PlayMaximized

@@ -52,6 +52,7 @@ namespace PlatformerPlayer
         /// ץǽ��Ծ״̬
         /// </summary>
         public PlayerLedgeClimbState ledgeClimbState { get; private set; }
+        public PlayerDashState dashState { get; private set; }
 
         [SerializeField]
         private PlayerData playerData;
@@ -61,6 +62,7 @@ namespace PlatformerPlayer
         public Animator anim { get; private set; }
         public PlayerInputHandler inputHandler { get; private set; }
         public Rigidbody2D rb;
+        public Transform dashDirectionIndicator { get; private set; }
         #endregion
 
         #region Check Transforms
@@ -94,6 +96,7 @@ namespace PlatformerPlayer
             wallClimbState = new PlayerWallClimbState(this, stateMachine, playerData, "wallClimb");
             wallJumpState = new PlayerWallJumpState(this, stateMachine, playerData, "inAir");
             ledgeClimbState = new PlayerLedgeClimbState(this, stateMachine, playerData, "ledgeClimbState");
+            dashState = new PlayerDashState(this, stateMachine, playerData, "inAir");
         }
 
         private void Start()
@@ -101,6 +104,8 @@ namespace PlatformerPlayer
             anim = GetComponent<Animator>();
             inputHandler = GetComponent<PlayerInputHandler>();
             rb = GetComponent<Rigidbody2D>();
+            dashDirectionIndicator = transform.Find("DashDirectionIndicator");
+
             faceingDirection = 1;
 
             stateMachine.Initialize(idleState);
@@ -129,6 +134,13 @@ namespace PlatformerPlayer
         {
             angle.Normalize();
             workSpace.Set(angle.x * velocity * direction, angle.y * velocity);
+            rb.velocity = workSpace;
+            currentVelocity = workSpace;
+        }
+
+        public void SetVelocity(float velocity, Vector2 direction)
+        {
+            workSpace = direction * velocity;
             rb.velocity = workSpace;
             currentVelocity = workSpace;
         }

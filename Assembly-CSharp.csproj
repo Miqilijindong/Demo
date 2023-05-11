@@ -354,6 +354,7 @@
     <Compile Include="Assets\Scenes\2D_Dungeon\Cinemachine\CinemachineTest.cs" />
     <Compile Include="Assets\Scripts\对象池\Stuff.cs" />
     <Compile Include="Assets\Scripts\BreakGroundScroll.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerDashState.cs" />
     <Compile Include="Assets\Scripts\L6_7刚体移动.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\GameManager\GameManager.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\EnemySpecific\Enemy2\E2_RangedAttackState.cs" />

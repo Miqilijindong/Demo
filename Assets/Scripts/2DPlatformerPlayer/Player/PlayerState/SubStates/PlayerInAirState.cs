@@ -4,22 +4,27 @@ using UnityEngine;
 
 public class PlayerInAirState : PlayerState
 {
+    // Input 
     private int inputX;
+    private bool jumpInput;
+    private bool jumpInputStop;
+    private bool grapInput;
+    private bool dashInput;
+
+    // Check
     private bool isGrounded;
     private bool isTouchingWall;
     private bool isTouchingWallBack;
     private bool oldIsTouchingWall;
     private bool oldIsTouchingWallBack;
-    private bool jumpInput;
-    private bool grapInput;
-    private bool jumpInputStop;
+    private bool isJumping;
+    private bool isTouchingLedge;
+
     /// <summary>
     /// 土狼时间---在离开地面时，还有一定的时间能让玩家跳跃
     /// </summary>
     private bool coyoteTime;
     private bool wallJumpCoyoteTime;
-    private bool isJumping;
-    private bool isTouchingLedge;
 
     private float startWallJumpCoyoteTime;
 
@@ -81,6 +86,7 @@ public class PlayerInAirState : PlayerState
         jumpInput = player.inputHandler.JumpInput;
         jumpInputStop = player.inputHandler.JumpInputStop;
         grapInput = player.inputHandler.GrabInput;
+        dashInput = player.inputHandler.DashInput;
 
         CheckJumpMultiplier();
 
@@ -96,7 +102,7 @@ public class PlayerInAirState : PlayerState
         {
             //player.inputHandler.UseJumpInput();
 
-            StopWallJumpCoyoteTime(); 
+            StopWallJumpCoyoteTime();
             // 这里是因为DoCheck()是根据PhysicsUpdate()的，所以导致后续判断错误，所以这里要重新获取一次
             isTouchingWall = player.CheckIfTouchingWall();
             player.wallJumpState.DetermineWallJumpDirection(isTouchingWall);
@@ -114,6 +120,10 @@ public class PlayerInAirState : PlayerState
         else if (isTouchingWall && inputX == player.faceingDirection && player.currentVelocity.y <= 0)
         {
             stateMachine.ChangeState(player.wallSlideState);
+        }
+        else if (dashInput && player.dashState.CheckIfCanDash())
+        {
+            stateMachine.ChangeState(player.dashState);
         }
         else
         {
@@ -176,7 +186,7 @@ public class PlayerInAirState : PlayerState
     /// </summary>
     public void StartWallJumpCoyoteTime()
     {
-         wallJumpCoyoteTime = true;
+        wallJumpCoyoteTime = true;
         startWallJumpCoyoteTime = Time.time;
     }
 

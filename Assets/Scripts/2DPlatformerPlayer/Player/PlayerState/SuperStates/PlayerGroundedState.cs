@@ -11,6 +11,7 @@ public class PlayerGroundedState : PlayerState
     private bool isGrounded;
     private bool isTouchingWall;
     private bool isTouchingLedge;
+    private bool dashInput;
 
     public PlayerGroundedState(PlatformerPlayer.Player player, PlayerStateMachine playerStateMachine, PlayerData playerData, string animBoolName) : base(player, playerStateMachine, playerData, animBoolName)
     {
@@ -33,6 +34,7 @@ public class PlayerGroundedState : PlayerState
         base.Enter();
 
         player.jumpState.ResetAmountOfJumpsLeft();
+        player.dashState.ResetCanDash();
     }
 
     public override void Exit()
@@ -47,6 +49,7 @@ public class PlayerGroundedState : PlayerState
         inputX = player.inputHandler.NormInputX;
         jumpInput = player.inputHandler.JumpInput;
         grabInput = player.inputHandler.GrabInput;
+        dashInput = player.inputHandler.DashInput;
 
         if (jumpInput && player.jumpState.CanJump())
         {
@@ -61,6 +64,10 @@ public class PlayerGroundedState : PlayerState
         else if (isTouchingWall && grabInput && isTouchingLedge)
         {
             stateMachine.ChangeState(player.wallGrabState);
+        }
+        else if (dashInput && player.dashState.CheckIfCanDash())
+        {
+            stateMachine.ChangeState(player.dashState);
         }
     }
 
