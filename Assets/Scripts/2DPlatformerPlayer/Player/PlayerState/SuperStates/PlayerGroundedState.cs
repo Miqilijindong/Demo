@@ -5,6 +5,12 @@ using UnityEngine;
 public class PlayerGroundedState : PlayerState
 {
     protected int inputX;
+    protected int inputY;
+
+    /// <summary>
+    /// 判断是否触碰到天花板
+    /// </summary>
+    protected bool isTouchingCeiling;
 
     private bool jumpInput;
     private bool grabInput;
@@ -27,6 +33,7 @@ public class PlayerGroundedState : PlayerState
         isGrounded = player.CheckIfGrounded();
         isTouchingWall = player.CheckIfTouchingWall();
         isTouchingLedge = player.CheckIfTouchingLedge();
+        isTouchingCeiling = player.CheckForCeiling();
     }
 
     public override void Enter()
@@ -47,6 +54,7 @@ public class PlayerGroundedState : PlayerState
         base.LogicUpdate();
 
         inputX = player.inputHandler.NormInputX;
+        inputY = player.inputHandler.NormInputY;
         jumpInput = player.inputHandler.JumpInput;
         grabInput = player.inputHandler.GrabInput;
         dashInput = player.inputHandler.DashInput;
@@ -65,7 +73,7 @@ public class PlayerGroundedState : PlayerState
         {
             stateMachine.ChangeState(player.wallGrabState);
         }
-        else if (dashInput && player.dashState.CheckIfCanDash())
+        else if (dashInput && player.dashState.CheckIfCanDash() && !isTouchingCeiling)
         {
             stateMachine.ChangeState(player.dashState);
         }

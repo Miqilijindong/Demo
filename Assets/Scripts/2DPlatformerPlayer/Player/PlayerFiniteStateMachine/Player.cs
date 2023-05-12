@@ -49,10 +49,21 @@ namespace PlatformerPlayer
         /// </summary>
         public PlayerWallJumpState wallJumpState { get; private set; }
         /// <summary>
-        /// ×¥Ç½ÌøÔ¾×´Ì¬
+        /// ×¥Ç½½Ç×´Ì¬
         /// </summary>
         public PlayerLedgeClimbState ledgeClimbState { get; private set; }
+        /// <summary>
+        /// ³å´Ì×´Ì¬
+        /// </summary>
         public PlayerDashState dashState { get; private set; }
+        /// <summary>
+        /// ¶×ÏÂ¾²Ö¹×´Ì¬
+        /// </summary>
+        public PlayerCrouchIdleState crouchIdleState { get; private set; }
+        /// <summary>
+        /// ¶×ÏÂÒÆ¶¯×´Ì¬
+        /// </summary>
+        public PlayerCrouchMoveState crouchMoveState { get; private set; }
 
         [SerializeField]
         private PlayerData playerData;
@@ -63,15 +74,21 @@ namespace PlatformerPlayer
         public PlayerInputHandler inputHandler { get; private set; }
         public Rigidbody2D rb;
         public Transform dashDirectionIndicator { get; private set; }
+        public BoxCollider2D movementCollider { get; private set; }
+
         #endregion
 
         #region Check Transforms
+         
         [SerializeField]
         private Transform groundCheck;
         [SerializeField]
         private Transform wallCheck;
         [SerializeField]
         private Transform ledgeCheck;
+        [SerializeField]
+        private Transform ceilingCheck;
+
         #endregion
 
         #region Other Variables
@@ -97,6 +114,8 @@ namespace PlatformerPlayer
             wallJumpState = new PlayerWallJumpState(this, stateMachine, playerData, "inAir");
             ledgeClimbState = new PlayerLedgeClimbState(this, stateMachine, playerData, "ledgeClimbState");
             dashState = new PlayerDashState(this, stateMachine, playerData, "inAir");
+            crouchIdleState = new PlayerCrouchIdleState(this, stateMachine, playerData, "crouchIdle");
+            crouchMoveState = new PlayerCrouchMoveState(this, stateMachine, playerData, "crouchMove");
         }
 
         private void Start()
@@ -105,6 +124,7 @@ namespace PlatformerPlayer
             inputHandler = GetComponent<PlayerInputHandler>();
             rb = GetComponent<Rigidbody2D>();
             dashDirectionIndicator = transform.Find("DashDirectionIndicator");
+            movementCollider = GetComponent<BoxCollider2D>();
 
             faceingDirection = 1;
 
@@ -161,6 +181,12 @@ namespace PlatformerPlayer
         #endregion
 
         #region Check Functions
+
+        public bool CheckForCeiling()
+        {
+            return Physics2D.OverlapCircle(ceilingCheck.position, playerData.groundCheckRadius, playerData.whatIsGround);
+        }
+
         public void CheckIfShouldFlip(int inputX)
         {
             if (inputX != 0 && inputX != faceingDirection)
@@ -191,6 +217,16 @@ namespace PlatformerPlayer
         #endregion
 
         #region Other Functions
+        public void SetColliderHeight(float height)
+        {
+            Vector2 center = movementCollider.offset;
+            workSpace.Set(movementCollider.size.x, height);
+
+            center.y += (height - movementCollider.size.y) / 2;
+            movementCollider.size = workSpace;
+            movementCollider.offset = center;
+        }
+
         public Vector2 DetermineCornerPosition()
         {
             RaycastHit2D xHit = Physics2D.Raycast(wallCheck.position, Vector2.right * faceingDirection, playerData.wallCheckDistance, playerData.whatIsGround);

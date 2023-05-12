@@ -4,3 +4,6 @@ Friction 			n.不和、分歧；摩擦力；摩擦
 dummy 				n.人体模型；玩具娃娃；笨蛋；奶头；adj.假的；仿真的；v.假动作
 torque				n.转矩，扭矩；v.加转矩
 combat				n.战斗；争论；v.与...做斗争；防止；adj.战斗的；为...斗争的
+defines				v.定义；规定；详述
+operations			n.运行；运作；业务操作
+perform				v.演出；执行；运行；起...作用	

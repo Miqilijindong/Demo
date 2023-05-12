@@ -25,7 +25,7 @@ public class PlayerStateMachine
     /// <summary>
     /// ¸Ä±ä×´Ì¬
     /// </summary>
-    /// <param name="newState"></param>
+    /// <param name="newState">ÐÂ×´Ì¬</param>
     public void ChangeState(PlayerState newState)
     {
         CurrentState.Exit();

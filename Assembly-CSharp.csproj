@@ -374,6 +374,8 @@
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\Data\D_ChargeState.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\CombatDummyController.cs" />
     <Compile Include="Assets\Scripts\SpriteAndOverrideSprite.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerCrouchIdleState.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerCrouchMoveState.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shader\NewUnlitShader.shader" />

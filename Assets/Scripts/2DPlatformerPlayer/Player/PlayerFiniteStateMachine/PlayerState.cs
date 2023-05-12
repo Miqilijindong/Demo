@@ -9,9 +9,15 @@ using UnityEngine;
 public class PlayerState
 {
     protected PlatformerPlayer.Player player;
+    /// <summary>
+    /// 状态机
+    /// </summary>
     protected PlayerStateMachine stateMachine;
     protected PlayerData playerData;
 
+    /// <summary>
+    /// 动画是否播放完毕
+    /// </summary>
     protected bool isAnimatinoFinshed;
     /// <summary>
     /// 加入这个是因为当状态的父类发生了ChangeState，然后子类又发生了changeState时，禁止子类ChangeState
