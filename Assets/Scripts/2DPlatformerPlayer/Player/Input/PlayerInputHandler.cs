@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,6 +30,8 @@ public class PlayerInputHandler : MonoBehaviour
     public bool DashInput { get; private set; }
     public bool DashInputStop { get; private set; }
 
+    public bool[] AttackInputs { get; private set; }
+
     [SerializeField]
     private float inputHoldTime = 0.2f;
 
@@ -38,6 +41,10 @@ public class PlayerInputHandler : MonoBehaviour
     private void Start()
     {
         playerInput = GetComponent<PlayerInput>();
+
+        int count = Enum.GetValues(typeof(CombatInputs)).Length;
+        AttackInputs = new bool[count];
+
         cam = Camera.main;
     }
 
@@ -47,28 +54,57 @@ public class PlayerInputHandler : MonoBehaviour
         CheckDashInputHoldTime();
     }
 
+    public void OnPrimaryAttactInput(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            AttackInputs[(int)CombatInputs.primary] = true;
+        }
+
+        if (context.canceled)
+        {
+            AttackInputs[(int)CombatInputs.primary] = false;
+        }
+    }
+
+    public void OnSecondaryAttactInput(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            AttackInputs[(int)CombatInputs.secondary] = true;
+        }
+
+        if (context.canceled)
+        {
+            AttackInputs[(int)CombatInputs.secondary] = false;
+        }
+    }
+
     public void OnMoveInput(InputAction.CallbackContext context)
     {
         RawMovementInput = context.ReadValue<Vector2>();
 
         // 这里是因为手柄操作时，RawMovementInput.x或者.y不一定等于1,导致动画和人物移动不统一。所以需要加入normalized
-        if (Mathf.Abs(RawMovementInput.x) > 0.25f)
+        /*if (Mathf.Abs(RawMovementInput.x) > 0.25f)
         {
             NormInputX = (int)(RawMovementInput * Vector2.right).normalized.x;
         }
         else
         {
             NormInputX = 0;
-        }
+        }*/
 
-        if (Mathf.Abs(RawMovementInput.y) > 0.25f)
+        /*if (Mathf.Abs(RawMovementInput.y) > 0.25f)
         {
             NormInputY = (int)(RawMovementInput * Vector2.up).normalized.y;
         }
         else
         {
             NormInputY = 0;
-        }
+        }*/
+
+        NormInputX = Mathf.RoundToInt(RawMovementInput.x);
+        NormInputY = Mathf.RoundToInt(RawMovementInput.y);
     }
 
     public void OnJumpInput(InputAction.CallbackContext context)
@@ -178,4 +214,11 @@ public class PlayerInputHandler : MonoBehaviour
         }
     }
 
+}
+
+
+public enum CombatInputs
+{
+    primary, 
+    secondary
 }

@@ -113,7 +113,7 @@ public class PlayerLedgeClimbState : PlayerState
 
     public void SetDetectedPosition(Vector2 pos) => detectedPos = pos;
 
-    private void CheckForSpace()
+    public void CheckForSpace()
     {
         isTouchingCeiling = Physics2D.Raycast(cornerPos + (Vector2.up * 0.015f) + (Vector2.right * player.faceingDirection * 0.015f), Vector2.up, playerData.standColliderHeight, playerData.whatIsGround);
 

@@ -49,6 +49,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "PrimaryAttack",
+                    "type": "Button",
+                    "id": "b2d39176-eccd-48b6-af35-10a091c4b4f3",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ScondaryAttack",
+                    "type": "Button",
+                    "id": "34cf81bb-4b7d-436d-8674-b4f065b2ef5c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -176,7 +194,7 @@
                 {
                     "name": "",
                     "id": "a2331c4f-282c-456a-996f-c19834f495f1",
-                    "path": "<Gamepad>/buttonWest",
+                    "path": "<Gamepad>/rightShoulder",
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
@@ -214,6 +232,50 @@
                     "processors": "",
                     "groups": "Keyboard",
                     "action": "DashDirection",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1684db8c-02d1-4150-84c8-e1c72c9bbef3",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "PrimaryAttack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f3351495-ef1e-4f7d-9fc1-e8acbfab81f4",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "PrimaryAttack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c3582303-528d-4bdd-89e9-615e536bf9a6",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "ScondaryAttack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bfa9922a-363f-454f-bf9c-988d976449b0",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "ScondaryAttack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

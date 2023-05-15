@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// ץǽ
+/// 抓墙状态
 /// </summary>
 public class PlayerWallGrabState : PlayerTouchingWallState
 {

@@ -64,6 +64,14 @@ namespace PlatformerPlayer
         /// 蹲下移动状态
         /// </summary>
         public PlayerCrouchMoveState crouchMoveState { get; private set; }
+        /// <summary>
+        /// 首要攻击
+        /// </summary>
+        public PlayerAttackState primaryAttackState { get; private set; }
+        /// <summary>
+        /// 第二次攻击
+        /// </summary>
+        public PlayerAttackState secondaryAttackState { get; private set; }
 
         [SerializeField]
         private PlayerData playerData;
@@ -75,11 +83,12 @@ namespace PlatformerPlayer
         public Rigidbody2D rb;
         public Transform dashDirectionIndicator { get; private set; }
         public BoxCollider2D movementCollider { get; private set; }
+        public PlayerInventory inventory { get; private set; }
 
         #endregion
 
         #region Check Transforms
-         
+
         [SerializeField]
         private Transform groundCheck;
         [SerializeField]
@@ -116,6 +125,8 @@ namespace PlatformerPlayer
             dashState = new PlayerDashState(this, stateMachine, playerData, "inAir");
             crouchIdleState = new PlayerCrouchIdleState(this, stateMachine, playerData, "crouchIdle");
             crouchMoveState = new PlayerCrouchMoveState(this, stateMachine, playerData, "crouchMove");
+            primaryAttackState = new PlayerAttackState(this, stateMachine, playerData, "attack");
+            secondaryAttackState = new PlayerAttackState(this, stateMachine, playerData, "attack");
         }
 
         private void Start()
@@ -125,8 +136,12 @@ namespace PlatformerPlayer
             rb = GetComponent<Rigidbody2D>();
             dashDirectionIndicator = transform.Find("DashDirectionIndicator");
             movementCollider = GetComponent<BoxCollider2D>();
+            inventory = GetComponent<PlayerInventory>();
 
             faceingDirection = 1;
+
+            primaryAttackState.SetWeapon(inventory.weapons[(int)CombatInputs.primary]);
+            //secondaryAttackState.SetWeapon(inventory.weapons[(int)CombatInputs.primary]);
 
             stateMachine.Initialize(idleState);
         }

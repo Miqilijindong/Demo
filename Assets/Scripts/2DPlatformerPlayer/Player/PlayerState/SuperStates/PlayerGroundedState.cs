@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Íæ¼ÒµØÃæ
+/// </summary>
 public class PlayerGroundedState : PlayerState
 {
     protected int inputX;
@@ -59,7 +62,15 @@ public class PlayerGroundedState : PlayerState
         grabInput = player.inputHandler.GrabInput;
         dashInput = player.inputHandler.DashInput;
 
-        if (jumpInput && player.jumpState.CanJump())
+        if (player.inputHandler.AttackInputs[(int)CombatInputs.primary] && !isTouchingCeiling)
+        {
+            stateMachine.ChangeState(player.primaryAttackState);
+        }
+        else if (player.inputHandler.AttackInputs[(int)CombatInputs.secondary] && !isTouchingCeiling)
+        {
+            stateMachine.ChangeState(player.secondaryAttackState);
+        }
+        else if (jumpInput && player.jumpState.CanJump())
         {
             //player.inputHandler.UseJumpInput();
             stateMachine.ChangeState(player.jumpState);
