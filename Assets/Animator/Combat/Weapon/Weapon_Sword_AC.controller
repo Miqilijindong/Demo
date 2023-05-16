@@ -115,7 +115,7 @@ AnimatorController:
   m_Name: Weapon_Sword_AC
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: attackCount
+  - m_Name: attackCounter
     m_Type: 3
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -261,7 +261,7 @@ AnimatorTransition:
     m_ConditionEvent: attack
     m_EventTreshold: 0
   - m_ConditionMode: 6
-    m_ConditionEvent: attackCount
+    m_ConditionEvent: attackCounter
     m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3916941900519840651}
@@ -281,7 +281,7 @@ AnimatorTransition:
     m_ConditionEvent: attack
     m_EventTreshold: 0
   - m_ConditionMode: 6
-    m_ConditionEvent: attackCount
+    m_ConditionEvent: attackCounter
     m_EventTreshold: 2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -7468426780874146275}
@@ -301,7 +301,7 @@ AnimatorTransition:
     m_ConditionEvent: attack
     m_EventTreshold: 0
   - m_ConditionMode: 6
-    m_ConditionEvent: attackCount
+    m_ConditionEvent: attackCounter
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7865602561492410458}

@@ -20,3 +20,18 @@ implicitly			adv.含蓄的；绝对的
 converting 			n.转化；皈依；v.使改变；兑换
 described 			v.描述；
 iteration			n.迭代；重申
+literal				adj.字面上的；逐字的；刻板的；确切的；n.误印
+octal				adj.八进制
+hexadecimal			adj.十六进制的；n.十六进制
+notation			n.标记系统；注释
+whereas				conj.但是；鉴于；n.序言；条件语句
+quotes				n.引用；报价；v.报价；引用
+single quotes 		单引号
+double quotation	双引号	
+ordinarily			adv.通常的；一般的
+single precision	单精度
+term				n.时期；到期；属于；措辞；方面(trems)；(人与人之间的)关系(terms)；条件；项；v.把...称为，把...叫做
+surprisingly		adv.惊人地
+curly brace			大括号
+previously			adv.以前地
+restricted			adj.有限的；受制约的；保密的；v.限制；约束

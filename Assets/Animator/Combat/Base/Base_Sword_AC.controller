@@ -143,7 +143,7 @@ AnimatorTransition:
     m_ConditionEvent: attack
     m_EventTreshold: 0
   - m_ConditionMode: 6
-    m_ConditionEvent: attackCount
+    m_ConditionEvent: attackCounter
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8425376007490791840}
@@ -185,7 +185,7 @@ AnimatorController:
   m_Name: Base_Sword_AC
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: attackCount
+  - m_Name: attackCounter
     m_Type: 3
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -247,7 +247,7 @@ AnimatorTransition:
     m_ConditionEvent: attack
     m_EventTreshold: 0
   - m_ConditionMode: 6
-    m_ConditionEvent: attackCount
+    m_ConditionEvent: attackCounter
     m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8159135454441019036}
@@ -301,7 +301,7 @@ AnimatorTransition:
     m_ConditionEvent: attack
     m_EventTreshold: 0
   - m_ConditionMode: 6
-    m_ConditionEvent: attackCount
+    m_ConditionEvent: attackCounter
     m_EventTreshold: 2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -7700499761491541372}

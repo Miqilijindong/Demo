@@ -380,6 +380,7 @@
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Weapons\Weapon.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerInventory.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Intermediaries\WeaponAnimationToWeapon.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\ScriptableObjects\Weapons\SO_WeaponData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shader\NewUnlitShader.shader" />
