@@ -8,6 +8,8 @@ using UnityEngine;
 /// </summary>
 public class PlayerState
 {
+    protected Core core;
+
     protected PlatformerPlayer.Player player;
     /// <summary>
     /// ×´Ì¬»ú
@@ -35,6 +37,7 @@ public class PlayerState
         this.stateMachine = stateMachine;
         this.playerData = playerData;
         this.animBoolName = animBoolName;
+        core = player.core;
     }
 
     public virtual void Enter()

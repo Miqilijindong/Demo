@@ -212,6 +212,8 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
     <Compile Include="Assets\Scripts\BGScaler\CameraController_Scaler.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\Data\D_IdleState.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerAttackState.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Weapons\Weapon.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Interface\TextTimescale.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Legacy\PlayParticles.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
@@ -255,6 +257,7 @@
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Character\CharacterBehaviour.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\EnemySpecific\Enemy2\E2_DodgeState.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Intermediaries\WeaponAnimationToWeapon.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Utilities\TimeHandler.cs" />
     <Compile Include="Assets\Scripts\排序算法\基数排序.cs" />
     <Compile Include="Assets\Scripts\排序算法\插入排序.cs" />
@@ -264,6 +267,7 @@
     <Compile Include="Assets\Scripts\时光倒流\Player.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\LookForPlayerState.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\ScriptableObjects\Weapons\SO_WeaponData.cs" />
     <Compile Include="Assets\Scripts\3.1-4 委托\ActionClass.cs" />
     <Compile Include="Assets\UI-DotLine\MeshDotLine.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerLedgeClimbState.cs" />
@@ -304,6 +308,7 @@
     <Compile Include="Assets\Scripts\特性\Obsolete.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Legacy\TargetScript.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\EnemySpecific\Enemy1\E1_DeadState.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerInventory.cs" />
     <Compile Include="Assets\Scripts\StackClass.cs" />
     <Compile Include="Assets\Scripts\SealedClass.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerFiniteStateMachine\Player.cs" />
@@ -376,11 +381,10 @@
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\Data\D_ChargeState.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\CombatDummyController.cs" />
     <Compile Include="Assets\Scripts\SpriteAndOverrideSprite.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerAttackState.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Weapons\Weapon.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerInventory.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Intermediaries\WeaponAnimationToWeapon.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\ScriptableObjects\Weapons\SO_WeaponData.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Core\Core.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Core\CoreComponent\CoreComponent.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Core\CoreComponent\Movement.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Core\CoreComponent\CollisionSenses.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shader\NewUnlitShader.shader" />

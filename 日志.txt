@@ -352,3 +352,6 @@ abd
 今天开发2D平台游戏，开发到鼠标控制冲刺方向时，出现了一个问题。
 就是无法通过input actions获取鼠标移动Position。
 后面发现是game视图，需要把PlayFocused改成PlayMaximized
+
+17号
+savePizza

@@ -69,7 +69,7 @@ namespace PlatformerPlayer
         /// </summary>
         public PlayerAttackState primaryAttackState { get; private set; }
         /// <summary>
-        /// 第二次攻击
+        /// 第二种攻击---目前还未实现
         /// </summary>
         public PlayerAttackState secondaryAttackState { get; private set; }
 
@@ -78,6 +78,8 @@ namespace PlatformerPlayer
         #endregion
 
         #region Components
+
+        public Core core { get; private set; }
         public Animator anim { get; private set; }
         public PlayerInputHandler inputHandler { get; private set; }
         public Rigidbody2D rb;
@@ -87,22 +89,9 @@ namespace PlatformerPlayer
 
         #endregion
 
-        #region Check Transforms
-
-        [SerializeField]
-        private Transform groundCheck;
-        [SerializeField]
-        private Transform wallCheck;
-        [SerializeField]
-        private Transform ledgeCheck;
-        [SerializeField]
-        private Transform ceilingCheck;
-
-        #endregion
-
         #region Other Variables
-        public Vector2 currentVelocity { get; private set; }
-        public int faceingDirection { get; private set; }
+        //public Vector2 currentVelocity { get; private set; }
+        //public int faceingDirection { get; private set; }
 
         private Vector2 workSpace;
         #endregion
@@ -110,6 +99,8 @@ namespace PlatformerPlayer
         #region Unity Callback Functions
         private void Awake()
         {
+            core = GetComponentInChildren<Core>();
+
             stateMachine = new PlayerStateMachine();
 
             idleState = new PlayerIdleState(this, stateMachine, playerData, "idle");
@@ -138,7 +129,7 @@ namespace PlatformerPlayer
             movementCollider = GetComponent<BoxCollider2D>();
             inventory = GetComponent<PlayerInventory>();
 
-            faceingDirection = 1;
+            //faceingDirection = 1;
 
             primaryAttackState.SetWeapon(inventory.weapons[(int)CombatInputs.primary]);
             //secondaryAttackState.SetWeapon(inventory.weapons[(int)CombatInputs.primary]);
@@ -148,86 +139,14 @@ namespace PlatformerPlayer
 
         private void Update()
         {
-            currentVelocity = rb.velocity;
+            //currentVelocity = rb.velocity;
+            core.LogicUpdate();
             stateMachine.CurrentState.LogicUpdate();
         }
 
         private void FixedUpdate()
         {
             stateMachine.CurrentState.PhysicsUpdate();
-        }
-        #endregion
-
-        #region Set Functions
-        public void SetVelocityZero()
-        {
-            rb.velocity = Vector2.zero;
-            currentVelocity = Vector2.zero;
-        }
-
-        public void SetVelocity(float velocity, Vector2 angle, int direction)
-        {
-            angle.Normalize();
-            workSpace.Set(angle.x * velocity * direction, angle.y * velocity);
-            rb.velocity = workSpace;
-            currentVelocity = workSpace;
-        }
-
-        public void SetVelocity(float velocity, Vector2 direction)
-        {
-            workSpace = direction * velocity;
-            rb.velocity = workSpace;
-            currentVelocity = workSpace;
-        }
-
-        public void SetVelocityX(float velocity)
-        {
-            workSpace.Set(velocity, currentVelocity.y);
-            rb.velocity = workSpace;
-            currentVelocity = workSpace;
-        }
-
-        public void SetVelocityY(float velocity)
-        {
-            workSpace.Set(currentVelocity.x, velocity);
-            rb.velocity = workSpace;
-            currentVelocity = workSpace;
-        }
-        #endregion
-
-        #region Check Functions
-
-        public bool CheckForCeiling()
-        {
-            return Physics2D.OverlapCircle(ceilingCheck.position, playerData.groundCheckRadius, playerData.whatIsGround);
-        }
-
-        public void CheckIfShouldFlip(int inputX)
-        {
-            if (inputX != 0 && inputX != faceingDirection)
-            {
-                Flip();
-            }
-        }
-
-        public bool CheckIfGrounded()
-        {
-            return Physics2D.OverlapCircle(groundCheck.position, playerData.groundCheckRadius, playerData.whatIsGround);
-        }
-
-        public bool CheckIfTouchingWall()
-        {
-            return Physics2D.Raycast(wallCheck.position, Vector2.right * faceingDirection, playerData.wallCheckDistance, playerData.whatIsGround);
-        }
-
-        public bool CheckIfTouchingLedge()
-        {
-            return Physics2D.Raycast(ledgeCheck.position, Vector2.right * faceingDirection, playerData.wallCheckDistance, playerData.whatIsGround);
-        }
-
-        public bool CheckIfTouchingWallBack()
-        {
-            return Physics2D.Raycast(wallCheck.position, Vector2.right * -faceingDirection, playerData.wallCheckDistance, playerData.whatIsGround);
         }
         #endregion
 
@@ -242,39 +161,17 @@ namespace PlatformerPlayer
             movementCollider.offset = center;
         }
 
-        public Vector2 DetermineCornerPosition()
+        /*public Vector2 DetermineCornerPositionTest()
         {
-            RaycastHit2D xHit = Physics2D.Raycast(wallCheck.position, Vector2.right * faceingDirection, playerData.wallCheckDistance, playerData.whatIsGround);
+            RaycastHit2D xHit = Physics2D.Raycast(wallCheck.position, Vector2.right * core.movement.faceingDirection, playerData.wallCheckDistance, playerData.whatIsGround);
             float xDist = xHit.distance;
-
-            workSpace.Set((xDist + 0.015f) * faceingDirection, 0f);
-            //workSpace.Set(xDist * faceingDirection, 0f);// 这里不知道为什么有问题，会导致墙角抓墙位置有问题
-            RaycastHit2D yHit = Physics2D.Raycast(ledgeCheck.position + (Vector3)(workSpace), Vector2.down, ledgeCheck.position.y - wallCheck.position.y + 0.015f, playerData.whatIsGround);
-            //RaycastHit2D yHit = Physics2D.Raycast(ledgeCheck.position + (Vector3)(workSpace), Vector2.down, ledgeCheck.position.y - wallCheck.position.y, playerData.whatIsGround);// 这里不知道为什么有问题，会导致墙角抓墙位置有问题
-            float yDist = yHit.distance;
-
-            workSpace.Set(wallCheck.position.x + (xDist * faceingDirection), ledgeCheck.position.y - yDist);
-
-            return workSpace;
-        }
-
-        public Vector2 DetermineCornerPositionTest()
-        {
-            RaycastHit2D xHit = Physics2D.Raycast(wallCheck.position, Vector2.right * faceingDirection, playerData.wallCheckDistance, playerData.whatIsGround);
-            float xDist = xHit.distance;
-            workSpace.Set((xDist + 0.015f) * faceingDirection, 0f);
+            workSpace.Set((xDist + 0.015f) * core.movement.faceingDirection, 0f);
             RaycastHit2D yHit = Physics2D.Raycast(ledgeCheck.position + (Vector3)(workSpace), Vector2.down, ledgeCheck.position.y - wallCheck.position.y + 0.015f, playerData.whatIsGround);
             float yDist = yHit.distance;
 
-            workSpace.Set(wallCheck.position.x + (xDist * faceingDirection), ledgeCheck.position.y - yDist);
+            workSpace.Set(wallCheck.position.x + (xDist * core.movement.faceingDirection), ledgeCheck.position.y - yDist);
             return workSpace;
-        }
-
-        private void Flip()
-        {
-            faceingDirection *= -1;
-            transform.Rotate(0, 180f, 0);
-        }
+        }*/
 
         private void AnimationTrigger() => stateMachine.CurrentState.AnimationTrigger();
 

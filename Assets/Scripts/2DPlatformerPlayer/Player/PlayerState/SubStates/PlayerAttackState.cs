@@ -40,12 +40,12 @@ public class PlayerAttackState : PlayerAbilityState
 
         if (shouldCheckFlip)
         {
-            player.CheckIfShouldFlip(inputX);
+            core.movement.CheckIfShouldFlip(inputX);
         }
 
         if (setVelocity)
         {
-            player.SetVelocityX(velocityToSet * player.faceingDirection);
+            core.movement.SetVelocityX(velocityToSet * core.movement.faceingDirection);
         }
     }
 
@@ -57,7 +57,7 @@ public class PlayerAttackState : PlayerAbilityState
 
     public void SetPlayerVelocity(float velocity)
     {
-        player.SetVelocityX(velocity * player.faceingDirection);
+        core.movement.SetVelocityX(velocity * core.movement.faceingDirection);
 
         velocityToSet = velocity;
         setVelocity = true;

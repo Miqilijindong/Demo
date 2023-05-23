@@ -18,7 +18,7 @@ public class PlayerWallSlideState : PlayerTouchingWallState
 
         if (!isExitingState)
         {
-            player.SetVelocityY(-playerData.wallSliderVelocity);
+            core.movement.SetVelocityY(-playerData.wallSliderVelocity);
 
             if (grabInput && inputY == 0)
             {
