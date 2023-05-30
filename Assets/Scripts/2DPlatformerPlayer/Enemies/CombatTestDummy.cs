@@ -15,6 +15,8 @@ public class CombatTestDummy : MonoBehaviour, IDamageable
 
         Instantiate(hitParticles, transform.position, Quaternion.Euler(0, 00, Random.Range(0, 360)));
         anim.SetTrigger("damage");
+
+        Destroy(gameObject);
     }
 
     private void Awake()

@@ -35,3 +35,8 @@ surprisingly		adv.惊人地
 curly brace			大括号
 previously			adv.以前地
 restricted			adj.有限的；受制约的；保密的；v.限制；约束
+declarations		n.声明
+definitions			n.定义
+associated			adj.有关联的；联合的；v.联想；支持；交往；
+In addition			此外
+Scope				n.范围；(发挥能力的)机会，施展余地；事业；v.评估；确定(规划项目)的范围；

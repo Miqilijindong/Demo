@@ -41,7 +41,7 @@ public class PlayerDashState : PlayerAbilityState
         player.inputHandler.UseDashInput();
 
         isHolding = true;
-        dashDirtection = Vector2.right * core.movement.faceingDirection;
+        dashDirtection = Vector2.right * core.Movement.facingDirection;
 
         // 这里用的减速效果，是直接将所有物体的时间都减慢，效果虽然有了，但是可能会影响到其他的业务逻辑，所以建议以后改掉
         Time.timeScale = playerData.holdTimeScale;
@@ -54,9 +54,9 @@ public class PlayerDashState : PlayerAbilityState
     {
         base.Exit();
 
-        if (core.movement.currentVelocity.y > 0)
+        if (core.Movement.currentVelocity.y > 0)
         {
-            core.movement.SetVelocityY(core.movement.currentVelocity.y * playerData.dashEndYMultiplier);
+            core.Movement.SetVelocityY(core.Movement.currentVelocity.y * playerData.dashEndYMultiplier);
         }
     }
 
@@ -66,8 +66,8 @@ public class PlayerDashState : PlayerAbilityState
 
         if (!isExitingState)
         {
-            player.anim.SetFloat("yVelocity", core.movement.currentVelocity.y);
-            player.anim.SetFloat("xVelocity", Mathf.Abs(core.movement.currentVelocity.x));
+            player.anim.SetFloat("yVelocity", core.Movement.currentVelocity.y);
+            player.anim.SetFloat("xVelocity", Mathf.Abs(core.Movement.currentVelocity.x));
 
             if (isHolding)
             {
@@ -89,9 +89,9 @@ public class PlayerDashState : PlayerAbilityState
                     isHolding = false;
                     Time.timeScale = 1f;
                     startTime = Time.time;
-                    core.movement.CheckIfShouldFlip(Mathf.RoundToInt(dashDirtection.x));
+                    core.Movement.CheckIfShouldFlip(Mathf.RoundToInt(dashDirtection.x));
                     player.rb.drag = playerData.drag;
-                    core.movement.SetVelocity(playerData.dashVelocity, dashDirtection);
+                    core.Movement.SetVelocity(playerData.dashVelocity, dashDirtection);
 
                     player.dashDirectionIndicator.gameObject.SetActive(false);
                     PlaceAfterImage();
@@ -99,7 +99,7 @@ public class PlayerDashState : PlayerAbilityState
             }
             else
             {
-                core.movement.SetVelocity(playerData.dashVelocity, dashDirtection);
+                core.Movement.SetVelocity(playerData.dashVelocity, dashDirtection);
                 CheckIfShouldPlaceAfterImage();
 
                 if (Time.time >= startTime + playerData.dashTime)

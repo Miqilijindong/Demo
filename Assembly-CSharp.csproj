@@ -171,6 +171,7 @@
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Weapons\UtilitiesWeapons.cs" />
     <Compile Include="Assets\Scripts\MainPanelClass.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Animation\PlaySoundBehaviour.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\ScriptableObjects\Weapons\SO_AggressiveWeaponData.cs" />
     <Compile Include="Assets\Scripts\时光倒流\TimeController.cs" />
     <Compile Include="Assets\Scripts\RandomScript.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\Old\PlayerCombatController.cs" />
@@ -238,6 +239,7 @@
     <Compile Include="Assets\Scripts\spiderman\PlayerMovement.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Weapons\Muzzle.cs" />
     <Compile Include="Assets\Scripts\排序算法\归并排序.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Intermediaries\WeaponHitboxToWeapon.cs" />
     <Compile Include="Assets\Scripts\AboutWhere\AboutWhereClass.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\EnemySpecific\Enemy2\E2_PlayerDetectState.cs" />
     <Compile Include="Assets\Scripts\2D_Dungeon\Prop.cs" />
@@ -388,8 +390,6 @@
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\Data\D_ChargeState.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\CombatDummyController.cs" />
     <Compile Include="Assets\Scripts\SpriteAndOverrideSprite.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Intermediaries\WeaponHitboxToWeapon.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\ScriptableObjects\Weapons\SO_AggressiveWeaponData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shader\NewUnlitShader.shader" />

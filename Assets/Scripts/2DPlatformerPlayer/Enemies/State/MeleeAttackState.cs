@@ -26,7 +26,7 @@ public class MeleeAttackState : AttackState
         base.Enter();
 
         attackDetails.damageAmount = stateData.attackDamage;
-        attackDetails.position = entity.aliveGo.transform.position;
+        attackDetails.position = entity.transform.position;
     }
 
     public override void Exit()
@@ -57,7 +57,7 @@ public class MeleeAttackState : AttackState
 
         foreach (var collider in detectedObjects)
         {
-            collider.transform.SendMessage("Damage", attackDetails);
+            collider.transform.SendMessage("Damage", attackDetails); 
         }
     }
 }

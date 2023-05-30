@@ -6,7 +6,7 @@ public class Movement : CoreComponent
 {
     public Rigidbody2D rb { get; private set; }
 
-    public int faceingDirection { get; private set; }
+    public int facingDirection { get; private set; }
 
     public Vector2 currentVelocity { get; private set; }
 
@@ -18,7 +18,7 @@ public class Movement : CoreComponent
 
         rb = GetComponentInParent<Rigidbody2D>();
 
-        faceingDirection = 1;
+        facingDirection = 1;
     }
 
     public void LogicUpdate()
@@ -65,15 +65,15 @@ public class Movement : CoreComponent
 
     public void CheckIfShouldFlip(int inputX)
     {
-        if (inputX != 0 && inputX != faceingDirection)
+        if (inputX != 0 && inputX != facingDirection)
         {
             Flip();
         }
     }
 
-    private void Flip()
+    public void Flip()
     {
-        faceingDirection *= -1;
+        facingDirection *= -1;
         rb.transform.Rotate(0, 180f, 0);
     }
     #endregion

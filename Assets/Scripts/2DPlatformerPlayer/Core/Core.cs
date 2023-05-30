@@ -4,22 +4,46 @@ using UnityEngine;
 
 public class Core : MonoBehaviour
 {
-    public Movement movement { get; private set; }
-    public CollisionSenses collisionSenses { get; private set; }
+    public Movement Movement
+    {
+        get
+        {
+            if (movement)
+            {
+                return movement;
+            }
+
+            Debug.LogError("No Movement Core Component on " + transform.parent.name);
+            return null;
+        }
+        private set { movement = value; }
+    }
+    public CollisionSenses CollisionSenses
+    {
+        get
+        {
+            if (collisionSenses)
+            {
+                return collisionSenses;
+            }
+
+            Debug.LogError("No CollisionSenses Core Component on " + transform.parent.name);
+            return null;
+        }
+        private set { collisionSenses = value; }
+    }
+
+    private Movement movement;
+    private CollisionSenses collisionSenses;
 
     private void Awake()
     {
-        movement = GetComponentInChildren<Movement>();
-        collisionSenses = GetComponentInChildren<CollisionSenses>();
-
-        if (!movement || !collisionSenses)
-        {
-            Debug.LogError("Missing Core Component");
-        }
+        Movement = GetComponentInChildren<Movement>();
+        CollisionSenses = GetComponentInChildren<CollisionSenses>();
     }
 
     public void LogicUpdate()
     {
-        movement.LogicUpdate();
+        Movement.LogicUpdate();
     }
 }

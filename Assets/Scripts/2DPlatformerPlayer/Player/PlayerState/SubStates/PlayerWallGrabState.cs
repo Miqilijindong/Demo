@@ -71,7 +71,7 @@ public class PlayerWallGrabState : PlayerTouchingWallState
     {
         player.transform.position = holdPosition;
 
-        core.movement.SetVelocityX(0);
-        core.movement.SetVelocityY(0);
+        core.Movement.SetVelocityX(0);
+        core.Movement.SetVelocityY(0);
     }
 }

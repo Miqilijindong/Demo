@@ -39,10 +39,10 @@ public class PlayerInAirState : PlayerState
         oldIsTouchingWall = isTouchingWall;
         oldIsTouchingWallBack = isTouchingWallBack;
 
-        isGrounded = core.collisionSenses.Ground;
-        isTouchingWall = core.collisionSenses.WallFront;
-        isTouchingWallBack = core.collisionSenses.WallBack;
-        isTouchingLedge = core.collisionSenses.Ledge;
+        isGrounded = core.CollisionSenses.Ground;
+        isTouchingWall = core.CollisionSenses.WallFront;
+        isTouchingWallBack = core.CollisionSenses.WallBack;
+        isTouchingLedge = core.CollisionSenses.LedgeHorizontal;
 
         if (isTouchingWall && !isTouchingLedge)
         {
@@ -98,7 +98,7 @@ public class PlayerInAirState : PlayerState
         {
             stateMachine.ChangeState(player.secondaryAttackState);
         }
-        else if (isGrounded && core.movement.currentVelocity.y < 0.01f)
+        else if (isGrounded && core.Movement.currentVelocity.y < 0.01f)
         {
             stateMachine.ChangeState(player.landState);
         }
@@ -112,7 +112,7 @@ public class PlayerInAirState : PlayerState
 
             StopWallJumpCoyoteTime();
             // 这里是因为DoCheck()是根据PhysicsUpdate()的，所以导致后续判断错误，所以这里要重新获取一次
-            isTouchingWall = core.collisionSenses.WallFront;
+            isTouchingWall = core.CollisionSenses.WallFront;
             player.wallJumpState.DetermineWallJumpDirection(isTouchingWall);
             stateMachine.ChangeState(player.wallJumpState);
         }
@@ -125,7 +125,7 @@ public class PlayerInAirState : PlayerState
         {
             stateMachine.ChangeState(player.wallGrabState);
         }
-        else if (isTouchingWall && inputX == core.movement.faceingDirection && core.movement.currentVelocity.y <= 0)
+        else if (isTouchingWall && inputX == core.Movement.facingDirection && core.Movement.currentVelocity.y <= 0)
         {
             stateMachine.ChangeState(player.wallSlideState);
         }
@@ -135,11 +135,11 @@ public class PlayerInAirState : PlayerState
         }
         else
         {
-            core.movement.CheckIfShouldFlip(inputX);
-            core.movement.SetVelocityX(playerData.movementVelocity * inputX);
+            core.Movement.CheckIfShouldFlip(inputX);
+            core.Movement.SetVelocityX(playerData.movementVelocity * inputX);
 
-            player.anim.SetFloat("yVelocity", core.movement.currentVelocity.y);
-            player.anim.SetFloat("xVelocity", Mathf.Abs(core.movement.currentVelocity.x));
+            player.anim.SetFloat("yVelocity", core.Movement.currentVelocity.y);
+            player.anim.SetFloat("xVelocity", Mathf.Abs(core.Movement.currentVelocity.x));
         }
     }
 
@@ -149,10 +149,10 @@ public class PlayerInAirState : PlayerState
         {
             if (jumpInputStop)
             {
-                core.movement.SetVelocityY(core.movement.currentVelocity.y * playerData.variableJumpHeightMultiplier);
+                core.Movement.SetVelocityY(core.Movement.currentVelocity.y * playerData.variableJumpHeightMultiplier);
                 isJumping = false;
             }
-            else if (core.movement.currentVelocity.y <= 0f)
+            else if (core.Movement.currentVelocity.y <= 0f)
             {
                 isJumping = false;
             }
