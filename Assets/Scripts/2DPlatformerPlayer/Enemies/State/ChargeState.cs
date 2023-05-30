@@ -33,7 +33,6 @@ public class ChargeState : State
         base.Enter();
 
         isChargeTimeOver = false; 
-        core.Movement.SetVelocityX(stateData.chargeSpeed * core.Movement.facingDirection);
     }
 
     public override void Exit()
@@ -44,6 +43,7 @@ public class ChargeState : State
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+        core.Movement.SetVelocityX(stateData.chargeSpeed * core.Movement.facingDirection);
 
         if (Time.time >= startTime + stateData.chargeTime)
         {

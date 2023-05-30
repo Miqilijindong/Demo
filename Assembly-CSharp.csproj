@@ -390,6 +390,9 @@
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\Data\D_ChargeState.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\CombatDummyController.cs" />
     <Compile Include="Assets\Scripts\SpriteAndOverrideSprite.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Core\CoreComponent\Combat.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Generics\GenericNotImplementedError.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Interfaces\IKnocakbackable.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shader\NewUnlitShader.shader" />

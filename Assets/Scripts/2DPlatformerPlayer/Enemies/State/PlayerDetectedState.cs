@@ -34,7 +34,6 @@ public class PlayerDetectedState : State
         base.Enter();
 
         perfromLongRangeAction = false;
-        core.Movement.SetVelocityX(0f);
     }
 
     public override void Exit()
@@ -45,6 +44,8 @@ public class PlayerDetectedState : State
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+
+        core.Movement.SetVelocityX(0f);
 
         if (Time.time >= startTime + stateData.longRangeActionTime)
         {

@@ -28,4 +28,7 @@ public struct WeaponAttackDetails
     /// </summary>
     [Tooltip("¹¥»÷ÉËº¦")]
     public float damageAmount;
+
+    public float knockbackStrenght;
+    public Vector2 knockbackAngle;
 }

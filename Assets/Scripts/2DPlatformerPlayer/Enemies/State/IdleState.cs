@@ -29,7 +29,6 @@ namespace PlatformerPlayer
         {
             base.Enter();
 
-            core.Movement.SetVelocityX(0f);
             isIdleTimeOver = false;
             SetRandomIdleTime();
         }
@@ -47,6 +46,8 @@ namespace PlatformerPlayer
         public override void LogicUpdate()
         {
             base.LogicUpdate();
+
+            core.Movement.SetVelocityX(0f);
 
             if (Time.time >= startTime + idleTime)
             {

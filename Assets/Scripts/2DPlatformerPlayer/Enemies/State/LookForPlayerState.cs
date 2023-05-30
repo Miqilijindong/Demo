@@ -48,8 +48,6 @@ public class LookForPlayerState : State
 
         lastTurnTime = startTime;
         amountOfTurnsDone = 0;
-
-        core.Movement.SetVelocityX(0f);
     }
 
     public override void Exit()
@@ -60,6 +58,8 @@ public class LookForPlayerState : State
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+
+        core.Movement.SetVelocityX(0f);
 
         if (turnImmediatyly)
         {
