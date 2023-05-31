@@ -40,3 +40,7 @@ definitions			n.定义
 associated			adj.有关联的；联合的；v.联想；支持；交往；
 In addition			此外
 Scope				n.范围；(发挥能力的)机会，施展余地；事业；v.评估；确定(规划项目)的范围；
+occurs				vi.发生；存在；出现；突然出现(occur的第三人称单数)
+references			n.参考文献；参照；v.附...一共参考；引用
+pointers			n.指针	
+episode				n.集；一段时期

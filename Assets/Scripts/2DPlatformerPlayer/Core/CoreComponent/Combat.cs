@@ -2,12 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// 战斗核心组件类
+/// </summary>
 public class Combat : CoreComponent, IDamageable, IKnocakbackable
 {
+    [SerializeField]
+    private float maxKnockbackTime = 0.2f;
+
     private bool isKnockbackActive;
     private float knockbackStartTime;
 
-    public void LogicUpdate()
+    public override void LogicUpdate()
     {
         CheckKnockback();
     }
@@ -15,6 +21,7 @@ public class Combat : CoreComponent, IDamageable, IKnocakbackable
     public void Damage(float amount)
     {
         Debug.Log(core.transform.parent.name + " Damaged!");
+        core.Stats.DecreaseHealth(amount);
     }
 
     public void Knockback(Vector2 angle, float strength, int direction)
@@ -27,7 +34,7 @@ public class Combat : CoreComponent, IDamageable, IKnocakbackable
 
     private void CheckKnockback()
     {
-        if (isKnockbackActive && core.Movement.currentVelocity.y <= 0.01f && core.CollisionSenses.Ground)
+        if (isKnockbackActive && ((core.Movement.currentVelocity.y <= 0.01f && core.CollisionSenses.Ground) || Time.time >= knockbackStartTime + maxKnockbackTime))
         {
             isKnockbackActive = false;
             core.Movement.CanSetVelocity = true;

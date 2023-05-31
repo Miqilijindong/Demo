@@ -2,7 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CoreComponent : MonoBehaviour
+/// <summary>
+/// 核心组件基类
+/// 所有核心组件都必须要继承这个类
+/// </summary>
+public class CoreComponent : MonoBehaviour, ILogicUpdate
 {
     protected Core core;
 
@@ -14,5 +18,8 @@ public class CoreComponent : MonoBehaviour
         {
             Debug.LogError("There is not Core on the parent");
         }
+        core.AddComponent(this);
     }
+
+    public virtual void LogicUpdate() { }
 }
