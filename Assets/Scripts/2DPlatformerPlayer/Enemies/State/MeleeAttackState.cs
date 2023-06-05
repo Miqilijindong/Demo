@@ -11,6 +11,9 @@ public class MeleeAttackState : AttackState
 
     //protected AttackDetails attackDetails;
 
+    private Movement Movement { get => movement ?? core.GetCoreComponent(ref movement); }
+    private Movement movement;
+
     public MeleeAttackState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, Transform attackPosition, D_MeleeAttackState stateData) : base(entity, stateMachine, animBoolName, attackPosition)
     {
         this.stateData = stateData;
@@ -67,7 +70,7 @@ public class MeleeAttackState : AttackState
 
             if (knocakbackable != null)
             {
-                knocakbackable.Knockback(stateData.knockbackAngle, stateData.knockbackStrength, core.Movement.facingDirection);
+                knocakbackable.Knockback(stateData.knockbackAngle, stateData.knockbackStrength, Movement.facingDirection);
             }
         }
     }

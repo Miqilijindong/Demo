@@ -12,6 +12,16 @@ public class PlayerTouchingWallState : PlayerState
     protected int inputX;
     protected int inputY;
 
+    protected Movement Movement { get => movement ?? core.GetCoreComponent(ref movement); }
+    private CollisionSenses CollisionSenses
+    {
+        //get => collisionSenses ??= core.GetComponent<CollisionSenses>();// 当collisionSenses为空时，则执行core.GetComponent<CollisionSenses>();并赋值给collisionSenses，这是一种比较简单的方法
+        get => collisionSenses ?? core.GetCoreComponent(ref collisionSenses);
+    }
+
+    private Movement movement;
+    private CollisionSenses collisionSenses;
+
 
     public PlayerTouchingWallState(PlatformerPlayer.Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
@@ -31,9 +41,9 @@ public class PlayerTouchingWallState : PlayerState
     {
         base.DoChecks();
 
-        isGround = core.CollisionSenses.Ground;
-        isTouchingWall = core.CollisionSenses.WallFront;
-        isTouchingLedge = core.CollisionSenses.LedgeHorizontal;
+        isGround = CollisionSenses.Ground;
+        isTouchingWall = CollisionSenses.WallFront;
+        isTouchingLedge = CollisionSenses.LedgeHorizontal;
 
         if (isTouchingWall && !isTouchingLedge)
         {
@@ -70,7 +80,7 @@ public class PlayerTouchingWallState : PlayerState
         {
             stateMachine.ChangeState(player.idleState);
         }
-        else if (!isTouchingWall || (inputX != core.Movement.facingDirection && !grabInput))
+        else if (!isTouchingWall || (inputX != Movement.facingDirection && !grabInput))
         {
             stateMachine.ChangeState(player.inAirState);
         }

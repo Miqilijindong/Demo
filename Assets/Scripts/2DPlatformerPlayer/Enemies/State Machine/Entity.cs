@@ -14,6 +14,10 @@ public class Entity : MonoBehaviour
     public int lastDamageDirection { get; private set; }
     public Core core { get; private set; }
 
+    private Movement Movement { get => movement ?? core.GetCoreComponent(ref movement); }
+
+    private Movement movement;
+
     [SerializeField]
     private Transform wallCheck;
     [SerializeField]
@@ -52,7 +56,7 @@ public class Entity : MonoBehaviour
         core.LogicUpdate();
         stateMachine.currentState.LogicUpdate();
 
-        anim.SetFloat("yVelocity", core.Movement.rb.velocity.y);
+        anim.SetFloat("yVelocity", Movement.rb.velocity.y);
 
         if (Time.time >= lastDamageTime + entityData.stunRecoveryTime)
         {
@@ -117,8 +121,8 @@ public class Entity : MonoBehaviour
 
     public virtual void DamageHop(float velocity)
     {
-        velocityWorkspace.Set(core.Movement.rb.velocity.x, velocity);
-        core.Movement.rb.velocity = velocityWorkspace;
+        velocityWorkspace.Set(Movement.rb.velocity.x, velocity);
+        Movement.rb.velocity = velocityWorkspace;
     }
 
     /// <summary>
@@ -165,12 +169,12 @@ public class Entity : MonoBehaviour
     {
         if (core != null)
         {
-            Gizmos.DrawLine(wallCheck.position, wallCheck.position + (Vector3)(Vector2.right * core.Movement.facingDirection * entityData.wallCheckDistance));
+            Gizmos.DrawLine(wallCheck.position, wallCheck.position + (Vector3)(Vector2.right * Movement.facingDirection * entityData.wallCheckDistance));
             Gizmos.DrawLine(ledgeCheck.position, ledgeCheck.position + (Vector3)(Vector2.down * entityData.ledgeCheckDistance));
 
-            Gizmos.DrawWireSphere(playerDetectedCheck.position + (Vector3.right * core.Movement.facingDirection * entityData.closeRangeActionDistance), 0.2f);
-            Gizmos.DrawWireSphere(playerDetectedCheck.position + (Vector3.right * core.Movement.facingDirection * entityData.minAgroDistance), 0.2f);
-            Gizmos.DrawWireSphere(playerDetectedCheck.position + (Vector3.right * core.Movement.facingDirection * entityData.maxAgroDistance), 0.2f);
+            Gizmos.DrawWireSphere(playerDetectedCheck.position + (Vector3.right * Movement.facingDirection * entityData.closeRangeActionDistance), 0.2f);
+            Gizmos.DrawWireSphere(playerDetectedCheck.position + (Vector3.right * Movement.facingDirection * entityData.minAgroDistance), 0.2f);
+            Gizmos.DrawWireSphere(playerDetectedCheck.position + (Vector3.right * Movement.facingDirection * entityData.maxAgroDistance), 0.2f);
         }
     }
 }

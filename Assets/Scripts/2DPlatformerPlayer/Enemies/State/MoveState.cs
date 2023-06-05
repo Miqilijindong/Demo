@@ -10,6 +10,12 @@ public class MoveState : State
     protected bool isDetectingLedge;
     protected bool isPlayerInMinAgroRange;
 
+    private CollisionSenses CollisionSenses { get => collisionSenses ?? core.GetCoreComponent(ref collisionSenses); }
+    private Movement Movement { get => movement ?? core.GetCoreComponent(ref movement); }
+
+    private CollisionSenses collisionSenses;
+    private Movement movement;
+
     public MoveState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_MoveState stateData) : base(entity, stateMachine, animBoolName)
     {
         this.stateData = stateData;
@@ -29,7 +35,7 @@ public class MoveState : State
     public override void LogicUpdate()
     {
         base.LogicUpdate();
-        core.Movement.SetVelocityX(stateData.movementSpeed * core.Movement.facingDirection);
+        Movement?.SetVelocityX(stateData.movementSpeed * Movement.facingDirection);
     }
 
     public override void PhysicsUPdate()
@@ -42,8 +48,8 @@ public class MoveState : State
     {
         base.DoChecks();
 
-        isDetectingLedge = core.CollisionSenses.LedgeVertical;
-        isDetectingWall = core.CollisionSenses.WallFront;
+        isDetectingLedge = CollisionSenses.LedgeVertical;
+        isDetectingWall = CollisionSenses.WallFront;
         isPlayerInMinAgroRange = entity.CheckPlayerInMinAgroRange();
     }
 }

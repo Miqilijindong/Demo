@@ -20,6 +20,12 @@ public class DodgeState : State
     /// </summary>
     protected bool isDodgeOver;
 
+    private CollisionSenses CollisionSenses { get => collisionSenses ?? core.GetCoreComponent(ref collisionSenses); }
+    private Movement Movement { get => movement ?? core.GetCoreComponent(ref movement); }
+
+    private CollisionSenses collisionSenses;
+    private Movement movement;
+
     public DodgeState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_DodgeState stateData) : base(entity, stateMachine, animBoolName)
     {
         this.stateData = stateData;
@@ -31,8 +37,8 @@ public class DodgeState : State
 
         performCloseRangeAction = entity.CheckPlayerInCloseRangeAction();
         isPlayerInMaxAgroRange = entity.CheckPlayerInMaxAgroRange();
-        isGround = core.CollisionSenses.Ground;
-        
+        isGround = CollisionSenses.Ground;
+
     }
 
     public override void Enter()
@@ -41,7 +47,7 @@ public class DodgeState : State
 
         isDodgeOver = false;
 
-        core.Movement.SetVelocity(stateData.dodgeSpeed, stateData.dodgeAngle, -core.Movement.facingDirection);
+        Movement?.SetVelocity(stateData.dodgeSpeed, stateData.dodgeAngle, -Movement.facingDirection);
     }
 
     public override void Exit()

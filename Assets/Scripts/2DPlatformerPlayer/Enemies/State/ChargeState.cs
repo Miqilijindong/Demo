@@ -12,6 +12,16 @@ public class ChargeState : State
     protected bool isChargeTimeOver;
     protected bool performCloseRangeAction;
 
+    private Movement Movement { get => movement ?? core.GetCoreComponent(ref movement); }
+    private CollisionSenses CollisionSenses
+    {
+        //get => collisionSenses ??= core.GetComponent<CollisionSenses>();// 当collisionSenses为空时，则执行core.GetComponent<CollisionSenses>();并赋值给collisionSenses，这是一种比较简单的方法
+        get => collisionSenses ?? core.GetCoreComponent(ref collisionSenses);
+    }
+
+    private Movement movement;
+    private CollisionSenses collisionSenses;
+
     public ChargeState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_ChargeState stateData) : base(entity, stateMachine, animBoolName)
     {
         this.stateData = stateData;
@@ -22,8 +32,8 @@ public class ChargeState : State
         base.DoChecks();
 
         isPlayerInMinAgroRange = entity.CheckPlayerInMinAgroRange();
-        isDetectingWall = core.CollisionSenses.WallFront;
-        isDetectingLedge = core.CollisionSenses.LedgeVertical;
+        isDetectingWall = CollisionSenses.WallFront;
+        isDetectingLedge = CollisionSenses.LedgeVertical;
 
         performCloseRangeAction = entity.CheckPlayerInCloseRangeAction();
     }
@@ -43,7 +53,7 @@ public class ChargeState : State
     public override void LogicUpdate()
     {
         base.LogicUpdate();
-        core.Movement.SetVelocityX(stateData.chargeSpeed * core.Movement.facingDirection);
+        Movement?.SetVelocityX(stateData.chargeSpeed * Movement.facingDirection);
 
         if (Time.time >= startTime + stateData.chargeTime)
         {

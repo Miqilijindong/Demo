@@ -20,6 +20,12 @@ namespace PlatformerPlayer
 
         protected float idleTime;
 
+        private CollisionSenses CollisionSenses { get => collisionSenses ?? core.GetCoreComponent(ref collisionSenses); }
+        private Movement Movement { get => movement ?? core.GetCoreComponent(ref movement); }
+
+        private CollisionSenses collisionSenses;
+        private Movement movement;
+
         public IdleState(Entity entity, FiniteStateMachine stateMachine, string animBoolName, D_IdleState stateData) : base(entity, stateMachine, animBoolName)
         {
             this.stateData = stateData;
@@ -39,7 +45,7 @@ namespace PlatformerPlayer
 
             if (flipAfterIdle)
             {
-                core.Movement.Flip();
+                Movement.Flip();
             }
         }
 
@@ -47,7 +53,7 @@ namespace PlatformerPlayer
         {
             base.LogicUpdate();
 
-            core.Movement.SetVelocityX(0f);
+            Movement?.SetVelocityX(0f);
 
             if (Time.time >= startTime + idleTime)
             {

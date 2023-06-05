@@ -56,6 +56,10 @@ public class CollisionSenses : CoreComponent
 
     #endregion
 
+    private Movement Movement { get => movement ?? core.GetCoreComponent(ref movement); }
+
+    private Movement movement;
+
     #region Check Functions
 
     /*public bool CheckForCeiling()
@@ -95,7 +99,7 @@ public class CollisionSenses : CoreComponent
 
     public bool WallFront
     {
-        get => Physics2D.Raycast(WallCheck.position, Vector2.right * core.Movement.facingDirection, wallCheckDistance, whatIsGround);
+        get => Physics2D.Raycast(WallCheck.position, Vector2.right * Movement.facingDirection, wallCheckDistance, whatIsGround);
     }
 
     /// <summary>
@@ -103,7 +107,7 @@ public class CollisionSenses : CoreComponent
     /// </summary>
     public bool LedgeHorizontal
     {
-        get => Physics2D.Raycast(LedgeCheckHorizontal.position, Vector2.right * core.Movement.facingDirection, wallCheckDistance, whatIsGround);
+        get => Physics2D.Raycast(LedgeCheckHorizontal.position, Vector2.right * Movement.facingDirection, wallCheckDistance, whatIsGround);
     }
 
     /// <summary>
@@ -116,7 +120,7 @@ public class CollisionSenses : CoreComponent
 
     public bool WallBack
     {
-        get => Physics2D.Raycast(WallCheck.position, Vector2.right * -core.Movement.facingDirection, wallCheckDistance, whatIsGround);
+        get => Physics2D.Raycast(WallCheck.position, Vector2.right * -Movement.facingDirection, wallCheckDistance, whatIsGround);
     }
     #endregion
 }

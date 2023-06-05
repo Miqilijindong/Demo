@@ -7,6 +7,9 @@ public class AggressiveWeapon : Weapon
 {
     protected SO_AggressiveWeaponData aggressiveWeaponData;
 
+    private Movement Movement { get => movement ?? core.GetCoreComponent(ref movement); }
+    private Movement movement;
+
     private List<IDamageable> detectedDamageables = new List<IDamageable>();
     private List<IKnocakbackable> detectedKnockbackables = new List<IKnocakbackable>();
 
@@ -44,7 +47,7 @@ public class AggressiveWeapon : Weapon
 
         foreach (IKnocakbackable item in detectedKnockbackables.ToList())
         {
-            item.Knockback(details.knockbackAngle, details.knockbackStrenght, core.Movement.facingDirection);
+            item.Knockback(details.knockbackAngle, details.knockbackStrenght, Movement.facingDirection);
         }
     }
 

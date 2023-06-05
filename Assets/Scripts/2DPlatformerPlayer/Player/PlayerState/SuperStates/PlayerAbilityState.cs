@@ -7,6 +7,16 @@ public class PlayerAbilityState : PlayerState
 {
     protected bool isAbilityDone;
 
+    protected Movement Movement { get => movement ?? core.GetCoreComponent(ref movement); }
+    private CollisionSenses CollisionSenses
+    {
+        //get => collisionSenses ??= core.GetComponent<CollisionSenses>();// 当collisionSenses为空时，则执行core.GetComponent<CollisionSenses>();并赋值给collisionSenses，这是一种比较简单的方法
+        get => collisionSenses ?? core.GetCoreComponent(ref collisionSenses);
+    }
+
+    private Movement movement;
+    private CollisionSenses collisionSenses;
+
     private bool isGrounded;
 
     public PlayerAbilityState(PlatformerPlayer.Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
@@ -17,7 +27,7 @@ public class PlayerAbilityState : PlayerState
     {
         base.DoChecks();
 
-        isGrounded = core.CollisionSenses.Ground;
+        isGrounded = CollisionSenses.Ground;
     }
 
     public override void Enter()
@@ -38,7 +48,7 @@ public class PlayerAbilityState : PlayerState
 
         if (isAbilityDone)
         {
-            if (isGrounded && core.Movement.currentVelocity.y < 0.01f)
+            if (isGrounded && Movement?.currentVelocity.y < 0.01f)
             {
                 stateMachine.ChangeState(player.idleState);
             }
