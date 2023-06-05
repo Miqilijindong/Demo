@@ -83,7 +83,7 @@ public class PlayerGroundedState : PlayerState
         {
             stateMachine.ChangeState(player.secondaryAttackState);
         }
-        else if (jumpInput && player.jumpState.CanJump())
+        else if (jumpInput && player.jumpState.CanJump() && !isTouchingCeiling)
         {
             //player.inputHandler.UseJumpInput();
             stateMachine.ChangeState(player.jumpState);
