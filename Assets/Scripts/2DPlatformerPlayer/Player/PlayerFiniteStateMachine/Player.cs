@@ -151,6 +151,11 @@ namespace PlatformerPlayer
         #endregion
 
         #region Other Functions
+        
+        /// <summary>
+        /// 修改碰撞体积高度
+        /// </summary>
+        /// <param name="height"></param>
         public void SetColliderHeight(float height)
         {
             Vector2 center = movementCollider.offset;

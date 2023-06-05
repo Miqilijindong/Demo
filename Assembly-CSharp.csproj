@@ -111,6 +111,7 @@
     <Compile Include="Assets\Scripts\L3_2Sprite.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Weapons\AggressiveWeapon.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\EnemySpecific\Enemy1\E1_PlayerDetectedState.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Core\CoreComponent\Stats.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Weapons\Weapon.cs" />
     <Compile Include="Assets\Scripts\FloatWindowClass.cs" />
     <Compile Include="Assets\Scripts\角色移动\Cam360View.cs" />
@@ -152,6 +153,7 @@
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\EnemySpecific\Enemy2\E2_LookForPlayerState.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
     <Compile Include="Assets\Scripts\对象池\BezierPathController.cs" />
+    <Compile Include="Assets\Tools\StringHelper.cs" />
     <Compile Include="Assets\Scripts\spiderman\PlayerMovementDashing.cs" />
     <Compile Include="Assets\Scripts\力扣\最大二叉树.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Animation\AnimationReceiver.cs" />
@@ -176,6 +178,7 @@
     <Compile Include="Assets\Scripts\时光倒流\TimeController.cs" />
     <Compile Include="Assets\Scripts\RandomScript.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\Old\PlayerCombatController.cs" />
+    <Compile Include="Assets\UIBaseScriptsCreater.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\Data\D_DodgeState.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Weapons\Scope.cs" />
     <Compile Include="Assets\Scripts\rope-tutorial-master\GrapplingRope.cs" />
@@ -369,6 +372,7 @@
     <Compile Include="Assets\Scripts\L10_6声息系统.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Intermediaries\AnimationToStatemachine.cs" />
     <Compile Include="Assets\Scripts\spiderman\PlayerMovementGrappling.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Interfaces\ILogicUpdate.cs" />
     <Compile Include="Assets\Infima Games\Tools\Looping\Loops.cs" />
     <Compile Include="Assets\Scenes\2D_Dungeon\Cinemachine\CinemachineTest.cs" />
     <Compile Include="Assets\Scripts\对象池\Stuff.cs" />
@@ -393,8 +397,6 @@
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\Data\D_ChargeState.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\CombatDummyController.cs" />
     <Compile Include="Assets\Scripts\SpriteAndOverrideSprite.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Interfaces\ILogicUpdate.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Core\CoreComponent\Stats.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shader\NewUnlitShader.shader" />

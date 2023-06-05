@@ -44,3 +44,8 @@ occurs				vi.发生；存在；出现；突然出现(occur的第三人称单数)
 references			n.参考文献；参照；v.附...一共参考；引用
 pointers			n.指针	
 episode				n.集；一段时期
+
+With two exceptions that we'll cover in p.61 and p.601
+除了在第61页和第601页提到的两个例外。
+
+obtain				v.(尤指通过艰难的过程)得到，获得；存在，通用
