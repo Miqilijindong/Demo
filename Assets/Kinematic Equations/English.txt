@@ -49,3 +49,7 @@ With two exceptions that we'll cover in p.61 and p.601
 除了在第61页和第601页提到的两个例外。
 
 obtain				v.(尤指通过艰难的过程)得到，获得；存在，通用
+bind				v.捆包；包扎
+defined				adj.轮廓分明；vt.给...下定义，解释；使清楚。
+avoid 				v.避免；回避；撤销
+definitions			n.定义；榜样；清晰
