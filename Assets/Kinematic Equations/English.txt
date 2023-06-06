@@ -53,3 +53,8 @@ bind				v.捆包；包扎
 defined				adj.轮廓分明；vt.给...下定义，解释；使清楚。
 avoid 				v.避免；回避；撤销
 definitions			n.定义；榜样；清晰
+interactable		adj.可交互的	
+artists				n.艺术家，设计师
+relatively			adv.相当地，相对的
+graphic 			adj.详细的，生动的；回话的；图形的；可视图像；视觉艺术的；n.图表，图形；图形设计
+interact			v.相互交流互动；相互作用，相互影响		interact;interact;interact;
