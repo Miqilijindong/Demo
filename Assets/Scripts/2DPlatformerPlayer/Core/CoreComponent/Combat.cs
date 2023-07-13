@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// 战斗核心组件类
 /// </summary>
-public class Combat : CoreComponent, IDamageable, IKnocakbackable
+public class Combat : CoreComponent, IDamageable, IKnockbackable
 {
     [SerializeField]
     private GameObject damageParticles;

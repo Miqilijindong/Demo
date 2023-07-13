@@ -58,3 +58,22 @@ artists				n.艺术家，设计师
 relatively			adv.相当地，相对的
 graphic 			adj.详细的，生动的；回话的；图形的；可视图像；视觉艺术的；n.图表，图形；图形设计
 interact			v.相互交流互动；相互作用，相互影响		interact;interact;interact;
+ordinary			adj.普通的；平淡无奇的；常任的；n.常见的；
+temporary			adj.暂时的；短期的；n.临时工
+evaluate			v.评价，评估，估值；求(方程式，公式，函数)的数值
+literal				adj.字面上的；逐字的；缺乏想象力的，科班的；确切的；n.误印
+expression			n.表达，表示；表情，神情；词语；表达式；挤压
+verify				v.核实，查证；证明；证实
+ordinarily			adv.通常的；一般地
+implicitly			adv.含蓄的，暗中的；绝对的
+ordinary			adj.普通的，平常的；平淡无奇的，平庸的；常任的
+certain				adj.必然的，必定的；确定的；特定的；一定程度上；pron.某些；
+hence				adv.因此；之后
+Despite				prep.尽管，即使；不由自主的；n.亵渎；v.蔑视
+appearances			n.表面现象；外观；露面；出庭
+consequence			n.结果，侯贵；重要性，价值；	consequence;consequence;consequence
+Aliase				n.别名
+deduce				v.推断，演绎
+expression			n.表达，表示；表情，神情；			expression;expression;expression;
+involve				v.牵涉，设计；包含，需要；使陷入，使卷入；参加；使承担，使面对
+explicitly			adv.清楚明确的，详细的；直截了当的；露骨的

@@ -61,7 +61,7 @@ public class MeleeAttackState : AttackState
         foreach (var collider in detectedObjects)
         {
             IDamageable damageable = collider.GetComponent<IDamageable>();
-            IKnocakbackable knocakbackable = collider.GetComponent<IKnocakbackable>();
+            IKnockbackable knocakbackable = collider.GetComponent<IKnockbackable>();
 
             if (damageable != null)
             {

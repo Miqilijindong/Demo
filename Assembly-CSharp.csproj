@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\Data\D_MeleeAttackState.cs" />
     <Compile Include="Assets\Scripts\子弹\FirePoint.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Structs\AttackDetails.cs" />
+    <Compile Include="Assets\Scripts\特性\Reference\AttackData\AttackData.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerWallSlideState.cs" />
     <Compile Include="Assets\Scripts\2.8-13\Abstract.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerInAirState.cs" />
@@ -68,12 +69,14 @@
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Character\CharacterKinematics.cs" />
     <Compile Include="Assets\Scripts\L8_7角色控制.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Legacy\ExplosiveBarrelScript.cs" />
+    <Compile Include="Assets\Scripts\特性\SerializeReferenceTest.cs" />
     <Compile Include="Assets\Scripts\L2_5TransformClass.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Animation\CharacterAnimationEventHandler.cs" />
     <Compile Include="Assets\Scripts\TypeChange.cs" />
     <Compile Include="Assets\Scripts\QueueClass.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Weapons\WeaponAttachmentManagerBehaviour.cs" />
     <Compile Include="Assets\Scripts\UIGradient.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Core\CoreComponent\ParticleManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\Scripts\状态机\IState.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerMoveState.cs" />
@@ -146,6 +149,7 @@
     <Compile Include="Assets\Scripts\spiderman\Climbing.cs" />
     <Compile Include="Assets\Scripts\方块保卫战\GameController.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Generics\GenericNotImplementedError.cs" />
+    <Compile Include="Assets\Scripts\特性\Reference\Example.cs" />
     <Compile Include="Assets\Scripts\AboutParent\AboutParentClass.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\EnemySpecific\Enemy1\E1_IdleState.cs" />
     <Compile Include="Assets\Scripts\AbstractClass.cs" />
@@ -181,6 +185,7 @@
     <Compile Include="Assets\UIBaseScriptsCreater.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\Data\D_DodgeState.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Weapons\Scope.cs" />
+    <Compile Include="Assets\Scripts\特性\Reference\AttackData\AttackMovement.cs" />
     <Compile Include="Assets\Scripts\rope-tutorial-master\GrapplingRope.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Character\Movement.cs" />
     <Compile Include="Assets\Scripts\rope-tutorial-master\MoveCamera.cs" />
@@ -260,6 +265,7 @@
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Core\CoreComponent\Combat.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Core\CoreComponent\CoreComponent.cs" />
     <Compile Include="Assets\Scripts\方块保卫战\UIManager.cs" />
+    <Compile Include="Assets\Scripts\特性\Reference\AttackData\AttackSprites.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Weapons\WeaponBehaviour.cs" />
     <Compile Include="Assets\Scripts\L5_6Toggle.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Character\InventoryBehaviour.cs" />
@@ -297,7 +303,7 @@
     <Compile Include="Assets\Scripts\L2_6GameObjectClass.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\IdleState.cs" />
     <Compile Include="Assets\Infima Games\Tools\Looping\LoopUtilities.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Interfaces\IKnocakbackable.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Interfaces\IKnockbackable.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Legacy\GasTankScript.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\EnemySpecific\Enemy2\E2_DeadState.cs" />
     <Compile Include="Assets\Scripts\子弹\Bullet.cs" />
@@ -306,7 +312,9 @@
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\Data\D_PlayerDetectedState.cs" />
     <Compile Include="Assets\Scripts\spiderman\LedgeGrabbing.cs" />
     <Compile Include="Assets\Scripts\2D_Dungeon\RoomDataExtractor.cs" />
+    <Compile Include="Assets\Scripts\特性\Reference\AttackData\ComponentData.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
+    <Compile Include="Assets\Scripts\特性\Reference\AttackData\MovementData.cs" />
     <Compile Include="Assets\Scripts\排序算法\冒泡排序.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\Old\PlayerAfterImageSprite.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\BasicEnemyController.cs" />
@@ -314,6 +322,7 @@
     <Compile Include="Assets\Scripts\Day5_class.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\Scripts\排序算法\计数排序.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Core\CoreComponent\Death.cs" />
     <Compile Include="Assets\Scripts\ThreePersonMovement\ThreePersonCam.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Services\IGameModeService.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerCrouchIdleState.cs" />
@@ -383,6 +392,7 @@
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\EnemySpecific\Enemy2\E2_RangedAttackState.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State Machine\Entity.cs" />
     <Compile Include="Assets\Scripts\L4_5小球.cs" />
+    <Compile Include="Assets\Scripts\MessageBoxTest.cs" />
     <Compile Include="Assets\Scripts\spiderman\PlayerCam.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\Data\D_Entity.cs" />
     <Compile Include="Assets\Scripts\2.8-13\TClass.cs" />
@@ -393,12 +403,11 @@
     <Compile Include="Assets\Scenes\2D_Dungeon\Cinemachine\CameraController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\Scripts\L2_8生命周期.cs" />
+    <Compile Include="Assets\Scripts\特性\Reference\WeaponDataSO.cs" />
     <Compile Include="Assets\Scripts\Extern.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\Data\D_ChargeState.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\CombatDummyController.cs" />
     <Compile Include="Assets\Scripts\SpriteAndOverrideSprite.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Core\CoreComponent\ParticleManager.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Core\CoreComponent\Death.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shader\NewUnlitShader.shader" />
@@ -716,6 +725,9 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <HintPath>Assets\Plugins\System.Windows.Forms.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>D:\Program Files\Unity\Hub\Editor\2021.3.10f1c2\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -1122,6 +1134,9 @@
     <Reference Include="Unity.VisualScripting.State.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="LoopListMini">
+      <HintPath>Library\ScriptAssemblies\LoopListMini.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Searcher.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
     </Reference>
@@ -1184,6 +1199,9 @@
     </Reference>
     <Reference Include="Unity.2D.Common.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="RuntimeConsole">
+      <HintPath>Library\ScriptAssemblies\RuntimeConsole.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
@@ -1284,6 +1302,9 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="EditorLoopListMini">
+      <HintPath>Library\ScriptAssemblies\EditorLoopListMini.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
     </Reference>
@@ -1313,6 +1334,14 @@
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
       <Project>{7405B0C2-8C09-B5F9-1158-26143DD6F644}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
+    <ProjectReference Include="MackySoft.SerializeReferenceExtensions.Editor.csproj">
+      <Project>{AFA1AA7F-5872-57ED-E3CD-DDA7FBD5B8E9}</Project>
+      <Name>MackySoft.SerializeReferenceExtensions.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="MackySoft.SerializeReferenceExtensions.csproj">
+      <Project>{BC4D35FB-B2B1-108A-622B-C239E051FBC4}</Project>
+      <Name>MackySoft.SerializeReferenceExtensions</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

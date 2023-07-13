@@ -255,6 +255,7 @@ addressables是我们公司现在所使用的热更新方式
 11号
 今天用玉兔删了一些不用的资源，然后打包时发现，手机之前有aa热更新的bundle的资源话，后续都不会出错，但是卸载后，就是更新一遍bundle资源，所以以后测试的话，尽量要删掉后重新安装再测试。
 RuntimeConsole，手机模拟器打印日志
+https://gitee.com/GameDevLee/RuntimeConsole
 
 12号
 今天发现如果使用的是aa热更新模式的话，对应的aa group里的所有资源的path都要改成local的，不然就会去服务器获取资源的。
@@ -270,7 +271,7 @@ Click your Hold cards then\nor change your Bet Amount\nplace your Bet and Draw!
 然后先删掉成员变量，然后再改回来，就可以在Inspector里做到换行了
 
 快速生成get、set
-ctrl+e、ctrl+r
+ctrl+r、ctrl+e
 
 15号
 C#中两个问号（“?”）的作用是判断“?”左边的对象是否为null,如果不为null则使用“?”左边的对象,如果为null则使用“?”右边的对象.
@@ -366,3 +367,99 @@ savePizza
 
 31日
 complete game类似见缝插针的游戏
+
+
+6月12日
+lottery---彩票
+carracing---赛车
+2D3D Infinite Runner---跑酷
+complete Game---类似见缝插针
+
+如果使用了序列化ScriptableObject当组件，添加参数到组件后改了名字，可以通过直接修改asset里的标签名字，已达到同步
+
+16日
+A problem occurred evaluating project ':launcher'.
+这个通常是为路径上有中文字符
+C#的多态引用可看看:https://github.com/mackysoft/Unity-SerializeReferenceExtensions
+
+19日
+可以看看:https://blog.csdn.net/kk702392702/article/details/129415575
+1、左值
+就是哪些可以出现在赋值符号左边的东西，它表示了一个可以存储结果值的地点。
+程序在编译时，编译器会为每个变量分配一个地址(左值)，这个地址在编译是即可知。
+也就是说，左值在编译是即可知，左值标志存储结果的一个地方，也可以理解为左值就是一块空间。
+
+2、右值
+就是那些可以出现在复制符号右边的东西，必须具有一个特定的值。
+也左值相反，变量中存储的那个值(右值)，只有在运行时才克制，且只有要用到变量中存储的值时，编译器才会发出指令从指定的地址读入变量的值，并将它存于寄存器中。
+也即是说，右值就是一个数字或一个字面值或一个常量，它不表示任何位置。
+
+
+
+google facebook
+webview与h5对接
+adjust对接
+如果可以的话，做成热更新Lua项目
+
+
+27日
+现在打算用unity来直接对接h5，用webview来实现，但是用webview必须是要用安卓平台或者IOS平台才能执行，不然就会报错。
+
+现在打算先试试用facebook登录，完成后将token数据传给h5界面
+
+
+
+
+bjosephoning@gmail.com
+standbyme777
+
+
+
+webview-dist
+
+主要还是得用majar01里的pluging
+
+
+1.点击登录按钮事件并调用安卓或者IOS的sdk进行登录。
+完成后将sdk得到的token返回给h5页面。
+2.登出
+3.调用adjust
+
+5.调用自带浏览器跳转到对应地址
+
+
+
+google包含4个连续0，就传adid，不是就穿googleid
+
+
+7月3日14:48:17
+如果是IOS或者Android调用Unity的话，要指定物体和对应的方法名
+明天准备jeson lin，问问google和facebook对接
+
+打开AndroidManifest.xml，找到标签， 在里面加入android:usesCleartextTraffic="true"即可，这个代码标表示可以使用http明文传输，
+<application
+       ...
+        android:usesCleartextTraffic="true"		
+       ...	
+        >
+		
+http://10.10.10.156:3000/home
+
+
+
+接受param里有type来判断方法
+data来判断数据
+
+json记得看看怎么回事
+不知道为什么构造函数只能有一个带初始化的，另一个就是只能为空的
+
+
+7月5日
+newGameProject改好，主要是因为配置文件AndroidManifest.xml里多配置了两个<activity>，导致报ClassNotFoundException
+
+7月6日
+如果是用google登录的话，window->firebase-documentation
+SHA-1 
+密码:android
+BE:91:DE:B6:02:60:DC:6A:8E:78:33:98:A7:14:35:FA:0D:62:B8:B6
+模拟器因为没有谷歌框架，所以用不了

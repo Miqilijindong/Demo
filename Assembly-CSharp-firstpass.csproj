@@ -66,6 +66,7 @@
     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Plugins\System.Windows.Forms.dll" />
     <None Include="Assets\Plugins\Demigiant\DOTween\DOTween.XML" />
     <None Include="Assets\Plugins\Demigiant\DOTween\DOTween.dll" />
     <None Include="Assets\Plugins\Demigiant\DOTween\readme.txt" />
@@ -349,6 +350,9 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <HintPath>Assets\Plugins\System.Windows.Forms.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>D:\Program Files\Unity\Hub\Editor\2021.3.10f1c2\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -755,6 +759,9 @@
     <Reference Include="Unity.VisualScripting.State.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="LoopListMini">
+      <HintPath>Library\ScriptAssemblies\LoopListMini.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Searcher.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
     </Reference>
@@ -817,6 +824,9 @@
     </Reference>
     <Reference Include="Unity.2D.Common.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.2D.Common.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="RuntimeConsole">
+      <HintPath>Library\ScriptAssemblies\RuntimeConsole.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
@@ -917,6 +927,9 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="EditorLoopListMini">
+      <HintPath>Library\ScriptAssemblies\EditorLoopListMini.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
     </Reference>
@@ -943,6 +956,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="MackySoft.SerializeReferenceExtensions.Editor.csproj">
+      <Project>{AFA1AA7F-5872-57ED-E3CD-DDA7FBD5B8E9}</Project>
+      <Name>MackySoft.SerializeReferenceExtensions.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="MackySoft.SerializeReferenceExtensions.csproj">
+      <Project>{BC4D35FB-B2B1-108A-622B-C239E051FBC4}</Project>
+      <Name>MackySoft.SerializeReferenceExtensions</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

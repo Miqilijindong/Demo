@@ -1,5 +1,21 @@
 {
   "dependencies": {
+    "com.leeframework.console": {
+      "version": "https://e.coding.net/ggdevlee/leeframework/RuntimeConsole.git#1.1.1",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.leeframework.uilooplistmini": "https://e.coding.net/ggdevlee/leeframework/LoopListMini.git#1.0.0"
+      },
+      "hash": "61538c1844c7fa381f7746a7b5246f6546ebeba9"
+    },
+    "com.leeframework.uilooplistmini": {
+      "version": "https://e.coding.net/ggdevlee/leeframework/LoopListMini.git#1.0.1",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "04ee0d98fa544676470ed46c358b1cbd74851e1f"
+    },
     "com.unity.2d.animation": {
       "version": "7.0.7",
       "depth": 1,

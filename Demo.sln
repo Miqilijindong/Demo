@@ -5,6 +5,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{7405B0C2-8C09-B5F9-1158-26143DD6F644}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MackySoft.SerializeReferenceExtensions", "MackySoft.SerializeReferenceExtensions.csproj", "{BC4D35FB-B2B1-108A-622B-C239E051FBC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MackySoft.SerializeReferenceExtensions.Editor", "MackySoft.SerializeReferenceExtensions.Editor.csproj", "{AFA1AA7F-5872-57ED-E3CD-DDA7FBD5B8E9}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{DB0005D0-E46F-236E-2F57-76542FED5F47}"
 EndProject
 Global
@@ -21,6 +25,14 @@ Global
 		{7405B0C2-8C09-B5F9-1158-26143DD6F644}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7405B0C2-8C09-B5F9-1158-26143DD6F644}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7405B0C2-8C09-B5F9-1158-26143DD6F644}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC4D35FB-B2B1-108A-622B-C239E051FBC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC4D35FB-B2B1-108A-622B-C239E051FBC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC4D35FB-B2B1-108A-622B-C239E051FBC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC4D35FB-B2B1-108A-622B-C239E051FBC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFA1AA7F-5872-57ED-E3CD-DDA7FBD5B8E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFA1AA7F-5872-57ED-E3CD-DDA7FBD5B8E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFA1AA7F-5872-57ED-E3CD-DDA7FBD5B8E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFA1AA7F-5872-57ED-E3CD-DDA7FBD5B8E9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DB0005D0-E46F-236E-2F57-76542FED5F47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DB0005D0-E46F-236E-2F57-76542FED5F47}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB0005D0-E46F-236E-2F57-76542FED5F47}.Release|Any CPU.ActiveCfg = Release|Any CPU
