@@ -463,3 +463,35 @@ SHA-1
 密码:android
 BE:91:DE:B6:02:60:DC:6A:8E:78:33:98:A7:14:35:FA:0D:62:B8:B6
 模拟器因为没有谷歌框架，所以用不了
+
+7月17日
+完成打包Game.apk，遇到的几个问题总结一下
+首先是对接uniwebview，我是从台湾同事的游戏里找到uniwebview的sdk的，因为线上的已经变成要付费的了，所以以后新项目的马甲包都要这样做了
+然后是对接adjust，需要到控制平台申请apptokenid和对应的事件tokenId以及参数回传等等
+完了就是准备安卓和IOS调用他们的接口来获取对应的Init数据，后续就是给google和facebook接入sdk，完成对接登录。
+最后就是跟后台风控对接post接口，让风控来判断是否用uniwebview打开h5页面。
+
+
+keytool -genkey -alias android.keystore -keyalg RSA -validity 36500 -keystore android.keystore，
+这句话的意思是：创建了一个名为android.keystore的别名也为android.keystore的采用RSA加密算法的有效期为100年的证书文件（由于之前我已经生成了android.keystore，所以现在根据参数说明改文件名等）
+
+
+D:\java\Android\Android Studio\jre\bin>keytool -list -v -keystore C:\Users\Administrator\.android\debug.keystore
+这里是生成谷歌对应控制台所需的类似md5密钥吧，我也不清楚叫什么。
+我原本是用系统自带的实现的，后来不知道为什么长度不一样导致只能重新生成一个。
+用Android Studio重新生成的，首先要注意一下项目的配置环境，其次就是准备生成密钥了，后续也就没什么大问题了
+证书指纹:
+         SHA1: 86:74:32:DD:99:F2:34:6B:50:30:33:21:6E:8F:84:DA:32:B9:FE:0B
+         SHA256: DB:3F:8E:A8:1C:1A:67:32:0B:9D:ED:D1:CD:60:57:64:51:54:99:AA:A4:AA:12:D2:19:D6:71:5B:1B:2E:C4:B1
+现在我因为jdk版本有问题，导致生成了一次jks就跟young说了，无法改变，使用只能通过jks生成对应的keystore(必须用cmd而且还得到java11里面才可以，就是(D:\java\Android\Android Studio\jre\bin))
+后面又出现了一个问题，unity的jdk只能是1.8版本的，所以我还是得跟young说，换一个证书
+
+jks生成对应的keystore
+keytool -importkeystore -destkeystore C:\Users\Administrator\Demo.keystore -srcstoretype PKCS12 -srckeystore C:\Users\Administrator\Demo.jks
+
+keytool -importkeystore -srckeystore C:\Users\Administrator\Demo.jks -srcstoretype JKS -deststoretype PKCS12 -destkeystore C:\Users\Administrator\Demo.p12
+keytool -v -importkeystore -srckeystore C:\Users\Administrator\Demo.p12 -srcstoretype PKCS12 -destkeystore C:\Users\Administrator\Demo.keystore -deststoretype JKS
+
+
+
+keytool -importkeystore -srckeystore C:\Users\Administrator\Demo.jks -srcstoretype JKS -deststoretype PKCS12 -destkeystore 

@@ -408,6 +408,7 @@
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\Data\D_ChargeState.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\CombatDummyController.cs" />
     <Compile Include="Assets\Scripts\SpriteAndOverrideSprite.cs" />
+    <Compile Include="Assets\Samples\DialogueSystemDemo\DialogueParser.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shader\NewUnlitShader.shader" />
@@ -1342,6 +1343,14 @@
     <ProjectReference Include="MackySoft.SerializeReferenceExtensions.csproj">
       <Project>{BC4D35FB-B2B1-108A-622B-C239E051FBC4}</Project>
       <Name>MackySoft.SerializeReferenceExtensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="Editor.csproj">
+      <Project>{226079B5-72C0-6FC4-E205-BC7F41BF845E}</Project>
+      <Name>Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Runtime.csproj">
+      <Project>{BFDADFE4-497D-8EEC-D3A7-DD9C410E824F}</Project>
+      <Name>Runtime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
