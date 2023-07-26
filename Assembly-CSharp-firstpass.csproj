@@ -960,10 +960,6 @@
       <Project>{AFA1AA7F-5872-57ED-E3CD-DDA7FBD5B8E9}</Project>
       <Name>MackySoft.SerializeReferenceExtensions.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="MackySoft.SerializeReferenceExtensions.csproj">
-      <Project>{BC4D35FB-B2B1-108A-622B-C239E051FBC4}</Project>
-      <Name>MackySoft.SerializeReferenceExtensions</Name>
-    </ProjectReference>
     <ProjectReference Include="Editor.csproj">
       <Project>{226079B5-72C0-6FC4-E205-BC7F41BF845E}</Project>
       <Name>Editor</Name>
@@ -971,6 +967,10 @@
     <ProjectReference Include="Runtime.csproj">
       <Project>{BFDADFE4-497D-8EEC-D3A7-DD9C410E824F}</Project>
       <Name>Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="MackySoft.SerializeReferenceExtensions.csproj">
+      <Project>{BC4D35FB-B2B1-108A-622B-C239E051FBC4}</Project>
+      <Name>MackySoft.SerializeReferenceExtensions</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -84,7 +84,6 @@
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Player\PlayerState\SubStates\PlayerWallJumpState.cs" />
     <Compile Include="Assets\Scripts\3.1-4 委托\BoardCast.cs" />
     <Compile Include="Assets\Scripts\Day4.cs" />
-    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Core\CoreComponent\Movement.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Services\IAudioManagerService.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\Scripts\L6_6物理射线.cs" />
@@ -123,6 +122,7 @@
     <Compile Include="Assets\Scripts\方块保卫战\playerClass.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\3.1-4 委托\ClassFunc.cs" />
+    <Compile Include="Assets\Scripts\WeaponSystem\MonoTest.cs" />
     <Compile Include="Assets\Infima Games\Tools\Log.cs" />
     <Compile Include="Assets\Scripts\排序算法\希尔排序.cs" />
     <Compile Include="Assets\Scripts\2.8-13\TInterfact.cs" />
@@ -143,6 +143,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\Infima Games\Tools\Looping\RLoops.cs" />
     <Compile Include="Assets\Scripts\排序算法\堆排序.cs" />
+    <Compile Include="Assets\Scripts\WeaponSystem\ScriptableObjects\WeaponDataSO.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Services\ServiceLocator.cs" />
     <Compile Include="Assets\Scripts\时光倒流\TimeControlled.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\EnemySpecific\Enemy2\Enemy2.cs" />
@@ -202,6 +203,7 @@
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Utilities\UtilitiesArrays.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Character\MovementBehaviour.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\EnemySpecific\Enemy1\E1_StunState.cs" />
+    <Compile Include="Assets\Scripts\WeaponSystem\Components\ComponentData\ComponentData.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Interface\CanvasSpawner.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Character\Inventory.cs" />
     <Compile Include="Assets\Scripts\2.14-17\TStruct.cs" />
@@ -322,6 +324,7 @@
     <Compile Include="Assets\Scripts\Day5_class.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\Scripts\排序算法\计数排序.cs" />
+    <Compile Include="Assets\Samples\DialogueSystemDemo\DialogueParser.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Core\CoreComponent\Death.cs" />
     <Compile Include="Assets\Scripts\ThreePersonMovement\ThreePersonCam.cs" />
     <Compile Include="Assets\Infima Games\Low Poly Shooter Pack - Free Sample\Code\Services\IGameModeService.cs" />
@@ -408,7 +411,14 @@
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\State\Data\D_ChargeState.cs" />
     <Compile Include="Assets\Scripts\2DPlatformerPlayer\Enemies\CombatDummyController.cs" />
     <Compile Include="Assets\Scripts\SpriteAndOverrideSprite.cs" />
-    <Compile Include="Assets\Samples\DialogueSystemDemo\DialogueParser.cs" />
+    <Compile Include="Assets\Scripts\WeaponSystem\Components\ComponentData\AttackData\AttackData.cs" />
+    <Compile Include="Assets\Scripts\WeaponSystem\Components\ComponentData\MovementData.cs" />
+    <Compile Include="Assets\Scripts\WeaponSystem\Components\ComponentData\AttackData\AttackMovement.cs" />
+    <Compile Include="Assets\Scripts\WeaponSystem\Components\Movement.cs" />
+    <Compile Include="Assets\Scripts\WeaponSystem\Components\WeaponComponent.cs" />
+    <Compile Include="Assets\Scripts\WeaponSystem\Weapon.cs" />
+    <Compile Include="Assets\Scripts\WeaponSystem\AnimationEventHandler.cs" />
+    <Compile Include="Assets\Scripts\2DPlatformerPlayer\Core\CoreComponent\Movement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shader\NewUnlitShader.shader" />
@@ -1340,10 +1350,6 @@
       <Project>{AFA1AA7F-5872-57ED-E3CD-DDA7FBD5B8E9}</Project>
       <Name>MackySoft.SerializeReferenceExtensions.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="MackySoft.SerializeReferenceExtensions.csproj">
-      <Project>{BC4D35FB-B2B1-108A-622B-C239E051FBC4}</Project>
-      <Name>MackySoft.SerializeReferenceExtensions</Name>
-    </ProjectReference>
     <ProjectReference Include="Editor.csproj">
       <Project>{226079B5-72C0-6FC4-E205-BC7F41BF845E}</Project>
       <Name>Editor</Name>
@@ -1351,6 +1357,10 @@
     <ProjectReference Include="Runtime.csproj">
       <Project>{BFDADFE4-497D-8EEC-D3A7-DD9C410E824F}</Project>
       <Name>Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="MackySoft.SerializeReferenceExtensions.csproj">
+      <Project>{BC4D35FB-B2B1-108A-622B-C239E051FBC4}</Project>
+      <Name>MackySoft.SerializeReferenceExtensions</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

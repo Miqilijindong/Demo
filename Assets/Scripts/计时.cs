@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
 public class 计时 : MonoBehaviour
 {
@@ -47,15 +49,15 @@ public class 计时 : MonoBehaviour
         GUI.Label(new Rect(10, 175, 500, 500), v0);
         string v11 = DateTime.Now.ToString("U");
         GUI.Label(new Rect(10, 190, 500, 500), v11);
-        string v12= DateTime.Now.ToString("m");
+        string v12 = DateTime.Now.ToString("m");
         GUI.Label(new Rect(10, 205, 500, 500), v12);
-        string v13= DateTime.Now.ToString("M");
+        string v13 = DateTime.Now.ToString("M");
         GUI.Label(new Rect(10, 220, 500, 500), v13);
         string v14 = DateTime.Now.ToString("r");
         GUI.Label(new Rect(10, 235, 500, 500), v14);
-        string v15= DateTime.Now.ToString("R");
+        string v15 = DateTime.Now.ToString("R");
         GUI.Label(new Rect(10, 250, 500, 500), v15);
-        string v16= DateTime.Now.ToString("y");
+        string v16 = DateTime.Now.ToString("y");
         GUI.Label(new Rect(10, 265, 500, 500), v16);
         string v17 = DateTime.Now.ToString("Y");
         GUI.Label(new Rect(10, 280, 500, 500), v17);
@@ -68,5 +70,18 @@ public class 计时 : MonoBehaviour
 
         timeStr = string.Format("{0:D2}:{1:D2}:{2:D2}", h, m, s);
         GUI.Label(new Rect(10, 10, 500, 500), timeStr);
+    }
+
+    Stopwatch sw;
+    public void TestTime()
+    {
+        sw = new Stopwatch();
+        sw.Start();
+    }
+
+    public void TestTimeStop()
+    {
+        sw.Stop();
+        Debug.Log(sw.ElapsedMilliseconds);
     }
 }
