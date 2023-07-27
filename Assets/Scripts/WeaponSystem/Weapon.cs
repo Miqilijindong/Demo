@@ -18,6 +18,13 @@ namespace WeaponSystem
         public event Action OnExit;
         public event Action OnUseInput;
 
+        /// <summary>
+        /// 攻击次数重置冷却时间
+        /// </summary>
+        [Tooltip("攻击次数重置冷却时间")]
+        [SerializeField]
+        private float attackCounterRestCooldown;
+
         private Animator anim;
         public GameObject BaseGameObject { get; private set; }
         public GameObject WeaponSpriteGameObject { get; private set; }
@@ -41,6 +48,11 @@ namespace WeaponSystem
         /// </summary>
         private bool initDone;
         private AnimationEventHandler eventHandler;
+
+        public void SetData(WeaponDataSO data)
+        {
+            Data = data;
+        }
 
         /// <summary>
         /// 获取依赖数据

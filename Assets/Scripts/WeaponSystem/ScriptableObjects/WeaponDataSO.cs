@@ -11,7 +11,11 @@ namespace WeaponSystem
     public class WeaponDataSO : ScriptableObject
     {
         [field: SerializeField]
+        public RuntimeAnimatorController AnimatorController { get; private set; }
+
+        [field: SerializeField]
         public int NumberOfAttacks { get; private set; }
+
         /// <summary>
         /// 当前data文件中所需要的component组件数据
         /// 后期的话，更像是这个武器所对应可用操作。每一个组件对应一个操作，比如有Movement的话，就可以边攻击边移动。可以理解成武器的状态机
@@ -24,6 +28,11 @@ namespace WeaponSystem
         {
             // List.OfType<T>();数组中不同的实体，可以通过OfType<T>()取出T类型的对象
             return ComponentData.OfType<T>().FirstOrDefault();
+        }
+
+        public List<Type> GetAllDependencies()
+        {
+            return ComponentData.Select(component => component.ComponentDependency).ToList();
         }
 
         /// <summary>
